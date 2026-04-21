@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviso Legal | Perito Informático</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    .legal-page { max-width: 760px; margin: 0 auto; padding: calc(var(--nav-h) + 4rem) 2rem 6rem; }
+    .legal-page h1 { font-family: var(--ff-display); font-size: 2.8rem; margin-bottom: 0.5rem; }
+    .legal-page h1 em { color: var(--accent); font-style: italic; }
+    .legal-meta { font-family: var(--ff-mono); font-size: 0.72rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3rem; }
+    .legal-page h2 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 2.5rem 0 0.75rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .legal-page p, .legal-page li { font-size: 0.9rem; color: var(--text-2); line-height: 1.75; }
+    .legal-page ul { padding-left: 1.25rem; margin: 0.75rem 0; }
+    .legal-page ul li { margin-bottom: 0.4rem; list-style: disc; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--ff-mono); font-size: 0.78rem; color: var(--accent); margin-bottom: 2.5rem; transition: gap 0.2s; }
+    .back-link:hover { gap: 0.8rem; }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">PERITO <em>DIGITAL</em></span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="legal-page">
+    <a href="index.html" class="back-link">← Volver al inicio</a>
+    <h1>Aviso <em>Legal</em></h1>
+    <div class="legal-meta">Última actualización: Enero 2025</div>
+
+    <h2>1. Datos identificativos del titular</h2>
+    <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se informa:</p>
+    <ul>
+      <li><strong>Titular:</strong> Nombre Apellido Apellido</li>
+      <li><strong>CIF/NIF:</strong> X-XXXXXXXX</li>
+      <li><strong>Domicilio profesional:</strong> [Dirección], [CP] Madrid</li>
+      <li><strong>Email:</strong> perito@tudominio.es</li>
+      <li><strong>Colegio Profesional:</strong> Colegio Oficial de Ingenieros Informáticos — Nº Col. XXXXX</li>
+      <li><strong>Registro de Peritos CGPJ:</strong> Inscrito</li>
+    </ul>
+
+    <h2>2. Objeto y ámbito de aplicación</h2>
+    <p>El presente aviso legal regula el acceso y uso del sitio web [www.tudominio.es] (en adelante, "el Sitio Web"), de titularidad del profesional indicado. El acceso al Sitio Web implica la aceptación de las condiciones aquí establecidas.</p>
+
+    <h2>3. Propiedad intelectual e industrial</h2>
+    <p>Todos los contenidos del Sitio Web —textos, imágenes, logotipos, diseño, código fuente— son propiedad del titular o de terceros que han autorizado su uso. Queda prohibida su reproducción, distribución o modificación sin autorización expresa.</p>
+
+    <h2>4. Limitación de responsabilidad</h2>
+    <p>El titular no se responsabiliza de los daños derivados del uso del Sitio Web, interrupciones del servicio o errores en el contenido. Los informes periciales tienen efecto exclusivamente en el ámbito del encargo profesional correspondiente.</p>
+
+    <h2>5. Legislación aplicable y jurisdicción</h2>
+    <p>Las presentes condiciones se rigen por la legislación española. Para la resolución de controversias, las partes se someten a los Juzgados y Tribunales de Madrid, con renuncia expresa a cualquier otro fuero.</p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="max-width:760px;margin:0 auto;border-top:none;padding-top:0">
+      <span>© 2025 Perito Informático. Todos los derechos reservados.</span>
+      <span><a href="politica-privacidad.html" style="color:var(--text-3)">Privacidad</a> · <a href="politica-cookies.html" style="color:var(--text-3)">Cookies</a></span>
+    </div>
+  </footer>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 40); });
+  </script>
+</body>
+</html>

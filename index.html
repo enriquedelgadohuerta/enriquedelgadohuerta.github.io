@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perito Informático | Análisis Forense Digital</title>
+  <meta name="description" content="Perito informático judicial especializado en análisis forense de correo electrónico, redes sociales, WhatsApp y Telegram. Informes periciales con validez judicial." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">PERITO <em>DIGITAL</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#metodologia">Metodología</a></li>
+        <li><a href="#casos">Casos</a></li>
+        <li><a href="#sobre-mi">Perito</a></li>
+        <li><a href="#contacto" class="nav-cta">Consulta</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="scan-line"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Perito Informático Judicial · Col. Nº XXXXX
+      </div>
+      <h1 class="hero-title">
+        Análisis<br/>
+        <em>Forense</em><br/>
+        Digital
+      </h1>
+      <p class="hero-sub">
+        Informes periciales con validez judicial para<br/>
+        litigios civiles, penales y laborales.
+      </p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary">Solicitar Peritaje</a>
+        <a href="#servicios" class="btn-ghost">Ver Servicios ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">+200</span>
+          <span class="stat-label">Informes emitidos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">Aceptación judicial</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">48h</span>
+          <span class="stat-label">Entrega urgente</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">forensic_analysis.sh</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">init_forensic_scan</span></div>
+          <div class="t-line t-out">→ Cargando módulos de análisis...</div>
+          <div class="t-line t-out">→ Email headers: <span class="t-ok">VERIFICADO</span></div>
+          <div class="t-line t-out">→ Metadatos EXIF: <span class="t-ok">EXTRAÍDO</span></div>
+          <div class="t-line t-out">→ Hash SHA-256: <span class="t-ok">GENERADO</span></div>
+          <div class="t-line t-out">→ Cadena de custodia: <span class="t-ok">ESTABLECIDA</span></div>
+          <div class="t-line t-out">→ Informe pericial: <span class="t-ok blink">LISTO ■</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="services">
+    <div class="section-header">
+      <span class="section-tag">// 01 — Servicios</span>
+      <h2>Especialidades<br/><em>Periciales</em></h2>
+      <p>Análisis forense sobre las principales plataformas de comunicación digital con metodología acreditada y cadena de custodia garantizada.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- CORREO ELECTRÓNICO -->
+      <div class="service-card" data-service="email">
+        <div class="card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="10" width="40" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
+            <path d="M4 14l20 13 20-13" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="card-tag">01</div>
+        <h3>Correo Electrónico</h3>
+        <p>Análisis forense de cabeceras SMTP, autenticidad de mensajes, trazabilidad de origen y detección de suplantación de identidad (phishing/spoofing).</p>
+        <ul class="card-list">
+          <li>Análisis de cabeceras (From, Reply-To, X-Originating-IP)</li>
+          <li>Verificación SPF, DKIM y DMARC</li>
+          <li>Trazabilidad de servidores relay</li>
+          <li>Detección de manipulación de mensajes</li>
+          <li>Extracción de metadatos de adjuntos</li>
+          <li>Autenticidad de firmas digitales</li>
+        </ul>
+        <a href="#contacto" class="card-link">Solicitar análisis →</a>
+      </div>
+
+      <!-- REDES SOCIALES -->
+      <div class="service-card featured" data-service="rrss">
+        <div class="card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="24" r="4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="36" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="36" cy="36" r="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 22l16-8M16 26l16 8" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="card-tag">02</div>
+        <div class="card-badge">Más solicitado</div>
+        <h3>Redes Sociales</h3>
+        <p>Peritaje de publicaciones, mensajes privados y actividad en Facebook, Instagram, X (Twitter), LinkedIn y TikTok. Preservación forense con validez probatoria.</p>
+        <ul class="card-list">
+          <li>Captura forense certificada de perfiles y publicaciones</li>
+          <li>Identificación de cuentas anónimas o falsas</li>
+          <li>Análisis de mensajes directos (DM)</li>
+          <li>Cronología de actividad y borrados</li>
+          <li>Detección de contenido manipulado</li>
+          <li>Preservación conforme al Reglamento 2019/1150</li>
+        </ul>
+        <a href="#contacto" class="card-link">Solicitar análisis →</a>
+      </div>
+
+      <!-- WHATSAPP -->
+      <div class="service-card" data-service="whatsapp">
+        <div class="card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 6C14.06 6 6 14.06 6 24c0 3.19.84 6.17 2.3 8.75L6 42l9.55-2.27A17.94 17.94 0 0024 42c9.94 0 18-8.06 18-18S33.94 6 24 6z" stroke="currentColor" stroke-width="2"/>
+            <path d="M17 20s0-2 2-2 4 4 4 4-1 2-2 3 4 5 5 5 3-2 3-2 4 2 4 4-3 4-4 4C22 36 12 26 17 20z" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="card-tag">03</div>
+        <h3>WhatsApp</h3>
+        <p>Extracción y análisis forense de conversaciones de WhatsApp. Verificación de autenticidad, recuperación de mensajes borrados y análisis de metadatos de archivos.</p>
+        <ul class="card-list">
+          <li>Extracción forense de backups (Android/iOS)</li>
+          <li>Verificación de autenticidad de pantallazos</li>
+          <li>Análisis de base de datos msgstore.db</li>
+          <li>Recuperación de mensajes eliminados</li>
+          <li>Metadatos de imágenes y documentos</li>
+          <li>Análisis de llamadas y videollamadas registradas</li>
+        </ul>
+        <a href="#contacto" class="card-link">Solicitar análisis →</a>
+      </div>
+
+      <!-- TELEGRAM -->
+      <div class="service-card" data-service="telegram">
+        <div class="card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 8L6 21l14 5 4 12 5-7 9 7 2-30z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M20 26l3-3" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="card-tag">04</div>
+        <h3>Telegram</h3>
+        <p>Análisis forense de chats, grupos y canales de Telegram. Identificación de usuarios, exportación certificada y análisis de bots y canales anónimos.</p>
+        <ul class="card-list">
+          <li>Exportación forense de historiales de chat</li>
+          <li>Análisis de metadatos de archivos compartidos</li>
+          <li>Identificación de números y usernames</li>
+          <li>Análisis de grupos y canales públicos/privados</li>
+          <li>Verificación de mensajes autodestruibles (rastros)</li>
+          <li>Análisis de bots e interacciones automatizadas</li>
+        </ul>
+        <a href="#contacto" class="card-link">Solicitar análisis →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- METODOLOGÍA -->
+  <section id="metodologia" class="methodology">
+    <div class="method-content">
+      <div class="section-header left">
+        <span class="section-tag">// 02 — Proceso</span>
+        <h2>Metodología<br/><em>Forense</em></h2>
+        <p>Cada peritaje sigue un protocolo estricto conforme a la norma UNE 71506 y los estándares internacionales ACPO y RFC 3227.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4>Adquisición y Preservación</h4>
+            <p>Copia forense bit a bit de la evidencia digital con verificación hash MD5/SHA-256. Establecimiento de la cadena de custodia desde el primer momento.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4>Análisis Técnico</h4>
+            <p>Examen exhaustivo de metadatos, cabeceras, logs y artefactos digitales. Uso de herramientas forenses certificadas (Autopsy, FTK, Cellebrite UFED).</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4>Documentación</h4>
+            <p>Redacción del informe pericial con conclusiones técnicas fundamentadas, capturas certificadas y anexos probatorios según el art. 335 LEC.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4>Ratificación Judicial</h4>
+            <p>Comparecencia ante el juzgado para ratificación y defensa del informe. Disponibilidad para aclaraciones y contrainterrogatorio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="method-visual">
+      <div class="cert-card">
+        <div class="cert-header">
+          <span class="cert-icon">🔒</span>
+          <div>
+            <div class="cert-title">Cadena de Custodia</div>
+            <div class="cert-sub">Garantía de integridad probatoria</div>
+          </div>
+        </div>
+        <div class="cert-hash">
+          <div class="hash-label">SHA-256 Verificado</div>
+          <div class="hash-value">a3f8d2...c9e1b4</div>
+        </div>
+        <div class="cert-badges">
+          <span class="cbadge">UNE 71506</span>
+          <span class="cbadge">ISO 27037</span>
+          <span class="cbadge">RFC 3227</span>
+          <span class="cbadge">ACPO</span>
+        </div>
+      </div>
+
+      <div class="tools-card">
+        <div class="tools-title">Herramientas Certificadas</div>
+        <div class="tools-list">
+          <div class="tool-item"><span class="tool-dot"></span>Autopsy / Sleuth Kit</div>
+          <div class="tool-item"><span class="tool-dot"></span>FTK Imager</div>
+          <div class="tool-item"><span class="tool-dot"></span>Cellebrite UFED</div>
+          <div class="tool-item"><span class="tool-dot"></span>Oxygen Forensic Detective</div>
+          <div class="tool-item"><span class="tool-dot"></span>Magnet AXIOM</div>
+          <div class="tool-item"><span class="tool-dot"></span>Wireshark / NetworkMiner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS DE USO -->
+  <section id="casos" class="cases">
+    <div class="section-header">
+      <span class="section-tag">// 03 — Aplicaciones</span>
+      <h2>Casos Típicos de<br/><em>Peritaje</em></h2>
+    </div>
+    <div class="cases-grid">
+      <div class="case-item">
+        <span class="case-icon">⚖️</span>
+        <h4>Litigios Laborales</h4>
+        <p>Despidos disciplinarios por uso indebido de comunicaciones corporativas. Acoso laboral vía mensajería.</p>
+      </div>
+      <div class="case-item">
+        <span class="case-icon">🛡️</span>
+        <h4>Ciberacoso y Difamación</h4>
+        <p>Identificación de autores de mensajes amenazantes, acoso en RRSS y campañas de difamación online.</p>
+      </div>
+      <div class="case-item">
+        <span class="case-icon">💼</span>
+        <h4>Fraude Empresarial</h4>
+        <p>Fuga de información confidencial, competencia desleal y apropiación de datos mediante comunicaciones digitales.</p>
+      </div>
+      <div class="case-item">
+        <span class="case-icon">👨‍👩‍👧</span>
+        <h4>Derecho de Familia</h4>
+        <p>Custodia de menores, prueba de comunicaciones en procesos de divorcio y violencia de género digital.</p>
+      </div>
+      <div class="case-item">
+        <span class="case-icon">💳</span>
+        <h4>Estafas y Phishing</h4>
+        <p>Análisis de emails fraudulentos, suplantación de identidad y trazabilidad de comunicaciones en estafas.</p>
+      </div>
+      <div class="case-item">
+        <span class="case-icon">📋</span>
+        <h4>Prueba Anticipada</h4>
+        <p>Preservación forense urgente de evidencias digitales antes de que sean eliminadas o modificadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE EL PERITO -->
+  <section id="sobre-mi" class="about">
+    <div class="about-content">
+      <div class="section-header left">
+        <span class="section-tag">// 04 — El Perito</span>
+        <h2>Experiencia y<br/><em>Acreditación</em></h2>
+      </div>
+      <p class="about-text">
+        Perito informático judicial con más de 10 años de experiencia en análisis forense digital. Designado por juzgados de lo penal, civil y mercantil de toda España. Colaborador habitual de despachos de abogados, compañías aseguradoras y empresas del sector tecnológico.
+      </p>
+      <div class="credentials">
+        <div class="credential">
+          <div class="cred-icon">🎓</div>
+          <div>
+            <div class="cred-title">Formación</div>
+            <div class="cred-text">Ingeniería Informática · Máster en Seguridad Informática · Certificación CHFI (EC-Council)</div>
+          </div>
+        </div>
+        <div class="credential">
+          <div class="cred-icon">📜</div>
+          <div>
+            <div class="cred-title">Colegiación</div>
+            <div class="cred-text">Colegio Oficial de Ingenieros Informáticos · Nº Col. XXXXX · Inscrito en el Registro de Peritos del CGPJ</div>
+          </div>
+        </div>
+        <div class="credential">
+          <div class="cred-icon">🏛️</div>
+          <div>
+            <div class="cred-title">Actuaciones Judiciales</div>
+            <div class="cred-text">Juzgados Penales, Civiles y Mercantiles · Audiencias Provinciales · Juzgados de Violencia</div>
+          </div>
+        </div>
+        <div class="credential">
+          <div class="cred-icon">🌐</div>
+          <div>
+            <div class="cred-title">Ámbito de Actuación</div>
+            <div class="cred-text">Nacional · Disponibilidad para desplazamiento a cualquier provincia · Videoconferencia judicial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="profile-card">
+        <div class="profile-avatar">
+          <div class="avatar-placeholder">
+            <svg viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="30" r="16" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 70c0-16.6 13.4-30 30-30s30 13.4 30 30" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="profile-info">
+          <div class="profile-name">Nombre Apellidos</div>
+          <div class="profile-role">Perito Informático Judicial</div>
+          <div class="profile-college">Col. Nº XXXXX · COIIE</div>
+        </div>
+        <div class="profile-stats">
+          <div class="pstat"><span>+200</span><small>Informes</small></div>
+          <div class="pstat"><span>+10</span><small>Años exp.</small></div>
+          <div class="pstat"><span>+50</span><small>Juzgados</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <div class="section-header">
+      <span class="section-tag">// 05 — Contacto</span>
+      <h2>Solicitar<br/><em>Consulta</em></h2>
+      <p>Primera consulta gratuita. Respuesta en menos de 24 horas.</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Juan García López" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="juan@despacho.es" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+          <div class="form-group">
+            <label for="tipo">Tipo de peritaje *</label>
+            <select id="tipo" name="tipo" required>
+              <option value="">Seleccionar servicio...</option>
+              <option value="email">Correo Electrónico</option>
+              <option value="rrss">Redes Sociales</option>
+              <option value="whatsapp">WhatsApp</option>
+              <option value="telegram">Telegram</option>
+              <option value="multiple">Varios / Consultar</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group full">
+          <label for="mensaje">Descripción del caso *</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Describa brevemente el caso y qué tipo de análisis necesita..." rows="5" required></textarea>
+        </div>
+        <div class="form-group full">
+          <label class="checkbox-label">
+            <input type="checkbox" id="lopd" name="lopd" required />
+            <span>He leído y acepto la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a> (RGPD)</span>
+          </label>
+        </div>
+        <button type="submit" class="btn-submit">
+          <span>Enviar consulta</span>
+          <svg viewBox="0 0 20 20" fill="none"><path d="M3 10h14M10 3l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="form-message" class="form-message"></div>
+      </form>
+
+      <div class="contact-info">
+        <div class="info-block">
+          <div class="info-icon">📧</div>
+          <div>
+            <div class="info-label">Email profesional</div>
+            <a href="mailto:perito@tudominio.es" class="info-value">perito@tudominio.es</a>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon">📞</div>
+          <div>
+            <div class="info-label">Teléfono / WhatsApp</div>
+            <a href="tel:+34600000000" class="info-value">+34 600 000 000</a>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Ubicación</div>
+            <div class="info-value">Madrid · Actuación nacional</div>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon">🕐</div>
+          <div>
+            <div class="info-label">Horario de atención</div>
+            <div class="info-value">L–V: 9:00–19:00 · Urgencias 24h</div>
+          </div>
+        </div>
+        <div class="urgency-box">
+          <span class="urgency-dot"></span>
+          <div>
+            <strong>¿Caso urgente?</strong>
+            <p>Para preservación de evidencias urgente o plazos procesales inminentes, contacte directamente por teléfono.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-icon">⬡</span>
+          <span class="logo-text">PERITO <em>DIGITAL</em></span>
+        </div>
+        <p>Peritaje informático judicial con metodología certificada y plena validez probatoria ante los tribunales españoles.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">Servicios</div>
+          <a href="#servicios">Correo Electrónico</a>
+          <a href="#servicios">Redes Sociales</a>
+          <a href="#servicios">WhatsApp</a>
+          <a href="#servicios">Telegram</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Información</div>
+          <a href="#metodologia">Metodología</a>
+          <a href="#casos">Casos</a>
+          <a href="#sobre-mi">El Perito</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Legal</div>
+          <a href="aviso-legal.html">Aviso Legal</a>
+          <a href="politica-privacidad.html">Política de Privacidad</a>
+          <a href="politica-cookies.html">Política de Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Perito Informático. Todos los derechos reservados.</span>
+      <span>CIF: X-XXXXXXXX · Col. Nº XXXXX COIIE</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
