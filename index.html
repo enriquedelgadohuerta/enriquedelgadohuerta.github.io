@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enrique Delgado | Perito Informático Judicial</title>
+<title>Enrique Delgado | Perito Informático</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -20,7 +20,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--text);background:va
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
 .nav-inner{max-width:1100px;margin:0 auto;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
-.logo{color:var(--gold);font-size:15px;font-weight:700;letter-spacing:0.5px;text-decoration:none}
+.logo{color:var(--gold);font-size:15px;font-weight:700;letter-spacing:0.5px;text-decoration:none;display:flex;align-items:center;gap:10px}
 .logo span{color:var(--text);font-weight:400}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{color:var(--text2);text-decoration:none;font-size:13.5px;transition:color .2s}
@@ -37,7 +37,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.9
 /* HERO */
 .hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23c9a84c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
-.hero-inner{max-width:1100px;margin:0 auto;padding:7rem 2rem 4rem;display:grid;grid-template-columns:1fr 400px;gap:4rem;align-items:center;width:100%}
+.hero-inner{max-width:1100px;margin:0 auto;padding:5rem 2rem 3rem;display:grid;grid-template-columns:1fr 400px;gap:3rem;align-items:center;width:100%}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.1);border:1px solid var(--border);color:var(--gold2);padding:6px 16px;border-radius:20px;font-size:12.5px;font-weight:600;letter-spacing:0.5px;margin-bottom:1.5rem}
 .hero h1{font-size:clamp(28px,4vw,52px);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:1.25rem}
 .hero h1 span{color:var(--gold)}
@@ -51,7 +51,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.9
 .stat-n{font-size:28px;font-weight:800;color:var(--gold)}
 .stat-l{font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px}
 .hero-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem}
-.avatar-ring{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#1e5fa8);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-size:32px;color:var(--white);font-weight:800}
+.avatar-ring{display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
 .hero-card h3{color:var(--white);font-size:17px;font-weight:700;text-align:center;margin-bottom:4px}
 .hero-card p{color:var(--gold2);font-size:13px;text-align:center;margin-bottom:1.25rem}
 .card-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:1.25rem}
@@ -61,19 +61,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.9
 .card-row svg{flex-shrink:0;color:var(--gold)}
 
 /* SECCIONES */
-section{padding:5rem 2rem}
+section{padding:3rem 2rem}
 .container{max-width:1100px;margin:0 auto}
 .section-label{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
 .section-title{font-size:clamp(24px,3vw,38px);font-weight:800;color:var(--white);line-height:1.25;margin-bottom:1rem}
 .section-sub{font-size:16px;color:var(--text2);max-width:600px;line-height:1.7}
-
-/* SEPARADORES */
 .sep{border:none;border-top:1px solid var(--border2);max-width:1100px;margin:0 auto}
 
 /* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:2rem}
 .about-img{background:var(--card);border:1px solid var(--border);border-radius:16px;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center}
-.about-features{display:flex;flex-direction:column;gap:1rem;margin-top:1.75rem}
+.about-features{display:flex;flex-direction:column;gap:0.75rem;margin-top:1.25rem}
 .feature{display:flex;align-items:flex-start;gap:12px}
 .feat-icon{width:40px;height:40px;background:rgba(201,168,76,0.08);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .feat-icon svg{color:var(--gold)}
@@ -81,7 +79,7 @@ section{padding:5rem 2rem}
 .feat-text p{font-size:13.5px;color:var(--text2);line-height:1.55}
 
 /* SERVICES */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2rem}
 .service-card{background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:1.75rem;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
 .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),#2d7dd6);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .service-card:hover{transform:translateY(-4px);border-color:var(--border)}
@@ -99,7 +97,7 @@ section{padding:5rem 2rem}
 .svc-cta{display:inline-block;margin-top:1rem;font-size:13px;color:var(--gold);font-weight:600;text-decoration:none}
 
 /* WHY */
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:3rem}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
 .why-card{background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:1.5rem;transition:border-color .2s}
 .why-card:hover{border-color:var(--border)}
 .why-num{font-size:36px;font-weight:800;color:var(--gold);opacity:0.5;margin-bottom:0.5rem}
@@ -107,7 +105,7 @@ section{padding:5rem 2rem}
 .why-card p{font-size:13.5px;color:var(--text2);line-height:1.6}
 
 /* PROCESS */
-.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0;margin-top:3rem;position:relative}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0;margin-top:2rem;position:relative}
 .process-steps::before{content:'';position:absolute;top:32px;left:10%;right:10%;height:1px;background:var(--border);z-index:0}
 .step{text-align:center;position:relative;z-index:1}
 .step-circle{width:64px;height:64px;border-radius:50%;background:var(--card);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:20px;font-weight:800;color:var(--gold)}
@@ -115,8 +113,8 @@ section{padding:5rem 2rem}
 .step p{font-size:13px;color:var(--text2);max-width:150px;margin:0 auto;line-height:1.5}
 
 /* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem;align-items:start}
-.contact-info{display:flex;flex-direction:column;gap:1.25rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:0.875rem}
 .contact-item{display:flex;align-items:flex-start;gap:14px;background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:1.25rem}
 .ci-icon{width:44px;height:44px;background:rgba(201,168,76,0.08);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .ci-icon svg{color:var(--gold)}
@@ -175,21 +173,32 @@ footer a:hover{color:var(--gold)}
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#inicio" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none">
-      <svg width="36" height="36" viewBox="0 0 92 92" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="46,4 80,4 97,34 80,64 46,64 29,34" fill="none" stroke="#c9a84c" stroke-width="3"/>
-        <polygon points="46,12 74,12 88,34 74,56 46,56 32,34" fill="#0f1e38" stroke="#c9a84c" stroke-width="0.8" stroke-opacity="0.4"/>
-        <circle cx="40" cy="30" r="11" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
-        <line x1="48" y1="38" x2="57" y2="47" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="35" cy="26" r="1.8" fill="#c9a84c"/>
-        <circle cx="40" cy="30" r="1.8" fill="#c9a84c"/>
-        <circle cx="46" cy="26" r="1.8" fill="#c9a84c"/>
-        <line x1="35" y1="26" x2="40" y2="30" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.8"/>
-        <line x1="40" y1="30" x2="46" y2="26" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.8"/>
-        <line x1="35" y1="26" x2="35" y2="34" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.4"/>
-        <line x1="46" y1="26" x2="46" y2="34" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.4"/>
+    <a href="#inicio" class="logo">
+      <svg width="42" height="52" viewBox="0 0 280 310" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="140,8 272,235 8,235" fill="#0f1e38" stroke="#c9a84c" stroke-width="5"/>
+        <polygon points="140,22 258,228 22,228" fill="none" stroke="#c9a84c" stroke-width="1.2" stroke-opacity="0.3"/>
+        <line x1="90" y1="110" x2="190" y2="110" stroke="#c9a84c" stroke-width="4" stroke-linecap="round"/>
+        <line x1="140" y1="90" x2="140" y2="110" stroke="#c9a84c" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="140" cy="88" r="6" fill="#c9a84c"/>
+        <line x1="94" y1="110" x2="94" y2="128" stroke="#c9a84c" stroke-width="3" stroke-dasharray="5,4"/>
+        <line x1="186" y1="110" x2="186" y2="128" stroke="#c9a84c" stroke-width="3" stroke-dasharray="5,4"/>
+        <ellipse cx="94" cy="132" rx="22" ry="7" fill="#c9a84c" fill-opacity="0.12" stroke="#c9a84c" stroke-width="3"/>
+        <ellipse cx="186" cy="132" rx="22" ry="7" fill="#c9a84c" fill-opacity="0.12" stroke="#c9a84c" stroke-width="3"/>
+        <circle cx="140" cy="178" r="28" fill="none" stroke="#c9a84c" stroke-width="3.5"/>
+        <line x1="161" y1="199" x2="178" y2="216" stroke="#c9a84c" stroke-width="4.5" stroke-linecap="round"/>
+        <circle cx="129" cy="170" r="3.5" fill="#c9a84c"/>
+        <circle cx="140" cy="178" r="3.5" fill="#c9a84c"/>
+        <circle cx="152" cy="170" r="3.5" fill="#c9a84c"/>
+        <line x1="129" y1="170" x2="140" y2="178" stroke="#c9a84c" stroke-width="2" stroke-opacity="0.75"/>
+        <line x1="140" y1="178" x2="152" y2="170" stroke="#c9a84c" stroke-width="2" stroke-opacity="0.75"/>
+        <line x1="129" y1="170" x2="129" y2="186" stroke="#c9a84c" stroke-width="2" stroke-opacity="0.4"/>
+        <line x1="152" y1="170" x2="152" y2="186" stroke="#c9a84c" stroke-width="2" stroke-opacity="0.4"/>
+        <text x="140" y="272" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-style="italic" fill="#c9a84c" letter-spacing="1">Honesta sis fidelis</text>
+        <line x1="18" y1="267" x2="82" y2="267" stroke="#c9a84c" stroke-width="1.2" stroke-opacity="0.4"/>
+        <line x1="198" y1="267" x2="262" y2="267" stroke="#c9a84c" stroke-width="1.2" stroke-opacity="0.4"/>
       </svg>
       <span style="color:#c9a84c;font-weight:700">informe<span style="color:#e8edf5;font-weight:400">peritoinformatico</span>.es</span>
     </a>
@@ -214,13 +223,63 @@ footer a:hover{color:var(--gold)}
   <a href="#contacto" class="nav-cta" onclick="closeMenu()">Solicitar consulta</a>
 </div>
 
+<!-- BARRA DE CONTACTO RÁPIDO -->
+<div id="contacto-barra" style="background:var(--card);border-bottom:1px solid var(--border);padding:10px 2rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:64px">
+  <span style="font-size:13px;color:var(--text2);font-weight:600;letter-spacing:0.5px">CONTACTO RÁPIDO:</span>
+  <a href="tel:+34649716627" style="display:flex;align-items:center;gap:8px;color:var(--text);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text)'">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.2 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+    649 716 627
+  </a>
+  <a href="mailto:info@informeperitoinformatico.es" style="display:flex;align-items:center;gap:8px;color:var(--text);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text)'">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    info@informeperitoinformatico.es
+  </a>
+  <a href="https://wa.me/34649716627" target="_blank" style="display:flex;align-items:center;gap:8px;background:#25d366;color:#fff;text-decoration:none;font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;transition:opacity .2s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp directo
+  </a>
+  <button onclick="toggleFormFlotante()" style="display:flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);border:none;cursor:pointer;font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;transition:opacity .2s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    Enviar consulta
+  </button>
+</div>
+
+<!-- FORMULARIO DESPLEGABLE -->
+<div id="form-flotante" style="display:none;background:var(--card);border-bottom:1px solid var(--border);padding:1.5rem 2rem">
+  <div style="max-width:900px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:1rem;align-items:end">
+      <div class="form-row" style="margin:0"><label>Nombre *</label><input type="text" id="fb-nombre" placeholder="Su nombre"></div>
+      <div class="form-row" style="margin:0"><label>Email *</label><input type="email" id="fb-email" placeholder="correo@ejemplo.com"></div>
+      <div class="form-row" style="margin:0">
+        <label>Asunto</label>
+        <select id="fb-tipo">
+          <option value="">Seleccione...</option>
+          <option>Forense de mensajería</option>
+          <option>Peritaje de email</option>
+          <option>Forense de dispositivo</option>
+          <option>Informe pericial</option>
+          <option>Consulta general</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="submit-btn" style="white-space:nowrap;padding:11px 18px" onclick="submitFormFlotante()">Enviar</button>
+        <button onclick="submitWAFlotante()" style="background:#25d366;color:#fff;border:none;cursor:pointer;padding:11px 14px;border-radius:8px;font-size:13px;font-weight:700;white-space:nowrap">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WA
+        </button>
+      </div>
+    </div>
+    <div id="fb-msg" style="display:none;margin-top:0.75rem;padding:10px 14px;border-radius:8px;font-size:13px;font-weight:600"></div>
+  </div>
+</div>
+
 <!-- HERO -->
-<section class="hero" id="inicio">
+<section class="hero" id="inicio" style="margin-top:0">
   <div class="hero-inner">
     <div>
       <div class="hero-badge">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Perito Informático Judicial · LEC Art. 340
+        Perito Informático · LEC Art. 340
       </div>
       <h1>Prueba pericial <span>informática</span> con validez judicial</h1>
       <p class="hero-sub">Informes periciales técnicos para procedimientos civiles, penales y laborales. Especializado en mensajería digital, correo electrónico y análisis forense de dispositivos.</p>
@@ -239,23 +298,33 @@ footer a:hover{color:var(--gold)}
       </div>
     </div>
     <div class="hero-card">
-      <div class="avatar-ring" style="background:none;border:2px solid rgba(201,168,76,0.3)">
-        <svg width="64" height="64" viewBox="0 0 92 92" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="46,4 80,4 97,34 80,64 46,64 29,34" fill="none" stroke="#c9a84c" stroke-width="3"/>
-          <polygon points="46,12 74,12 88,34 74,56 46,56 32,34" fill="#0f1e38" stroke="#c9a84c" stroke-width="0.8" stroke-opacity="0.4"/>
-          <circle cx="40" cy="30" r="11" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
-          <line x1="48" y1="38" x2="57" y2="47" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="35" cy="26" r="1.8" fill="#c9a84c"/>
-          <circle cx="40" cy="30" r="1.8" fill="#c9a84c"/>
-          <circle cx="46" cy="26" r="1.8" fill="#c9a84c"/>
-          <line x1="35" y1="26" x2="40" y2="30" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.8"/>
-          <line x1="40" y1="30" x2="46" y2="26" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.8"/>
-          <line x1="35" y1="26" x2="35" y2="34" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.4"/>
-          <line x1="46" y1="26" x2="46" y2="34" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.4"/>
+      <div class="avatar-ring">
+        <svg width="110" height="110" viewBox="0 0 280 310" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="140,8 272,235 8,235" fill="#0f1e38" stroke="#c9a84c" stroke-width="5"/>
+          <polygon points="140,22 258,228 22,228" fill="none" stroke="#c9a84c" stroke-width="1.2" stroke-opacity="0.3"/>
+          <line x1="90" y1="110" x2="190" y2="110" stroke="#c9a84c" stroke-width="4" stroke-linecap="round"/>
+          <line x1="140" y1="90" x2="140" y2="110" stroke="#c9a84c" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="140" cy="88" r="6" fill="#c9a84c"/>
+          <line x1="94" y1="110" x2="94" y2="128" stroke="#c9a84c" stroke-width="3" stroke-dasharray="5,4"/>
+          <line x1="186" y1="110" x2="186" y2="128" stroke="#c9a84c" stroke-width="3" stroke-dasharray="5,4"/>
+          <ellipse cx="94" cy="132" rx="22" ry="7" fill="#c9a84c" fill-opacity="0.12" stroke="#c9a84c" stroke-width="3"/>
+          <ellipse cx="186" cy="132" rx="22" ry="7" fill="#c9a84c" fill-opacity="0.12" stroke="#c9a84c" stroke-width="3"/>
+          <circle cx="140" cy="178" r="28" fill="none" stroke="#c9a84c" stroke-width="3.5"/>
+          <line x1="161" y1="199" x2="178" y2="216" stroke="#c9a84c" stroke-width="4.5" stroke-linecap="round"/>
+          <circle cx="129" cy="170" r="3.5" fill="#c9a84c"/>
+          <circle cx="140" cy="178" r="3.5" fill="#c9a84c"/>
+          <circle cx="152" cy="170" r="3.5" fill="#c9a84c"/>
+          <line x1="129" y1="170" x2="140" y2="178" stroke="#c9a84c" stroke-width="2" stroke-opacity="0.75"/>
+          <line x1="140" y1="178" x2="152" y2="170" stroke="#c9a84c" stroke-width="2" stroke-opacity="0.75"/>
+          <line x1="129" y1="170" x2="129" y2="186" stroke="#c9a84c" stroke-width="2" stroke-opacity="0.4"/>
+          <line x1="152" y1="170" x2="152" y2="186" stroke="#c9a84c" stroke-width="2" stroke-opacity="0.4"/>
+          <text x="140" y="272" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-style="italic" fill="#c9a84c" letter-spacing="1">Honesta sis fidelis</text>
+          <line x1="18" y1="267" x2="82" y2="267" stroke="#c9a84c" stroke-width="1.2" stroke-opacity="0.4"/>
+          <line x1="198" y1="267" x2="262" y2="267" stroke="#c9a84c" stroke-width="1.2" stroke-opacity="0.4"/>
         </svg>
       </div>
       <h3>Enrique Delgado</h3>
-      <p>Perito Informático Judicial · Alcalá de Henares</p>
+      <p>Perito Informático</p>
       <div class="card-tags">
         <span class="tag">Forense digital</span>
         <span class="tag">Mensajería</span>
@@ -288,7 +357,7 @@ footer a:hover{color:var(--gold)}
     <div class="reveal">
       <div class="section-label">Sobre mí</div>
       <h2 class="section-title">Experiencia técnica al servicio de la justicia</h2>
-      <p class="section-sub">Ingeniero técnico industrial con especialización en electrónica y amplia trayectoria en tecnologías de la información. Perito informático judicial con actuación en el corredor del Henares y la Comunidad de Madrid.</p>
+      <p class="section-sub">Ingeniero y perito informático con amplia trayectoria en tecnologías de la información y actuación en toda España.</p>
     </div>
     <div class="about-grid reveal">
       <div class="about-img">
@@ -297,7 +366,7 @@ footer a:hover{color:var(--gold)}
         </svg>
       </div>
       <div>
-        <p style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1.5rem">Combino formación técnica en ingeniería electrónica con especialización en informática forense, ofreciendo una visión multidisciplinar imprescindible para la pericia judicial en entornos digitales. Mi metodología se ajusta a los estándares UNE 197010 y UNE 71505-3 para garantizar la admisibilidad de las pruebas en sede judicial.</p>
+        <p style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1.5rem">Combino formación en ingeniería con especialización en informática forense, ofreciendo una visión multidisciplinar imprescindible para la pericia judicial en entornos digitales. Mi metodología se ajusta a los estándares UNE 197010 y UNE 71505-3 para garantizar la admisibilidad de las pruebas en sede judicial.</p>
         <div class="about-features">
           <div class="feature">
             <div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
@@ -449,7 +518,7 @@ footer a:hover{color:var(--gold)}
       <div class="contact-info">
         <div class="contact-item">
           <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div class="ci-text"><h4>Zona de actuación</h4><p>Despacho en Alcalá de Henares<br><span style="color:var(--gold);font-size:13px;font-weight:600">Servicios periciales en toda España</span></p></div>
+          <div class="ci-text"><h4>Zona de actuación</h4><p><span style="color:var(--gold);font-size:13px;font-weight:600">Servicios periciales en toda España</span></p></div>
         </div>
         <div class="contact-item">
           <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
@@ -500,7 +569,7 @@ footer a:hover{color:var(--gold)}
   <div class="footer-inner">
     <div>
       <h4>informeperitoinformatico.es</h4>
-      <p>Peritaje informático forense para procedimientos civiles, penales y laborales. Actuación en Alcalá de Henares y Comunidad de Madrid.</p>
+      <p>Peritaje informático forense para procedimientos civiles, penales y laborales. Actuación en toda España.</p>
     </div>
     <div>
       <h4>Marco normativo</h4>
@@ -541,12 +610,8 @@ function getFormData(){
   }
 }
 function validateForm(d,msgEl){
-  if(!d.n||!d.e||!d.m){
-    msgEl.textContent='Por favor complete los campos obligatorios (*).';msgEl.className='err';msgEl.style.display='block';return false
-  }
-  if(!d.e.includes('@')){
-    msgEl.textContent='Introduzca un email válido.';msgEl.className='err';msgEl.style.display='block';return false
-  }
+  if(!d.n||!d.e||!d.m){msgEl.textContent='Por favor complete los campos obligatorios (*).';msgEl.className='err';msgEl.style.display='block';return false}
+  if(!d.e.includes('@')){msgEl.textContent='Introduzca un email válido.';msgEl.className='err';msgEl.style.display='block';return false}
   return true
 }
 function clearForm(){
@@ -569,6 +634,34 @@ function submitWhatsApp(){
   window.open('https://wa.me/34649716627?text='+text,'_blank')
   msg.textContent='✓ Se ha abierto WhatsApp con su consulta pre-rellenada.'
   msg.className='ok';msg.style.display='block';clearForm()
+}
+function toggleFormFlotante(){
+  const f=document.getElementById('form-flotante')
+  f.style.display=f.style.display==='none'?'block':'none'
+}
+function submitFormFlotante(){
+  const n=document.getElementById('fb-nombre').value.trim()
+  const e=document.getElementById('fb-email').value.trim()
+  const tipo=document.getElementById('fb-tipo').value
+  const msg=document.getElementById('fb-msg')
+  if(!n||!e){msg.textContent='Complete nombre y email.';msg.style.background='rgba(239,68,68,0.1)';msg.style.color='#f87171';msg.style.display='block';return}
+  if(!e.includes('@')){msg.textContent='Email no válido.';msg.style.background='rgba(239,68,68,0.1)';msg.style.color='#f87171';msg.style.display='block';return}
+  const subject=encodeURIComponent('Consulta pericial — '+n)
+  const body=encodeURIComponent('Nombre: '+n+'\nEmail: '+e+'\nAsunto: '+(tipo||'—'))
+  window.location.href='mailto:info@informeperitoinformatico.es?subject='+subject+'&body='+body
+  msg.textContent='✓ Se ha abierto su cliente de correo.';msg.style.background='rgba(37,211,102,0.1)';msg.style.color='#4ade80';msg.style.display='block'
+  document.getElementById('fb-nombre').value='';document.getElementById('fb-email').value='';document.getElementById('fb-tipo').value=''
+}
+function submitWAFlotante(){
+  const n=document.getElementById('fb-nombre').value.trim()
+  const e=document.getElementById('fb-email').value.trim()
+  const tipo=document.getElementById('fb-tipo').value
+  const msg=document.getElementById('fb-msg')
+  if(!n||!e){msg.textContent='Complete nombre y email.';msg.style.background='rgba(239,68,68,0.1)';msg.style.color='#f87171';msg.style.display='block';return}
+  const text=encodeURIComponent('Hola Enrique, consulta desde informeperitoinformatico.es\n\nNombre: '+n+'\nEmail: '+e+'\nAsunto: '+(tipo||'Consulta general'))
+  window.open('https://wa.me/34649716627?text='+text,'_blank')
+  msg.textContent='✓ Se ha abierto WhatsApp.';msg.style.background='rgba(37,211,102,0.1)';msg.style.color='#4ade80';msg.style.display='block'
+  document.getElementById('fb-nombre').value='';document.getElementById('fb-email').value='';document.getElementById('fb-tipo').value=''
 }
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
