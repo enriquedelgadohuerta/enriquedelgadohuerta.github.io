@@ -224,7 +224,7 @@ footer a:hover{color:var(--gold)}
 </div>
 
 <!-- BARRA DE CONTACTO RÁPIDO -->
-<div id="contacto-barra" style="background:var(--card);border-bottom:1px solid var(--border);padding:10px 2rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:64px">
+<div id="contacto-barra" style="position:fixed;top:64px;left:0;right:0;z-index:99;background:rgba(17,30,53,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:8px 2rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap">
   <span style="font-size:13px;color:var(--text2);font-weight:600;letter-spacing:0.5px">CONTACTO RÁPIDO:</span>
   <a href="tel:+34649716627" style="display:flex;align-items:center;gap:8px;color:var(--text);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text)'">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.2 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
@@ -245,7 +245,7 @@ footer a:hover{color:var(--gold)}
 </div>
 
 <!-- FORMULARIO DESPLEGABLE -->
-<div id="form-flotante" style="display:none;background:var(--card);border-bottom:1px solid var(--border);padding:1.5rem 2rem">
+<div id="form-flotante" style="display:none;position:fixed;top:112px;left:0;right:0;z-index:98;background:rgba(17,30,53,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:1.25rem 2rem">
   <div style="max-width:900px;margin:0 auto">
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:1rem;align-items:end">
       <div class="form-row" style="margin:0"><label>Nombre *</label><input type="text" id="fb-nombre" placeholder="Su nombre"></div>
@@ -274,7 +274,7 @@ footer a:hover{color:var(--gold)}
 </div>
 
 <!-- HERO -->
-<section class="hero" id="inicio" style="margin-top:0">
+<section class="hero" id="inicio" style="margin-top:0;padding-top:112px">
   <div class="hero-inner">
     <div>
       <div class="hero-badge">
@@ -360,10 +360,8 @@ footer a:hover{color:var(--gold)}
       <p class="section-sub">Ingeniero y perito informático con amplia trayectoria en tecnologías de la información y actuación en toda España.</p>
     </div>
     <div class="about-grid reveal">
-      <div class="about-img">
-        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,0.25)" stroke-width="1">
-          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
-        </svg>
+      <div class="about-img" style="overflow:hidden;padding:0">
+        <img src="foto.jpg" alt="Enrique Delgado — Perito Informático" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:16px">
       </div>
       <div>
         <p style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:1.5rem">Combino formación en ingeniería con especialización en informática forense, ofreciendo una visión multidisciplinar imprescindible para la pericia judicial en entornos digitales. Mi metodología se ajusta a los estándares UNE 197010 y UNE 71505-3 para garantizar la admisibilidad de las pruebas en sede judicial.</p>
