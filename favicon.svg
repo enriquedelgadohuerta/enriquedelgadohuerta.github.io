@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Fondo -->
+  <rect width="32" height="32" rx="4" fill="#0a1628"/>
+  <!-- Triángulo exterior -->
+  <polygon points="16,2 30,28 2,28" fill="#0f1e38" stroke="#c9a84c" stroke-width="1.2"/>
+  <!-- Triángulo interior decorativo -->
+  <polygon points="16,5 28,26 4,26" fill="none" stroke="#c9a84c" stroke-width="0.4" stroke-opacity="0.35"/>
+  <!-- Balanza: travesaño -->
+  <line x1="9" y1="13" x2="23" y2="13" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Balanza: palo vertical -->
+  <line x1="16" y1="9" x2="16" y2="13" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Balanza: punto central -->
+  <circle cx="16" cy="9" r="1" fill="#c9a84c"/>
+  <!-- Balanza: cadenas -->
+  <line x1="10" y1="13" x2="10" y2="16" stroke="#c9a84c" stroke-width="0.8" stroke-dasharray="1.5,1"/>
+  <line x1="22" y1="13" x2="22" y2="16" stroke="#c9a84c" stroke-width="0.8" stroke-dasharray="1.5,1"/>
+  <!-- Balanza: platillos -->
+  <ellipse cx="10" cy="17" rx="3" ry="1" fill="#c9a84c" fill-opacity="0.15" stroke="#c9a84c" stroke-width="0.8"/>
+  <ellipse cx="22" cy="17" rx="3" ry="1" fill="#c9a84c" fill-opacity="0.15" stroke="#c9a84c" stroke-width="0.8"/>
+  <!-- Lupa: círculo -->
+  <circle cx="16" cy="22" r="3.5" fill="none" stroke="#c9a84c" stroke-width="1.1"/>
+  <!-- Lupa: mango -->
+  <line x1="18.5" y1="24.5" x2="20.5" y2="26.5" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- Lupa: nodo circuito central -->
+  <circle cx="16" cy="22" r="0.7" fill="#c9a84c"/>
+</svg>
