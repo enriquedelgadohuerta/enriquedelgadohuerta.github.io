@@ -4,7 +4,7 @@
 
   <!-- ── Página principal ── -->
   <url>
-    <loc>https://www.informeperitoinformatico.es/</loc>
+    <loc>https://informeperitoinformatico.es/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -12,21 +12,21 @@
 
   <!-- ── Páginas legales ── -->
   <url>
-    <loc>https://www.informeperitoinformatico.es/privacidad.html</loc>
+    <loc>https://informeperitoinformatico.es/privacidad.html</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
 
   <url>
-    <loc>https://www.informeperitoinformatico.es/cookies.html</loc>
+    <loc>https://informeperitoinformatico.es/cookies.html</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
 
   <url>
-    <loc>https://www.informeperitoinformatico.es/aviso_legal.html</loc>
+    <loc>https://informeperitoinformatico.es/aviso_legal.html</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
