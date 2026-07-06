@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fondo hexagonal -->
+  <polygon points="32,4 58,18 58,46 32,60 6,46 6,18"
+    fill="#535d7e" stroke="#4a5470" stroke-width="1"/>
+  <!-- Anillo interior sutil -->
+  <polygon points="32,10 52,21 52,43 32,54 12,43 12,21"
+    fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <!-- Línea escáner horizontal -->
+  <line x1="14" y1="32" x2="50" y2="32"
+    stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"/>
+  <!-- Lupa: círculo -->
+  <circle cx="28" cy="28" r="10"
+    fill="none" stroke="#f0f3fa" stroke-width="2.5"/>
+  <!-- Lupa: mango -->
+  <line x1="35" y1="35" x2="44" y2="44"
+    stroke="#f0f3fa" stroke-width="3" stroke-linecap="round"/>
+  <!-- Puntos de datos -->
+  <circle cx="24" cy="27" r="2" fill="#f0f3fa"/>
+  <circle cx="29" cy="30" r="2" fill="#f0f3fa"/>
+  <circle cx="34" cy="25" r="2" fill="#f0f3fa"/>
+  <!-- Líneas entre puntos -->
+  <line x1="24" y1="27" x2="29" y2="30"
+    stroke="rgba(255,255,255,0.45)" stroke-width="1.2"/>
+  <line x1="29" y1="30" x2="34" y2="25"
+    stroke="rgba(255,255,255,0.45)" stroke-width="1.2"/>
+</svg>
