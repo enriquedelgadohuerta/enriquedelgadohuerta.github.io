@@ -368,7 +368,7 @@ footer a:hover{color:#fff}
   .hero-stats{justify-content:center}
   .hero-card{max-width:380px;margin:0 auto}
   .about-grid{grid-template-columns:1fr;gap:1.5rem}
-  .about-img{aspect-ratio:3/2;max-height:320px}
+  .about-img{aspect-ratio:4/5;max-height:none;width:220px;margin:0 auto}
   .contact-grid{grid-template-columns:1fr;gap:1.5rem}
   .process-steps{grid-template-columns:repeat(3,1fr);gap:1rem;row-gap:1.5rem}
   .process-steps::before{display:none}
@@ -389,6 +389,9 @@ footer a:hover{color:#fff}
   section{padding:2rem 1rem}
   .blog-modal-inner{padding:1.25rem;margin:1rem auto}
   .footer-bottom{flex-direction:column;text-align:center;gap:4px}
+}
+@media(max-width:600px){
+  .about-img{width:170px}
 }
 @media(max-width:380px){
   .why-grid{grid-template-columns:1fr}
