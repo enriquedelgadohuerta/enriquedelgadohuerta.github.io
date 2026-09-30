@@ -1,103 +1,24 @@
- # Portfolio Peritaje Informático
+# informeperitoinformatico.es
 
-Sitio web profesional para perito informático judicial. Estático, sin dependencias de servidor (excepto para el formulario de contacto).
+Web profesional de Enrique Delgado, perito informático. Sitio estático publicado con GitHub Pages (dominio en `CNAME`).
 
-## Estructura de ficheros
+## Estructura
 
 ```
-portfolio-peritaje/
-├── index.html              ← Página principal (portfolio)
-├── styles.css              ← Estilos completos
-├── main.js                 ← Interactividad (navbar, formulario, animaciones)
-├── aviso-legal.html        ← Aviso legal (LSSI)
-├── politica-privacidad.html← Política de privacidad (RGPD)
-├── politica-cookies.html   ← Política de cookies
-└── README.md               ← Este fichero
+index.html              Página principal (una sola página con anclas)
+styles.css              Estilos compartidos por todas las páginas
+main.js                 Menú móvil, animaciones y formulario (sin servidor)
+aviso_legal.html        Aviso legal
+privacidad.html         Política de privacidad
+cookies.html            Política de cookies (la web no usa cookies)
+assets/fonts/           Fraunces y Atkinson Hyperlegible (SIL OFL 1.1), autoalojadas
+favicon.svg, og-image.jpg, perito-informatico-enrique-delgado-*.jpg
+sitemap.xml, robots.txt, CNAME
 ```
 
-## Qué necesitas personalizar
+## Notas
 
-Busca y reemplaza en todos los ficheros:
-
-| Marcador               | Reemplazar por                              |
-|------------------------|---------------------------------------------|
-| `Nombre Apellidos`     | Tu nombre completo                          |
-| `XXXXX`               | Tu número de colegiado                      |
-| `enriquedelgadohuerta@gmail.com`  | Tu email profesional                        |
-| `+34 600 000 000`      | Tu teléfono real                            |
-| `[Dirección]`          | Tu dirección profesional                    |
-| `[CP]`                 | Tu código postal                            |
-| `informeperitoinformatico.es`     | Tu dominio real                             |
-| `X-XXXXXXXX`           | Tu NIF/CIF                                  |
-| `Col. Nº XXXXX COIIE`  | Tu colegio y número real                    |
-| `Madrid`               | Tu ciudad si es distinta                    |
-
-## Formulario de contacto
-
-El formulario incluye validación frontend. Para hacerlo funcional en producción, elige una opción:
-
-### Opción A — Formspree (gratis, fácil)
-1. Regístrate en https://formspree.io
-2. Crea un nuevo formulario
-3. En `main.js`, reemplaza el bloque `setTimeout` por:
-```javascript
-const res = await fetch('https://formspree.io/f/TU_ID', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    nombre: form.nombre.value,
-    email: form.email.value,
-    telefono: form.telefono.value,
-    tipo: form.tipo.value,
-    mensaje: form.mensaje.value
-  })
-});
-if (res.ok) showMessage('success', '✓ Consulta recibida...');
-else showMessage('error', '⚠ Error al enviar. Inténtelo de nuevo.');
-```
-
-### Opción B — EmailJS (sin servidor)
-1. Regístrate en https://www.emailjs.com
-2. Conecta tu cuenta de email
-3. Añade su SDK y configura el envío
-
-### Opción C — PHP (hosting propio)
-Crea un fichero `send.php` y usa `fetch('/send.php', { method: 'POST', body: formData })`.
-
-## Opciones de publicación
-
-### GitHub Pages (gratis)
-1. Crea repositorio en GitHub
-2. Sube los ficheros
-3. Ve a Settings → Pages → Source: main branch
-
-### Netlify (gratis, recomendado)
-1. Arrastra la carpeta a https://app.netlify.com/drop
-2. Configura dominio personalizado en Settings
-
-### Hosting tradicional (FTP)
-Sube los ficheros a la carpeta `public_html` o `www` de tu hosting.
-
-## SEO — Recomendaciones
-
-- Añade tu foto real en `.profile-avatar` (reemplaza el placeholder SVG)
-- Actualiza las estadísticas reales (+200 informes, etc.)
-- Añade el atributo `lang` correcto ya está en `es`
-- Configura Google Search Console con tu dominio
-- Considera añadir un sitemap.xml (generadores gratuitos online)
-
-## RGPD — Checklist legal
-
-- [ ] Sustituir todos los datos ficticios por los reales
-- [ ] Configurar el banner de cookies (recomendado: Cookiebot o Iubenda)
-- [ ] Registrar el tratamiento de datos en el RAAD (si aplica)
-- [ ] Revisar la política de privacidad con tu abogado
-- [ ] Añadir tu número de colegiado real
-
-## Tecnologías
-
-- HTML5 semántico
-- CSS3 con variables (sin framework)
-- JavaScript vanilla (sin dependencias)
-- Google Fonts: DM Serif Display + IBM Plex Mono + Outfit
-- Schema.org estructurado (LocalBusiness) generado dinámicamente
+- **Formulario de contacto**: no envía datos a ningún servidor. Compone el mensaje y lo abre en WhatsApp o en el correo del visitante.
+- **Sin cookies ni terceros**: no hay Google Fonts, analítica ni avatares externos. Si se añade algo así, actualizar `cookies.html` y `privacidad.html`.
+- **Datos estructurados**: `ProfessionalService`, `Person` y `FAQPage` en `index.html`. Las preguntas del JSON-LD deben coincidir con las visibles en la sección `#preguntas`.
+- **Casos tipo**: la sección `#casos` contiene ejemplos ilustrativos, no testimonios. No marcar reseñas con Schema.org salvo que sean reales y verificables.

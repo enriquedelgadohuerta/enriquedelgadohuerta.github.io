@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-# Bloquear páginas legales de la indexación
-
-# Sitemap
 Sitemap: https://informeperitoinformatico.es/sitemap.xml
