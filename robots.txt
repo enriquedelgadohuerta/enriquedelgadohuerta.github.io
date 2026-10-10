@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://informeperitoinformatico.es/sitemap.xml
+Sitemap: https://informeperitoinformatico.es/oposiciones-tecnologia/sitemap.xml
