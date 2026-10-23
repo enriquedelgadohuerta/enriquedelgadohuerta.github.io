@@ -44,3 +44,7 @@ python3 _tools/generar_zonas.py
 - `robots.txt` permite expresamente los rastreadores de búsqueda y de IA (OAI-SearchBot, Google-Extended, Bingbot, Claude-SearchBot, PerplexityBot…).
 - `llms.txt`: resumen del sitio para asistentes de IA. Mantenerlo coherente con la home.
 - IndexNow: la clave es el fichero `<32 hex>.txt` de la raíz (no borrarlo). Tras publicar, `python3 _tools/indexnow.py` avisa a Bing de todas las URLs del sitemap.
+
+## Artículos
+
+`/articulos/` y cada artículo se generan con `python3 _tools/generar_articulos.py` (lista `ARTICULOS` dentro del script). Después ejecutar `python3 _tools/generar_zonas.py` para regenerar el sitemap con los artículos. Son los mismos contenidos que se publican en LinkedIn.

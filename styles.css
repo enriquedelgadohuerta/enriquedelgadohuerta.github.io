@@ -367,3 +367,32 @@ a.channel:hover{border-color:var(--line-2);box-shadow:var(--shadow);color:var(--
   .facts div{grid-template-columns:1fr;gap:4px}
   .cta-local{padding:24px}
 }
+
+/* ---------- Artículos (/articulos/) ---------- */
+.article .crumbs{margin-bottom:18px}
+.article h1{font-size:clamp(30px,4.6vw,44px);margin-bottom:10px}
+.article-body{font-size:17.5px;color:var(--ink-2)}
+.article-body p{margin-bottom:16px}
+.article-body h2{font-size:clamp(22px,3vw,27px);color:var(--ink);margin:34px 0 12px}
+.article-body ul,.article-body ol{margin:0 0 18px 24px}
+.article-body li{margin-bottom:8px}
+.article-body strong{color:var(--ink)}
+.article-body .note{margin:22px 0}
+.article-cta{margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow)}
+.article-cta h2{font-size:24px;margin-bottom:8px}
+.article-cta p{color:var(--ink-2);margin-bottom:18px}
+.article-cta .hero-ctas{margin-bottom:0}
+.article-more{margin-top:40px;padding:0}
+.article-more h2{font-size:22px;margin-bottom:14px}
+.article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.article-card{display:flex;flex-direction:column;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;text-decoration:none;color:var(--ink);transition:border-color .2s,box-shadow .2s,transform .2s}
+.article-card:hover{border-color:var(--line-2);box-shadow:var(--shadow);transform:translateY(-2px);color:var(--ink)}
+.article-card h2,.article-card h3{font-size:20px;line-height:1.25}
+.article-card p{color:var(--ink-2);font-size:16px}
+.article-card .g-tag{align-self:flex-start;font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#9a5a12}
+.article-card .more{margin-top:auto;font-weight:700;color:var(--accent-ink)}
+.guides-articles{margin-bottom:28px}
+.verified{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-size:15.5px;font-weight:700;color:var(--accent-ink);text-decoration:none}
+.verified:hover{text-decoration:underline}
+@media (max-width:1020px){.article-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){.article-grid{grid-template-columns:1fr}.article-cta{padding:22px}}

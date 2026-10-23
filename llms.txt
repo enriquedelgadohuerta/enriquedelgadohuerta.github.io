@@ -6,7 +6,7 @@ Datos de contacto:
 - Teléfono y WhatsApp: +34 649 716 627
 - Correo: info@informeperitoinformatico.es
 - Telegram: @informeperitoinformatico
-- LinkedIn: https://www.linkedin.com/in/perito-informatico-enrique-delgado/
+- LinkedIn (identidad verificada): https://www.linkedin.com/in/perito-informatico-enrique-delgado/
 - Horario: lunes a viernes de 16:00 a 21:00; sábados de 10:00 a 14:00
 - Primera consulta gratuita; presupuesto cerrado por escrito antes de empezar
 
@@ -26,6 +26,12 @@ Qué no hace: no accede a dispositivos ni cuentas de terceros sin derecho legít
 - [Capturas de pantalla e imágenes](https://informeperitoinformatico.es/#servicios): metadatos EXIF, coherencia de formato, detección de manipulaciones
 - [Forense de dispositivos móviles](https://informeperitoinformatico.es/#servicios): extracción lógica y análisis de copias de seguridad de Android e iOS
 - [Informe pericial y contrapericial](https://informeperitoinformatico.es/#servicios): informe UNE 197010, revisión del informe de la parte contraria, ratificación en juicio
+
+## Artículos
+
+- [¿Basta un pantallazo de WhatsApp como prueba en un juicio?](https://informeperitoinformatico.es/articulos/pantallazos-whatsapp-prueba-juicio/): jurisprudencia del Supremo (STS 300/2015, STS 629/2025) y cómo reforzar la prueba
+- [La factura con otra cuenta bancaria](https://informeperitoinformatico.es/articulos/fraude-factura-cambio-cuenta-bancaria/): fraude BEC, cabeceras, SPF/DKIM/DMARC y qué hacer
+- [Qué hacer en las primeras horas para no perder una prueba digital](https://informeperitoinformatico.es/articulos/primeras-horas-conservar-prueba-digital/)
 
 ## Zonas con atención presencial
 

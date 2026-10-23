@@ -439,6 +439,7 @@ def header():
         <li><a href="/#como-trabajo">Cómo trabajo</a></li>
         <li><a href="/#precio">Precio</a></li>
         <li><a href="/zonas/">Zonas</a></li>
+        <li><a href="/articulos/">Artículos</a></li>
         <li><a class="btn btn-primary btn-sm" href="#contacto">Consulta gratis</a></li>
       </ul>
     </nav>
@@ -454,6 +455,7 @@ def header():
     <a href="/#precio">Precio</a>
     <a href="/#preguntas">Preguntas frecuentes</a>
     <a href="/zonas/">Zonas donde trabajo</a>
+    <a href="/articulos/">Artículos</a>
     <a href="#contacto">Contacto</a>
   </nav>
 </header>"""
@@ -697,6 +699,13 @@ def pagina_zonas():
 # ───────────────────────── sitemap ─────────────────────────
 def sitemap():
     urls = [(SITE + "/", "monthly", "1.0"), (SITE + "/zonas/", "monthly", "0.7")]
+    # artículos (generados por _tools/generar_articulos.py)
+    art_dir = os.path.join(ROOT, "articulos")
+    if os.path.isdir(art_dir):
+        urls.append((SITE + "/articulos/", "weekly", "0.8"))
+        for d in sorted(os.listdir(art_dir)):
+            if os.path.exists(os.path.join(art_dir, d, "index.html")):
+                urls.append((SITE + f"/articulos/{d}/", "monthly", "0.8"))
     orden = sorted(LUGARES, key=lambda l: ({"base": 0, "local": 1, "cercana": 2, "remota": 3}[l["modo"]], l["dist"]))
     for l in orden:
         pr = {"base": "0.9", "local": "0.8", "cercana": "0.6", "remota": "0.5"}[l["modo"]]
