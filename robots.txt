@@ -1,4 +1,45 @@
+# informeperitoinformatico.es
+# Acceso abierto a buscadores y asistentes de IA (ChatGPT, Gemini, Copilot, Claude, Perplexity).
+
 User-agent: *
+Allow: /
+
+# Buscadores
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# OpenAI — ChatGPT search, peticiones de usuarios y entrenamiento
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Google — Gemini (Google-Extended no afecta a Google Search)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic — Claude
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
 Allow: /
 
 Sitemap: https://informeperitoinformatico.es/sitemap.xml

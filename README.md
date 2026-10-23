@@ -38,3 +38,9 @@ python3 _tools/generar_zonas.py
 - Para añadir un municipio, se añade una entrada a `lugares` y se vuelve a ejecutar el script. Para cambiar textos, editar las funciones del script, no el HTML generado.
 - Cada página incluye datos estructurados `Service` (proveedor: la organización de la home), `BreadcrumbList` y `FAQPage` coherente con las preguntas visibles.
 - El script reescribe `sitemap.xml` entero.
+
+## Buscadores con IA (ChatGPT, Gemini, Copilot, Claude, Perplexity)
+
+- `robots.txt` permite expresamente los rastreadores de búsqueda y de IA (OAI-SearchBot, Google-Extended, Bingbot, Claude-SearchBot, PerplexityBot…).
+- `llms.txt`: resumen del sitio para asistentes de IA. Mantenerlo coherente con la home.
+- IndexNow: la clave es el fichero `<32 hex>.txt` de la raíz (no borrarlo). Tras publicar, `python3 _tools/indexnow.py` avisa a Bing de todas las URLs del sitemap.

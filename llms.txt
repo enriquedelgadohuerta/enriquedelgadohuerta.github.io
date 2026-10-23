@@ -1,0 +1,44 @@
+# Enrique Delgado — Perito informático
+
+> Perito informático con base en Alcalá de Henares (Madrid). Elabora informes periciales sobre pruebas digitales para particulares y abogados: autenticidad de conversaciones de WhatsApp y Telegram, correos electrónicos (cabeceras, SPF, DKIM, DMARC), capturas de pantalla e imágenes, y extracción forense de teléfonos Android e iOS. Informes conforme a UNE 197010, UNE 71505-3 e ISO/IEC 27037, con ratificación en juicio. Atiende en persona en el Corredor del Henares y la Comunidad de Madrid, y a distancia en el resto de España.
+
+Datos de contacto:
+- Teléfono y WhatsApp: +34 649 716 627
+- Correo: info@informeperitoinformatico.es
+- Telegram: @informeperitoinformatico
+- Horario: lunes a viernes de 16:00 a 21:00; sábados de 10:00 a 14:00
+- Primera consulta gratuita; presupuesto cerrado por escrito antes de empezar
+
+Formación y experiencia: ingeniero técnico industrial con más de veinte años en consultoría de datos y tecnología y en proyectos de transformación digital, dedicado a la informática forense.
+
+Qué no hace: no accede a dispositivos ni cuentas de terceros sin derecho legítimo (consentimiento del titular o autorización judicial).
+
+## Páginas principales
+
+- [Inicio](https://informeperitoinformatico.es/): servicios, cómo trabaja, precio, preguntas frecuentes y contacto
+- [Zonas donde trabaja](https://informeperitoinformatico.es/zonas/): Corredor del Henares, partidos judiciales de la Comunidad de Madrid y capitales de provincia
+
+## Servicios
+
+- [Peritaje de WhatsApp y mensajería](https://informeperitoinformatico.es/#servicios): adquisición forense de la conversación, cotejo de capturas con el original, mensajes eliminados cuando es técnicamente posible, huellas SHA-256
+- [Peritaje de correo electrónico](https://informeperitoinformatico.es/#servicios): análisis de cabeceras, SPF/DKIM/DMARC, suplantaciones y fraude de factura (BEC)
+- [Capturas de pantalla e imágenes](https://informeperitoinformatico.es/#servicios): metadatos EXIF, coherencia de formato, detección de manipulaciones
+- [Forense de dispositivos móviles](https://informeperitoinformatico.es/#servicios): extracción lógica y análisis de copias de seguridad de Android e iOS
+- [Informe pericial y contrapericial](https://informeperitoinformatico.es/#servicios): informe UNE 197010, revisión del informe de la parte contraria, ratificación en juicio
+
+## Zonas con atención presencial
+
+- [Alcalá de Henares](https://informeperitoinformatico.es/perito-informatico-alcala-de-henares/)
+- [Madrid](https://informeperitoinformatico.es/perito-informatico-madrid/)
+- [Torrejón de Ardoz](https://informeperitoinformatico.es/perito-informatico-torrejon-de-ardoz/)
+- [Coslada](https://informeperitoinformatico.es/perito-informatico-coslada/)
+- [San Fernando de Henares](https://informeperitoinformatico.es/perito-informatico-san-fernando-de-henares/)
+- [Meco](https://informeperitoinformatico.es/perito-informatico-meco/)
+- [Guadalajara](https://informeperitoinformatico.es/perito-informatico-guadalajara/)
+- [Azuqueca de Henares](https://informeperitoinformatico.es/perito-informatico-azuqueca-de-henares/)
+- [Arganda del Rey](https://informeperitoinformatico.es/perito-informatico-arganda-del-rey/)
+
+## Opcional
+
+- [Aviso legal](https://informeperitoinformatico.es/aviso_legal.html)
+- [Política de privacidad](https://informeperitoinformatico.es/privacidad.html)
