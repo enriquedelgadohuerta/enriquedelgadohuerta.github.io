@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Analizador de conversaciones | Perito Informático</title>
+<meta name="description" content="Herramienta para visualizar y filtrar exportaciones de WhatsApp y Telegram ya adquiridas. El análisis se hace en tu propio navegador: ningún dato se envía a ningún servidor.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#fbf7f1">
+<link rel="canonical" href="https://informeperitoinformatico.es/analizador.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://informeperitoinformatico.es/analizador.html">
+<meta property="og:title" content="Analizador de conversaciones — Perito Informático">
+<meta property="og:description" content="Visualiza y filtra exportaciones de WhatsApp y Telegram en local, sin subir nada a ningún servidor.">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="informeperitoinformatico.es">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* ---- Estilos propios del analizador, sobre la paleta del sitio ---- */
+  .tool-hero{padding:calc(var(--head-h) + 32px) 0 20px}
+  .tool-hero h1{font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 .4rem}
+  .tool-hero p{color:var(--ink-2);max-width:62ch;margin:.2rem 0}
+  .tool-hero .eyebrow{font-family:var(--ff-body);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--accent);margin:0 0 .5rem}
+
+  .tool-grid{display:grid;grid-template-columns:340px 1fr;gap:22px;align-items:start;padding:8px 0 56px}
+  @media(max-width:880px){.tool-grid{grid-template-columns:1fr}}
+
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .panel.side{padding:18px;position:sticky;top:calc(var(--head-h) + 14px)}
+  @media(max-width:880px){.panel.side{position:static}}
+
+  .drop{border:1.6px dashed var(--line-2);border-radius:var(--radius);padding:20px;text-align:center;color:var(--ink-3);cursor:pointer;transition:.15s;background:var(--paper)}
+  .drop:hover,.drop.hot{border-color:var(--accent);color:var(--ink);background:var(--accent-soft)}
+  .drop b{color:var(--accent-ink)}
+  .drop .small{font-size:.8rem}
+  input[type=file]{display:none}
+
+  .files{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+  .file{background:var(--paper-2);border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:.82rem}
+  .file .n{font-weight:700;word-break:break-all}
+  .file .m{color:var(--ink-3);margin-top:3px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .tag{font-size:.66rem;padding:1px 7px;border-radius:5px;border:1px solid var(--line-2);color:var(--ink-3)}
+  .tag.wa{color:var(--wa);border-color:#bfe3cd}
+  .tag.tg{color:var(--tg);border-color:#bfe0f1}
+  .hash{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.66rem;color:var(--ink-3);word-break:break-all;margin-top:5px;user-select:all}
+
+  .ctrl label{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin:14px 0 5px;font-weight:700}
+  select,input[type=text],input[type=date]{width:100%;background:var(--card);color:var(--ink);border:1px solid var(--line-2);border-radius:9px;padding:9px 10px;font-size:.92rem;font-family:inherit}
+  select:focus,input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .rowf{display:flex;gap:8px}
+  .rowf>*{flex:1;min-width:0}
+  .toggles{display:flex;flex-direction:column;gap:7px;margin-top:6px}
+  .chk{display:flex;align-items:center;gap:9px;font-size:.88rem;color:var(--ink);cursor:pointer}
+  .chk input{accent-color:var(--accent);width:16px;height:16px}
+
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:.86rem;color:var(--ink-2);flex-wrap:wrap}
+  .count-pill{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--paper-2);border:1px solid var(--line);padding:2px 9px;border-radius:6px;color:var(--ink)}
+  .btn-sm2{font-size:.84rem;padding:7px 13px;border-radius:9px;cursor:pointer;font-family:inherit;border:1px solid var(--line-2);background:var(--card);color:var(--ink)}
+  .btn-sm2:hover{border-color:var(--accent);color:var(--accent-ink)}
+  .btn-sm2.prim{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn-sm2.prim:hover{background:var(--accent-ink);color:#fff}
+
+  .msgs{max-height:72vh;overflow:auto;padding:14px 18px}
+  .msg{border-left:3px solid var(--line-2);padding:7px 0 7px 12px;margin-bottom:11px}
+  .msg .h{font-size:.76rem;color:var(--ink-3);display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+  .msg .sender{font-weight:700;color:var(--ink-2)}
+  .msg .ts{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem}
+  .msg .body{margin-top:3px;white-space:pre-wrap;word-break:break-word;font-size:.95rem}
+  .msg.system{border-color:var(--accent);opacity:.85}
+  .msg.system .body{font-style:italic;color:var(--ink-3)}
+  .msg.deleted{border-color:var(--warm)}
+  .badge{font-size:.64rem;padding:1px 7px;border-radius:5px;border:1px solid}
+  .badge.media{color:var(--warm);border-color:var(--warm-soft);background:var(--warm-soft)}
+  .badge.del{color:#b4551f;border-color:#f0cdb0}
+  .badge.sys{color:var(--accent-ink);border-color:var(--accent-soft);background:var(--accent-soft)}
+  .badge.edit{color:var(--ink-3);border-color:var(--line-2)}
+  .empty{color:var(--ink-3);text-align:center;padding:54px 20px}
+
+  .note{font-size:.8rem;color:var(--ink-2);background:var(--warm-soft);border:1px solid #f0dcb6;border-left:4px solid var(--warm);border-radius:10px;padding:11px 13px;margin-top:16px;line-height:1.55}
+  .legal-strip{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0}
+  .legal-strip .wrap{display:flex;gap:14px;align-items:flex-start;color:var(--ink-2);font-size:.86rem;max-width:var(--wrap)}
+  .legal-strip strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<a class="skip" href="#tool">Saltar al contenido</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="/" aria-label="informeperitoinformatico.es — inicio">
+      <svg class="brand-mark" width="38" height="42" viewBox="0 0 36 40" aria-hidden="true">
+        <polygon points="18,2 34,11 34,29 18,38 2,29 2,11" fill="#0f6e67"/>
+        <circle cx="16" cy="18" r="6.5" fill="none" stroke="#fbf7f1" stroke-width="2.2"/>
+        <line x1="20.8" y1="22.8" x2="26" y2="28" stroke="#fbf7f1" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M12.6 18.3l2.3 2.2 4-4.3" fill="none" stroke="#e9a23b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Enrique Delgado</span>
+        <span class="brand-sub">Perito informático · Alcalá de Henares</span>
+      </span>
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav">
+        <li><a href="/#te-ayudo">¿Qué te ha pasado?</a></li>
+        <li><a href="/#como-trabajo">Cómo trabajo</a></li>
+        <li><a href="/#precio">Precio</a></li>
+        <li><a href="/#sobre-mi">Sobre mí</a></li>
+        <li><a href="/articulos/">Artículos</a></li>
+        <li><a href="/analizador.html" aria-current="page">Analizador</a></li>
+        <li><a class="btn btn-primary btn-sm" href="/#contacto">Consulta gratis</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="label">Menú</span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil">
+    <a href="/#te-ayudo">¿Qué te ha pasado?</a>
+    <a href="/#como-trabajo">Cómo trabajo</a>
+    <a href="/#precio">Precio</a>
+    <a href="/#sobre-mi">Sobre mí</a>
+    <a href="/#preguntas">Preguntas frecuentes</a>
+    <a href="/articulos/">Artículos</a>
+    <a href="/analizador.html" aria-current="page">Analizador de conversaciones</a>
+    <a href="/#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main id="tool">
+  <section class="wrap tool-hero">
+    <p class="eyebrow">Herramienta de apoyo</p>
+    <h1>Analizador de conversaciones</h1>
+    <p>Visualiza y filtra una exportación de <strong>WhatsApp</strong> (.txt) o <strong>Telegram</strong> (.json) que ya hayas adquirido lícitamente. Todo el procesamiento ocurre <strong>en tu propio navegador</strong>: ningún mensaje, imagen ni fichero se sube a ningún servidor.</p>
+  </section>
+
+  <div class="legal-strip">
+    <div class="wrap">
+      <span aria-hidden="true">⚖️</span>
+      <span>Esta herramienta <strong>no extrae ni descarga conversaciones</strong> de ninguna cuenta: solo <em>lee</em> un fichero de exportación que ya obra en tu poder. La adquisición válida de la evidencia (con el dispositivo, cálculo de hash y cadena de custodia) es un paso previo e independiente. El extracto que genera es material de análisis, no constituye por sí mismo acto de adquisición.</span>
+    </div>
+  </div>
+
+  <div class="wrap tool-grid">
+    <aside class="panel side">
+      <label class="drop" id="drop">
+        <b>Cargar exportación</b><br>
+        Arrastra aquí o pulsa para seleccionar<br>
+        <span class="small">.txt (WhatsApp) · .json (Telegram)</span>
+        <input type="file" id="fileInput" multiple accept=".txt,.json">
+      </label>
+      <div class="files" id="fileList"></div>
+
+      <div class="ctrl">
+        <label for="convSel">Conversación</label>
+        <select id="convSel"><option>— carga un fichero —</option></select>
+
+        <label for="senderSel">Interlocutor</label>
+        <select id="senderSel"><option value="">Todos</option></select>
+
+        <label for="search">Búsqueda en texto</label>
+        <input type="text" id="search" placeholder="palabra, frase, número…">
+
+        <label>Rango de fechas</label>
+        <div class="rowf">
+          <input type="date" id="dFrom" aria-label="Desde">
+          <input type="date" id="dTo" aria-label="Hasta">
+        </div>
+
+        <label>Filtros</label>
+        <div class="toggles">
+          <label class="chk"><input type="checkbox" id="fMedia"> Solo multimedia</label>
+          <label class="chk"><input type="checkbox" id="fDel"> Solo eliminados</label>
+          <label class="chk"><input type="checkbox" id="fSys"> Solo mensajes de sistema</label>
+          <label class="chk"><input type="checkbox" id="hideSys"> Ocultar mensajes de sistema</label>
+        </div>
+      </div>
+
+      <div class="note">
+        Los <strong>hashes SHA-256</strong> se calculan en local sobre el fichero cargado, como control de integridad del extracto. Las exportaciones nativas de WhatsApp/Telegram <strong>no contienen mensajes borrados</strong>: solo aparecerán si la adquisición de origen los capturó (p. ej. extracción de la base de datos del terminal).
+      </div>
+    </aside>
+
+    <section class="panel">
+      <div class="bar">
+        <div>Mostrando <span class="count-pill" id="shown">0</span> de <span class="count-pill" id="total">0</span> mensajes</div>
+        <div style="display:flex;gap:8px">
+          <button class="btn-sm2" id="clearBtn">Limpiar</button>
+          <button class="btn-sm2 prim" id="exportBtn">Exportar extracto</button>
+        </div>
+      </div>
+      <div class="msgs" id="msgs">
+        <div class="empty">Carga una o varias exportaciones para empezar.<br>Cada fichero se lista como una conversación en el desplegable.</div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Enrique Delgado · Perito informático</h4>
+        <p>Informes periciales de WhatsApp, correo electrónico, capturas de pantalla, imágenes y dispositivos móviles para particulares y abogados. Alcalá de Henares, Comunidad de Madrid y toda España.</p>
+      </div>
+      <div>
+        <h4>Normativa</h4>
+        <ul>
+          <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2000-323" target="_blank" rel="noopener">Ley de Enjuiciamiento Civil</a></li>
+          <li><a href="https://www.une.org/encuentra-tu-norma/busca-tu-norma/norma/?c=norma-une-197010-2013-n0051625" target="_blank" rel="noopener">UNE 197010 — Informes periciales</a></li>
+          <li><a href="https://www.iso.org/standard/44381.html" target="_blank" rel="noopener">ISO/IEC 27037 — Evidencia digital</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Zonas</h4>
+        <ul>
+          <li><a href="/perito-informatico-alcala-de-henares/">Alcalá de Henares</a></li>
+          <li><a href="/perito-informatico-torrejon-de-ardoz/">Torrejón de Ardoz</a></li>
+          <li><a href="/perito-informatico-madrid/">Madrid</a></li>
+          <li><a href="/zonas/">Todas las zonas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal y redes</h4>
+        <ul>
+          <li><a href="aviso_legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="cookies.html">Política de cookies</a></li>
+          <li><a href="https://www.linkedin.com/in/perito-informatico-enrique-delgado/" target="_blank" rel="me noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 informeperitoinformatico.es</span>
+      <span>Esta web no usa cookies ni rastreadores. El analizador procesa los ficheros solo en tu navegador.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+<script>
+/* ===== Analizador de conversaciones — 100% en el navegador ===== */
+(function(){
+const state = { files:[], convs:[] };
+const $ = s => document.querySelector(s);
+
+async function sha256(buf){
+  const d = await crypto.subtle.digest('SHA-256', buf);
+  return [...new Uint8Array(d)].map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+function esc(s){return (s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function clean(s){return (s||'').replace(/[‎‏]/g,'');}
+
+const DELETED = ["se eliminó este mensaje","eliminaste este mensaje","este mensaje fue eliminado","this message was deleted","you deleted this message","mensaje eliminado"];
+const MEDIA = ["multimedia omitido","media omitted","imagen omitida","audio omitido","video omitido","vídeo omitido","sticker omitido","gif omitido","documento omitido","archivo adjunto","file attached","<adjunto",".jpg",".jpeg",".png",".webp",".opus",".mp4",".pdf",".vcf",".m4a",".3gp"];
+function isDeleted(t){const l=t.toLowerCase();return DELETED.some(d=>l.includes(d));}
+function isMedia(t){const l=t.toLowerCase();return MEDIA.some(d=>l.includes(d));}
+
+const WA_IOS = /^\[(\d{1,2}\/\d{1,2}\/\d{2,4}),?\s(\d{1,2}:\d{2}(?::\d{2})?(?:\s?[APap]\.?[Mm]\.?)?)\]\s?([\s\S]*)$/;
+const WA_AND = /^(\d{1,2}\/\d{1,2}\/\d{2,4}),?\s(\d{1,2}:\d{2}(?::\d{2})?(?:\s?[APap]\.?[Mm]\.?)?)\s?[-–]\s?([\s\S]*)$/;
+function parseWhatsApp(text){
+  const lines = text.split(/\r?\n/);
+  const msgs = []; let cur = null;
+  const push = ()=>{ if(cur) msgs.push(cur); };
+  for(const raw of lines){
+    const line = clean(raw);
+    let m = line.match(WA_IOS) || line.match(WA_AND);
+    if(m){
+      push();
+      const dateStr=m[1],timeStr=m[2],rest=m[3];
+      let sender=null,body=rest,system=false;
+      const sm = rest.match(/^(.{1,70}?):\s([\s\S]*)$/);
+      if(sm){sender=sm[1];body=sm[2];}else{system=true;}
+      cur={tsRaw:dateStr+' '+timeStr,ts:parseWADate(dateStr,timeStr),sender,text:body,system,deleted:!system&&isDeleted(body),media:!system&&isMedia(body)};
+    } else if(cur){ cur.text+='\n'+line; if(!cur.system){cur.deleted=cur.deleted||isDeleted(cur.text);cur.media=cur.media||isMedia(cur.text);} }
+  }
+  push(); return msgs;
+}
+function parseWADate(d,t){
+  try{
+    let [a,b,y]=d.split('/').map(Number); if(y<100)y+=2000;
+    let hh=0,mm=0; const tm=t.match(/(\d{1,2}):(\d{2})/); if(tm){hh=+tm[1];mm=+tm[2];}
+    if(/pm/i.test(t)&&hh<12)hh+=12; if(/am/i.test(t)&&hh===12)hh=0;
+    const dt=new Date(y,b-1,a,hh,mm); return isNaN(dt)?null:dt;
+  }catch(e){return null;}
+}
+
+function tgText(t){
+  if(typeof t==='string')return t;
+  if(Array.isArray(t))return t.map(e=>typeof e==='string'?e:(e.text||'')).join('');
+  return '';
+}
+function parseTelegram(json){
+  let chats=[];
+  if(json.chats&&json.chats.list)chats=json.chats.list;
+  else if(json.messages&&json.name!==undefined)chats=[{name:json.name,id:json.id,messages:json.messages}];
+  else if(json.messages)chats=[{name:'(sin nombre)',messages:json.messages}];
+  return chats.map(c=>{
+    const msgs=(c.messages||[]).map(m=>{
+      const service=m.type==='service';
+      const media=!!(m.photo||m.file||m.media_type||m.sticker_emoji||m.location_information||m.contact_information||m.poll);
+      let body=service?(m.action||'')+(m.actor?' — '+m.actor:''):tgText(m.text);
+      if(media&&!body)body='['+((m.media_type||m.photo)?'multimedia':'archivo')+(m.file?': '+m.file:'')+']';
+      let dt=null; if(m.date){dt=new Date(m.date);if(isNaN(dt))dt=null;} if(!dt&&m.date_unixtime)dt=new Date(+m.date_unixtime*1000);
+      return {tsRaw:m.date?String(m.date).replace('T',' '):(m.date_unixtime||''),ts:dt,sender:service?null:(m.from||'(desconocido)'),text:body,system:service,deleted:false,media,edited:!!m.edited,forwarded:!!m.forwarded_from};
+    });
+    return {name:c.name||('chat '+(c.id||'')),platform:'Telegram',messages:msgs};
+  });
+}
+
+async function handleFiles(fileListObj){
+  for(const f of fileListObj){
+    const buf=await f.arrayBuffer();
+    const hash=await sha256(buf);
+    const text=new TextDecoder('utf-8').decode(buf);
+    const rec={name:f.name,size:f.size,hash,platform:null};
+    try{
+      if(f.name.toLowerCase().endsWith('.json')){
+        const chats=parseTelegram(JSON.parse(text)); rec.platform='Telegram';
+        chats.forEach(c=>state.convs.push({name:c.name,platform:'Telegram',file:f.name,messages:c.messages}));
+      } else {
+        const msgs=parseWhatsApp(text); rec.platform='WhatsApp';
+        state.convs.push({name:f.name.replace(/\.txt$/i,''),platform:'WhatsApp',file:f.name,messages:msgs});
+      }
+    }catch(e){rec.error='No se pudo analizar: '+e.message;}
+    state.files.push(rec);
+  }
+  renderFiles(); renderConvSelect(); if(state.convs.length)$('#convSel').selectedIndex=$('#convSel').options.length-1;
+  render();
+}
+function renderFiles(){
+  $('#fileList').innerHTML=state.files.map(f=>`
+    <div class="file">
+      <div class="n">${esc(f.name)}</div>
+      <div class="m">${f.platform?`<span class="tag ${f.platform==='WhatsApp'?'wa':'tg'}">${f.platform}</span>`:''}<span class="tag">${(f.size/1024).toFixed(1)} KB</span></div>
+      ${f.error?`<div class="m" style="color:#b4551f">${esc(f.error)}</div>`:`<div class="hash">SHA-256: ${f.hash}</div>`}
+    </div>`).join('');
+}
+function renderConvSelect(){
+  const s=$('#convSel');
+  if(!state.convs.length){s.innerHTML='<option>— carga un fichero —</option>';return;}
+  s.innerHTML=state.convs.map((c,i)=>`<option value="${i}">[${c.platform}] ${esc(c.name)} (${c.messages.length})</option>`).join('');
+}
+function activeConv(){return state.convs[+$('#convSel').value]||null;}
+function renderSenderSelect(){
+  const c=activeConv(),s=$('#senderSel');
+  if(!c){s.innerHTML='<option value="">Todos</option>';return;}
+  const senders=[...new Set(c.messages.filter(m=>m.sender).map(m=>m.sender))].sort();
+  s.innerHTML='<option value="">Todos</option>'+senders.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');
+}
+function filtered(){
+  const c=activeConv(); if(!c)return [];
+  const q=$('#search').value.trim().toLowerCase(),snd=$('#senderSel').value;
+  const from=$('#dFrom').value?new Date($('#dFrom').value+'T00:00:00'):null;
+  const to=$('#dTo').value?new Date($('#dTo').value+'T23:59:59'):null;
+  const fMedia=$('#fMedia').checked,fDel=$('#fDel').checked,fSys=$('#fSys').checked,hideSys=$('#hideSys').checked;
+  return c.messages.filter(m=>{
+    if(fMedia&&!m.media)return false;
+    if(fDel&&!m.deleted)return false;
+    if(fSys&&!m.system)return false;
+    if(hideSys&&m.system)return false;
+    if(snd&&m.sender!==snd)return false;
+    if(q&&!(m.text||'').toLowerCase().includes(q)&&!((m.sender||'').toLowerCase().includes(q)))return false;
+    if((from||to)&&m.ts){if(from&&m.ts<from)return false;if(to&&m.ts>to)return false;}
+    return true;
+  });
+}
+function render(){
+  const c=activeConv(),box=$('#msgs');
+  if(!c){box.innerHTML='<div class="empty">Carga una o varias exportaciones para empezar.</div>';$('#shown').textContent='0';$('#total').textContent='0';return;}
+  renderSenderSelect();
+  const list=filtered();
+  $('#total').textContent=c.messages.length;$('#shown').textContent=list.length;
+  if(!list.length){box.innerHTML='<div class="empty">Sin mensajes para los filtros actuales.</div>';return;}
+  const CAP=10000,slice=list.slice(0,CAP);
+  box.innerHTML=slice.map(m=>{
+    const cls=m.deleted?'deleted':(m.system?'system':'');
+    const badges=[m.media?'<span class="badge media">multimedia</span>':'',m.deleted?'<span class="badge del">eliminado</span>':'',m.system?'<span class="badge sys">sistema</span>':'',m.edited?'<span class="badge edit">editado</span>':'',m.forwarded?'<span class="badge edit">reenviado</span>':''].join('');
+    return `<div class="msg ${cls}"><div class="h"><span class="ts">${esc(m.tsRaw)}</span>${m.sender?`<span class="sender">${esc(m.sender)}</span>`:''}${badges}</div><div class="body">${esc(m.text)}</div></div>`;
+  }).join('')+(list.length>CAP?`<div class="empty">Mostrados los primeros ${CAP}. Afina los filtros para ver el resto.</div>`:'');
+  box.scrollTop=0;
+}
+function exportExtract(){
+  const c=activeConv(); if(!c){alert('No hay conversación seleccionada.');return;}
+  const list=filtered(),now=new Date().toISOString();
+  const f=state.files.find(x=>x.name===c.file);
+  const H=['='.repeat(68),'EXTRACTO DE ANÁLISIS — ANALIZADOR DE CONVERSACIONES','informeperitoinformatico.es','='.repeat(68),
+    'Generado: '+now,'Plataforma: '+c.platform,'Conversación: '+c.name,'Fichero de origen: '+c.file,
+    'SHA-256 origen: '+(f?f.hash:'(n/d)'),'Mensajes en origen: '+c.messages.length,'Mensajes en este extracto: '+list.length,
+    'Filtros aplicados:','  - Interlocutor: '+($('#senderSel').value||'Todos'),'  - Búsqueda: '+($('#search').value||'(ninguna)'),
+    '  - Fechas: '+($('#dFrom').value||'inicio')+' a '+($('#dTo').value||'fin'),
+    '  - Solo multimedia: '+$('#fMedia').checked+' | Solo eliminados: '+$('#fDel').checked+' | Solo sistema: '+$('#fSys').checked+' | Ocultar sistema: '+$('#hideSys').checked,
+    'Nota: extracto de análisis sobre evidencia ya adquirida. No constituye por sí mismo acto de adquisición ni cadena de custodia.',
+    '='.repeat(68),'',''].join('\n');
+  const body=list.map(m=>{
+    const flags=[m.media?'[MULTIMEDIA]':'',m.deleted?'[ELIMINADO]':'',m.system?'[SISTEMA]':'',m.edited?'[EDITADO]':''].filter(Boolean).join('');
+    return `${m.tsRaw} ${m.sender?m.sender+': ':''}${flags?flags+' ':''}${m.text}`;
+  }).join('\n');
+  const blob=new Blob([H+body],{type:'text/plain;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download='extracto_'+c.name.replace(/[^\w\-]+/g,'_').slice(0,40)+'.txt';a.click();
+}
+
+const drop=$('#drop'),fi=$('#fileInput');
+drop.addEventListener('click',()=>fi.click());
+fi.addEventListener('change',e=>handleFiles(e.target.files));
+['dragover','dragenter'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('hot');}));
+['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('hot');}));
+drop.addEventListener('drop',e=>handleFiles(e.dataTransfer.files));
+['#convSel','#senderSel','#search','#dFrom','#dTo','#fMedia','#fDel','#fSys','#hideSys'].forEach(s=>{$(s).addEventListener('input',render);$(s).addEventListener('change',render);});
+$('#exportBtn').addEventListener('click',exportExtract);
+$('#clearBtn').addEventListener('click',()=>{state.files=[];state.convs=[];renderFiles();renderConvSelect();['#search','#dFrom','#dTo'].forEach(s=>$(s).value='');['#fMedia','#fDel','#fSys','#hideSys'].forEach(s=>$(s).checked=false);render();});
+})();
+</script>
+</body>
+</html>
