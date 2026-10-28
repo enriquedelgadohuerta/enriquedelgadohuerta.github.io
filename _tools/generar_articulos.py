@@ -22,6 +22,104 @@ MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto
 
 ARTICULOS = [
     {
+        "slug": "victima-phishing-smishing-que-hacer",
+        "tag": "Fraude",
+        "fecha": "2026-10-28",
+        "titulo": "He pinchado en un SMS o correo falso de mi banco: qué hacer ahora",
+        "desc": "Pasos inmediatos si has caído en un phishing, smishing o vishing bancario: qué hacer con el dispositivo, cómo conservar la prueba y por qué importa para reclamar al banco.",
+        "resumen": "Primero corta el daño; después conserva la prueba. En ese orden, y sin borrar nada.",
+        "cuerpo": """
+<p>Un SMS que parece de tu banco, un enlace, una web idéntica a la de siempre… y has metido tus claves. O te ha llamado alguien «del departamento de seguridad» y le has dado un código. Respira: lo que hagas en la próxima hora importa más que lo que ya ha pasado.</p>
+
+<h2>1. Corta el daño</h2>
+<ul>
+<li><strong>Llama a tu banco</strong> por el teléfono de siempre (el de la tarjeta o la app, no el del mensaje) y pide bloquear tarjetas, accesos y operaciones pendientes.</li>
+<li><strong>Cambia las contraseñas</strong> que hayas escrito en la web falsa y las de cualquier servicio donde uses la misma.</li>
+<li><strong>Desconecta el dispositivo de internet</strong> si además has instalado algo o has abierto un archivo.</li>
+</ul>
+<p>Si tienes dudas, el <strong>017</strong> es la línea gratuita de ayuda en ciberseguridad de INCIBE: te orientan sin necesidad de que sea una emergencia grave.</p>
+
+<h2>2. Conserva la prueba (antes de borrar nada)</h2>
+<p>Es el paso que casi todo el mundo se salta, y el que más pesa después:</p>
+<ul>
+<li><strong>No borres el SMS, el correo ni el historial de llamadas.</strong> Haz capturas, pero conserva también el original.</li>
+<li><strong>Guarda el enlace</strong> tal como venía (cópialo, no lo vuelvas a abrir).</li>
+<li><strong>Anota la hora</strong> del mensaje, de la llamada y de cada operación que veas en la cuenta.</li>
+<li>Si fue un correo, <strong>no lo reenvíes</strong>: el reenvío altera las cabeceras técnicas que permiten saber de dónde vino.</li>
+</ul>
+
+<h2>3. Denuncia y reclama</h2>
+<p>Presenta denuncia ante la Policía Nacional o la Guardia Civil con todo lo anterior. Con la denuncia, reclama por escrito a tu banco las operaciones que no autorizaste.</p>
+
+<h2>¿Dónde entra un perito?</h2>
+<p>Cuando el banco discute la reclamación —por ejemplo, alegando que fuiste negligente—, un informe pericial puede documentar cómo era el mensaje, desde dónde se envió, qué web suplantaba y qué ocurrió en tu dispositivo. Eso convierte «yo no fui» en hechos verificables.</p>
+""",
+    },
+    {
+        "slug": "sim-swapping-movil-sin-cobertura",
+        "tag": "Móviles",
+        "fecha": "2026-10-28",
+        "titulo": "Tu móvil se queda sin cobertura y empiezan los cargos: el SIM swapping",
+        "desc": "Qué es el SIM swapping o duplicado fraudulento de la tarjeta SIM, cómo detectarlo, qué hacer de inmediato y qué pruebas conviene conservar.",
+        "resumen": "Si tu móvil se queda sin línea de repente, no esperes: puede que alguien tenga tu número.",
+        "cuerpo": """
+<p>Estás en casa, con cobertura de siempre, y de repente tu móvil marca «Sin servicio» o «Solo emergencias». No es una avería: puede que alguien haya conseguido un <strong>duplicado de tu tarjeta SIM</strong>.</p>
+
+<h2>Cómo funciona</h2>
+<p>El delincuente se hace pasar por ti ante tu operador —con datos obtenidos antes, a menudo por un SMS o una llamada falsa— y consigue que le activen una SIM con tu número. Desde ese momento, <strong>los SMS de verificación del banco le llegan a él</strong>. Con tus claves y esos códigos puede hacer transferencias o entrar en tus cuentas. INCIBE lo describe como un fraude que permite tomar el control de banca online, correo y redes sociales.</p>
+
+<h2>Señales de alarma</h2>
+<ul>
+<li>Pérdida repentina de línea sin motivo aparente, sobre todo si dura más de unos minutos.</li>
+<li>Avisos de que se ha cambiado la contraseña o el correo de alguna cuenta.</li>
+<li>Días antes, mensajes o llamadas pidiendo datos personales o bancarios.</li>
+</ul>
+
+<h2>Qué hacer de inmediato</h2>
+<ol>
+<li><strong>Llama a tu operador</strong> desde otro teléfono y pregunta si se ha emitido un duplicado de tu SIM. Pide bloquearlo.</li>
+<li><strong>Llama a tu banco</strong> para bloquear accesos y operaciones.</li>
+<li><strong>Conserva todo</strong>: capturas de los avisos, correos de cambio de contraseña, horas exactas en que perdiste la línea.</li>
+<li><strong>Denuncia</strong> ante la Policía Nacional o la Guardia Civil.</li>
+</ol>
+
+<h2>La prueba que vas a necesitar</h2>
+<p>En estas reclamaciones suele discutirse quién falló: el banco, el operador o el cliente. La cronología técnica —cuándo se perdió la línea, cuándo llegaron los códigos, desde dónde se hicieron las operaciones— es la clave. El análisis forense de tu teléfono y de los correos y notificaciones recibidos permite reconstruirla con fechas y horas verificables.</p>
+""",
+    },
+    {
+        "slug": "pruebas-falsas-inteligencia-artificial",
+        "tag": "Capturas e IA",
+        "fecha": "2026-10-28",
+        "titulo": "¿Es real o la ha hecho una IA? Pruebas falsas en los juicios",
+        "desc": "Fotos, capturas y documentos generados o retocados con inteligencia artificial llegan a los juzgados. Qué se puede comprobar, qué límites tiene el análisis y cómo proteger tus pruebas reales.",
+        "resumen": "La IA permite fabricar pruebas creíbles, y también negar las auténticas. El método forense es la respuesta a las dos cosas.",
+        "cuerpo": """
+<p>Hasta hace poco, una foto o una captura se presumían auténticas salvo prueba en contrario. Hoy cualquiera puede generar una conversación, una imagen o un documento con apariencia real en minutos. Y eso tiene dos caras.</p>
+
+<h2>Las dos caras del problema</h2>
+<ul>
+<li><strong>Pruebas fabricadas:</strong> una captura de WhatsApp inventada, una foto retocada o un PDF «oficial» que nunca existió.</li>
+<li><strong>Pruebas auténticas negadas:</strong> la otra parte alega que tu prueba real «está hecha con IA» para restarle valor. Los juristas lo llaman <em>el dividendo del mentiroso</em>.</li>
+</ul>
+<p>El propio Reglamento europeo de Inteligencia Artificial define el <em>deepfake</em> como contenido de imagen, audio o vídeo generado o manipulado por IA que puede parecer falsamente auténtico. Despachos como Garrigues advierten de que la presunción tradicional de autenticidad de los medios audiovisuales ya no se sostiene.</p>
+
+<h2>Qué se puede comprobar en una imagen o captura</h2>
+<ul>
+<li><strong>Origen:</strong> si existe el original en el dispositivo o la cuenta, y si coincide con lo aportado.</li>
+<li><strong>Metadatos:</strong> fecha, dispositivo, software de edición. Ojo: se pueden borrar o falsificar, así que son un indicio, no una prueba definitiva.</li>
+<li><strong>Coherencia técnica:</strong> compresión, niveles de error, tipografías y formato real de la aplicación que supuestamente generó la captura.</li>
+<li><strong>Contexto:</strong> si lo que muestra encaja con el resto de datos (horas, conversaciones previas, otros dispositivos).</li>
+</ul>
+
+<h2>Los límites, dichos claramente</h2>
+<p>Los detectores automáticos de IA se equivocan en los dos sentidos. Por eso un informe serio no se basa en «la herramienta dice que es falsa», sino en un conjunto de comprobaciones documentadas y en expresar el grado de certeza real, sin exagerarlo. En audio y vídeo el análisis es más complejo y puede requerir un especialista en acústica forense.</p>
+
+<h2>Cómo proteger tus pruebas reales</h2>
+<p>La mejor defensa contra «eso está hecho con IA» es haber conservado el original: el teléfono, la cuenta, el archivo sin reenviar. Si además se adquiere con cadena de custodia y huellas digitales (hash) desde el principio, alegar que es falso deja de ser un argumento fácil.</p>
+""",
+    },
+    {
         "slug": "pantallazos-whatsapp-prueba-juicio",
         "tag": "WhatsApp",
         "fecha": "2026-10-23",

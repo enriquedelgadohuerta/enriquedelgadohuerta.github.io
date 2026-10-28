@@ -29,6 +29,9 @@ Qué no hace: no accede a dispositivos ni cuentas de terceros sin derecho legít
 
 ## Artículos
 
+- [He pinchado en un SMS o correo falso de mi banco: qué hacer ahora](https://informeperitoinformatico.es/articulos/victima-phishing-smishing-que-hacer/)
+- [Tu móvil se queda sin cobertura y empiezan los cargos: el SIM swapping](https://informeperitoinformatico.es/articulos/sim-swapping-movil-sin-cobertura/)
+- [¿Es real o la ha hecho una IA? Pruebas falsas en los juicios](https://informeperitoinformatico.es/articulos/pruebas-falsas-inteligencia-artificial/)
 - [¿Basta un pantallazo de WhatsApp como prueba en un juicio?](https://informeperitoinformatico.es/articulos/pantallazos-whatsapp-prueba-juicio/): jurisprudencia del Supremo (STS 300/2015, STS 629/2025) y cómo reforzar la prueba
 - [La factura con otra cuenta bancaria](https://informeperitoinformatico.es/articulos/fraude-factura-cambio-cuenta-bancaria/): fraude BEC, cabeceras, SPF/DKIM/DMARC y qué hacer
 - [Qué hacer en las primeras horas para no perder una prueba digital](https://informeperitoinformatico.es/articulos/primeras-horas-conservar-prueba-digital/)
