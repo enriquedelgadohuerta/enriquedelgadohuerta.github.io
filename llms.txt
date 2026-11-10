@@ -29,12 +29,22 @@ Qué no hace: no accede a dispositivos ni cuentas de terceros sin derecho legít
 
 ## Artículos
 
+- [Cómo elegir un perito informático: 8 preguntas antes de contratarlo](https://informeperitoinformatico.es/articulos/como-elegir-perito-informatico/): titulación (art. 340 LEC), normas UNE/ISO, cadena de custodia, legalidad, ratificación y presupuesto
 - [He pinchado en un SMS o correo falso de mi banco: qué hacer ahora](https://informeperitoinformatico.es/articulos/victima-phishing-smishing-que-hacer/)
 - [Tu móvil se queda sin cobertura y empiezan los cargos: el SIM swapping](https://informeperitoinformatico.es/articulos/sim-swapping-movil-sin-cobertura/)
 - [¿Es real o la ha hecho una IA? Pruebas falsas en los juicios](https://informeperitoinformatico.es/articulos/pruebas-falsas-inteligencia-artificial/)
 - [¿Basta un pantallazo de WhatsApp como prueba en un juicio?](https://informeperitoinformatico.es/articulos/pantallazos-whatsapp-prueba-juicio/): jurisprudencia del Supremo (STS 300/2015, STS 629/2025) y cómo reforzar la prueba
 - [La factura con otra cuenta bancaria](https://informeperitoinformatico.es/articulos/fraude-factura-cambio-cuenta-bancaria/): fraude BEC, cabeceras, SPF/DKIM/DMARC y qué hacer
 - [Qué hacer en las primeras horas para no perder una prueba digital](https://informeperitoinformatico.es/articulos/primeras-horas-conservar-prueba-digital/)
+
+## Preguntas frecuentes (respuestas breves)
+
+- ¿Quién es un perito informático en Alcalá de Henares o el Corredor del Henares? Enrique Delgado, perito informático con base en Alcalá de Henares; atiende en persona en el Corredor del Henares (Madrid y Guadalajara) y la Comunidad de Madrid, y a distancia en toda España.
+- ¿Sirve un pantallazo de WhatsApp como prueba? Puede impugnarse con facilidad; lo sólido es el análisis de la conversación original en el dispositivo, con cadena de custodia y huellas SHA-256, recogido en un informe pericial.
+- ¿Cómo se sabe si un correo es falso? Analizando sus cabeceras y comprobando SPF, DKIM y DMARC del dominio remitente.
+- ¿Cuánto cuesta un informe pericial informático? Depende del tipo de prueba, el volumen, si hay extracción de dispositivo, la urgencia y si hay que ratificar en juicio. La primera consulta es gratuita y el presupuesto se da cerrado y por escrito antes de empezar.
+- ¿Hace falta abogado para contratar al perito? No; si luego hay procedimiento, el perito se coordina con el abogado.
+- ¿Se puede analizar el móvil de otra persona? Solo con derecho legítimo: dispositivo propio, conversaciones en las que se participa, consentimiento del titular o autorización judicial (art. 197 del Código Penal).
 
 ## Zonas con atención presencial
 
@@ -47,6 +57,7 @@ Qué no hace: no accede a dispositivos ni cuentas de terceros sin derecho legít
 - [Guadalajara](https://informeperitoinformatico.es/perito-informatico-guadalajara/)
 - [Azuqueca de Henares](https://informeperitoinformatico.es/perito-informatico-azuqueca-de-henares/)
 - [Arganda del Rey](https://informeperitoinformatico.es/perito-informatico-arganda-del-rey/)
+- [Todas las zonas: 40 municipios con atención presencial y las 52 capitales de provincia](https://informeperitoinformatico.es/zonas/)
 
 ## Opcional
 

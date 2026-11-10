@@ -22,6 +22,50 @@ MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto
 
 ARTICULOS = [
     {
+        "slug": "como-elegir-perito-informatico",
+        "tag": "Guía",
+        "fecha": "2026-11-10",
+        "titulo": "Cómo elegir un perito informático: 8 preguntas antes de contratarlo",
+        "desc": "Qué comprobar antes de contratar a un perito informático en Madrid o en cualquier punto de España: titulación, normas UNE e ISO, cadena de custodia, ratificación en juicio, presupuesto y legalidad del análisis.",
+        "resumen": "Titulación, método, independencia y un presupuesto por escrito: lo que debes preguntar antes de encargar un informe pericial.",
+        "cuerpo": """
+<p>Un informe pericial informático puede decidir un juicio, pero solo si el perito lo ha hecho bien y sabe defenderlo. Antes de contratar a nadie, estas son las preguntas que conviene hacer. Sirven igual si buscas perito en Alcalá de Henares, en Madrid o en cualquier otra ciudad.</p>
+
+<h2>1. ¿Qué titulación tiene?</h2>
+<p>La Ley de Enjuiciamiento Civil (artículo 340) pide que el perito tenga el título oficial que corresponda a la materia. En informática forense eso suele ser una ingeniería o titulación técnica, idealmente con formación específica en análisis forense. Pide que te lo diga con claridad: si hay dudas sobre su cualificación, la parte contraria las usará para restar valor al informe.</p>
+
+<h2>2. ¿Qué normas sigue?</h2>
+<p>Un buen informe sigue normas reconocidas: <strong>UNE 197010</strong> para la estructura del informe, <strong>UNE 71505-3</strong> para el tratamiento de la evidencia electrónica e <strong>ISO/IEC 27037</strong> para identificar, recoger y preservar pruebas digitales. Si el perito no sabe responder a esto, mala señal.</p>
+
+<h2>3. ¿Cómo va a obtener la prueba?</h2>
+<p>La pregunta clave. Una captura de pantalla sola es fácil de impugnar. Lo sólido es trabajar sobre el original (el teléfono, el buzón de correo, el archivo), documentar cada paso y calcular <strong>huellas digitales (hash SHA-256)</strong> que demuestren que nada se ha alterado después. Eso es la cadena de custodia.</p>
+
+<h2>4. ¿Es legal lo que me propone?</h2>
+<p>Un perito serio solo analiza lo que tienes derecho a aportar: tu dispositivo, conversaciones en las que participas, o datos de otra persona con su consentimiento o con autorización judicial. Si alguien te ofrece «entrar» en el móvil o el WhatsApp de otra persona, aléjate: puede ser delito (artículo 197 del Código Penal) y además la prueba quedaría anulada.</p>
+
+<h2>5. ¿Ratificará el informe en el juicio?</h2>
+<p>El juez o las partes pueden pedir que el perito explique y defienda su informe en la vista. Confirma que está dispuesto a hacerlo y si eso está incluido en el presupuesto o se factura aparte.</p>
+
+<h2>6. ¿Me da un presupuesto cerrado por escrito?</h2>
+<p>El precio depende del tipo de prueba, del volumen de información, de si hay que extraer datos de un dispositivo, de la urgencia y de si hay que ir a juicio. Lo razonable es que, tras una primera consulta, recibas un presupuesto por escrito antes de empezar, sin sorpresas.</p>
+
+<h2>7. ¿Tiene experiencia con mi tipo de prueba?</h2>
+<p>No es lo mismo autenticar un chat de WhatsApp que analizar las cabeceras de un correo en un fraude de factura (BEC) o detectar una imagen manipulada o generada con IA. Pregunta qué casos parecidos ha llevado y qué herramientas usa.</p>
+
+<h2>8. ¿Puede atenderme en persona si hace falta?</h2>
+<p>Muchas pruebas se pueden enviar a distancia con garantías. Pero si hay que extraer datos de un teléfono o documentar una entrega en mano, la cercanía ahorra tiempo y dinero. Comprueba en qué zonas trabaja en persona.</p>
+
+<h2>Antes de la consulta, prepara esto</h2>
+<ul>
+<li>Un resumen breve de qué ha pasado y con qué fechas.</li>
+<li>Qué prueba tienes (chat, correo, fotos, audios, el propio teléfono) y dónde está el original.</li>
+<li>Si ya hay procedimiento judicial, el juzgado y los plazos.</li>
+<li>Si tienes abogado, sus datos: el perito se coordinará con él.</li>
+</ul>
+<p>Y una última regla: <strong>no borres ni reenvíes nada</strong> hasta hablar con el perito. Conservar el original es lo que más valor da a la prueba.</p>
+""",
+    },
+    {
         "slug": "victima-phishing-smishing-que-hacer",
         "tag": "Fraude",
         "fecha": "2026-10-28",
