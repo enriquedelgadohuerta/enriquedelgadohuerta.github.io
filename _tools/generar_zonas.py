@@ -297,6 +297,13 @@ SERVICIOS = [
 ]
 
 
+# Servicios con página propia (generadas por _tools/generar_servicios.py)
+SERVICIO_URL = {
+    "WhatsApp y mensajería": ("/peritaje-whatsapp/", "Peritaje de WhatsApp →"),
+}
+PAGINAS_SERVICIO = ["peritaje-whatsapp"]
+
+
 def bloque_servicios(l):
     n = l["nombre"]
     orden = SERVICIOS[:]
@@ -308,7 +315,7 @@ def bloque_servicios(l):
         f"""      <article class="problem">
         <h3>{esc(t)}</h3>
         <p>{esc(d)}</p>
-        <a class="problem-link" href="/#servicios">Ver el detalle técnico →</a>
+        <a class="problem-link" href="{SERVICIO_URL.get(t, ("/#servicios", "Ver el detalle técnico →"))[0]}">{SERVICIO_URL.get(t, ("/#servicios", "Ver el detalle técnico →"))[1]}</a>
       </article>""" for t, d, _ in orden
     )
     titulo = pick(l, [
@@ -468,6 +475,14 @@ def footer():
       <div>
         <h4>Enrique Delgado · Perito informático</h4>
         <p>Informes periciales de WhatsApp, correo electrónico, capturas de pantalla, imágenes y dispositivos móviles para particulares y abogados. Alcalá de Henares, Comunidad de Madrid y toda España.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/peritaje-whatsapp/">Peritaje de WhatsApp</a></li>
+          <li><a href="/#servicios">Todos los servicios</a></li>
+          <li><a href="/articulos/">Artículos</a></li>
+        </ul>
       </div>
       <div>
         <h4>Zonas</h4>
@@ -703,7 +718,12 @@ def pagina_zonas():
 
 # ───────────────────────── sitemap ─────────────────────────
 def sitemap():
-    urls = [(SITE + "/", "monthly", "1.0"), (SITE + "/zonas/", "monthly", "0.7")]
+    urls = [(SITE + "/", "monthly", "1.0")]
+    # páginas de servicio (generadas por _tools/generar_servicios.py)
+    for slug in PAGINAS_SERVICIO:
+        if os.path.exists(os.path.join(ROOT, slug, "index.html")):
+            urls.append((SITE + f"/{slug}/", "monthly", "0.9"))
+    urls.append((SITE + "/zonas/", "monthly", "0.7"))
     # artículos (generados por _tools/generar_articulos.py)
     art_dir = os.path.join(ROOT, "articulos")
     if os.path.isdir(art_dir):

@@ -190,6 +190,8 @@ ARTICULOS = [
 
 <h2>Mi consejo</h2>
 <p>Guarda los pantallazos, pero sobre todo <strong>conserva el teléfono tal como está</strong>. Si el asunto llega a juicio y alguien pone en duda tus mensajes, lo agradecerás.</p>
+
+<p>Si quieres saber qué se analiza exactamente y cómo es el proceso, te lo explico en la página de <a href="/peritaje-whatsapp/">peritaje de WhatsApp</a>.</p>
 """,
     },
     {
