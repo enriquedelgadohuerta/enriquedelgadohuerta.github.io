@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="56" viewBox="0 0 160 56" role="img" aria-labelledby="t">
+  <title id="t">Privacidad conforme al RGPD y la LOPDGDD · Web sin cookies ni rastreadores</title>
+  <rect x="0.5" y="0.5" width="159" height="55" rx="8" fill="#0f1a24" stroke="#5fb3a9"/>
+  <g transform="translate(10 9)">
+    <path d="M17 1 L31 6 V18 C31 27 25 33.5 17 37 C9 33.5 3 27 3 18 V6 Z" fill="#0f6e67" stroke="#8fd3ca" stroke-width="1.4"/>
+    <rect x="11" y="16.5" width="12" height="9.5" rx="1.6" fill="#ffffff"/>
+    <path d="M13.3 16.5 V13.6 a3.7 3.7 0 0 1 7.4 0 V16.5" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+    <circle cx="17" cy="20.6" r="1.4" fill="#0f6e67"/>
+    <rect x="16.4" y="21" width="1.2" height="2.8" fill="#0f6e67"/>
+  </g>
+  <g font-family="Atkinson Hyperlegible, Verdana, Arial, sans-serif" fill="#ffffff">
+    <text x="49" y="21" font-size="11" font-weight="700" textLength="102" lengthAdjust="spacingAndGlyphs">RGPD · LOPDGDD</text>
+    <text x="49" y="35" font-size="9.6" fill="#cfe9e5">Privacidad por diseño</text>
+    <text x="49" y="47" font-size="9.6" fill="#cfe9e5">Sin cookies ni rastreo</text>
+  </g>
+</svg>

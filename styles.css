@@ -271,6 +271,13 @@ a.channel:hover{border-color:var(--line-2);box-shadow:var(--shadow);color:var(--
 .site-foot ul{list-style:none;display:grid;gap:6px}
 .foot-bottom{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:14px;color:#9aa4b0}
 
+.foot-seals{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.foot-seals .seal{display:inline-flex;border-radius:8px;line-height:0;opacity:.9;transition:opacity .15s}
+.foot-seals .seal:hover,.foot-seals .seal:focus-visible{opacity:1}
+.foot-seals img{display:block;width:160px;height:56px}
+.wrap > .foot-seals:first-child{margin-top:0}
+.foot-seals + .foot-bottom[style]{margin-top:20px!important}
+
 /* ---------- Barra fija móvil ---------- */
 .quickbar{display:none}
 
