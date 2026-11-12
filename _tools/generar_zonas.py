@@ -300,8 +300,9 @@ SERVICIOS = [
 # Servicios con página propia (generadas por _tools/generar_servicios.py)
 SERVICIO_URL = {
     "WhatsApp y mensajería": ("/peritaje-whatsapp/", "Peritaje de WhatsApp →"),
+    "Correo electrónico": ("/peritaje-correo-electronico/", "Peritaje de correo electrónico →"),
 }
-PAGINAS_SERVICIO = ["peritaje-whatsapp"]
+PAGINAS_SERVICIO = ["peritaje-whatsapp", "peritaje-correo-electronico"]
 
 
 def bloque_servicios(l):
@@ -480,6 +481,7 @@ def footer():
         <h4>Servicios</h4>
         <ul>
           <li><a href="/peritaje-whatsapp/">Peritaje de WhatsApp</a></li>
+          <li><a href="/peritaje-correo-electronico/">Peritaje de correo electrónico</a></li>
           <li><a href="/#servicios">Todos los servicios</a></li>
           <li><a href="/articulos/">Artículos</a></li>
         </ul>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perito Informático de Correo Electrónico | Peritaje de emails</title>
+<meta name="description" content="Peritaje de correo electrónico: origen real del email, cabeceras, SPF, DKIM y DMARC, facturas con otra cuenta y suplantaciones. Toda España. Consulta gratis.">
+<meta name="author" content="Enrique Delgado — Perito Informático">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#fbf7f1">
+<link rel="canonical" href="https://informeperitoinformatico.es/peritaje-correo-electronico/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://informeperitoinformatico.es/peritaje-correo-electronico/">
+<meta property="og:title" content="Perito informático de correo electrónico">
+<meta property="og:description" content="Peritaje de correo electrónico: origen real del email, cabeceras, SPF, DKIM y DMARC, facturas con otra cuenta y suplantaciones. Toda España. Consulta gratis.">
+<meta property="og:image" content="https://informeperitoinformatico.es/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="informeperitoinformatico.es">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preload" href="/assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://informeperitoinformatico.es/peritaje-correo-electronico/#servicio",
+  "name": "Peritaje informático de correo electrónico",
+  "alternateName": [
+    "Perito de correo electrónico",
+    "Peritaje de email",
+    "Informe pericial de correo electrónico"
+  ],
+  "serviceType": "Peritaje informático de correo electrónico",
+  "url": "https://informeperitoinformatico.es/peritaje-correo-electronico/",
+  "description": "Peritaje de correo electrónico: origen real del email, cabeceras, SPF, DKIM y DMARC, facturas con otra cuenta y suplantaciones. Toda España. Consulta gratis.",
+  "provider": {
+    "@id": "https://informeperitoinformatico.es/#organization"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "España"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "servicePhone": {
+      "@type": "ContactPoint",
+      "telephone": "+34649716627",
+      "contactType": "customer service",
+      "availableLanguage": "es"
+    },
+    "serviceUrl": "https://informeperitoinformatico.es/peritaje-correo-electronico/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://informeperitoinformatico.es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Servicios",
+      "item": "https://informeperitoinformatico.es/#servicios"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Peritaje de correo electrónico",
+      "item": "https://informeperitoinformatico.es/peritaje-correo-electronico/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Me sirve el correo impreso o una captura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Como apoyo, sí; como prueba técnica, no. Ni la impresión ni la captura muestran las cabeceras, que son las que dicen desde dónde y por qué servidores se envió el mensaje."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo reenviarte el correo para que lo analices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mejor no: al reenviarlo se pierden datos. Te explico cómo descargar el mensaje original como archivo .eml o .msg, o lo exporto yo directamente del buzón con cadena de custodia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ya he pagado una factura falsa, ¿qué hago?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Llama a tu banco cuanto antes para intentar retener la transferencia y presenta denuncia. No borres ni reenvíes los correos. El informe pericial documenta cómo se produjo el engaño y sirve para la denuncia y para reclamar a quien corresponda."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede saber quién envió el correo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Normalmente se puede determinar desde qué servidor y en muchos casos desde qué dirección IP salió, y si el dominio era el legítimo. Identificar a la persona concreta suele requerir que el juzgado pida datos al proveedor, y el informe es la base para solicitarlo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedes demostrar que un correo se envió o se recibió?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En muchos casos sí, a partir de las cabeceras del mensaje en el buzón del destinatario o del remitente y de los registros de la cuenta. Antes de empezar te digo qué se puede acreditar con lo que hay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajas fuera de Madrid, por ejemplo en Málaga, Barcelona o Córdoba?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El peritaje de correo se hace casi siempre a distancia: los mensajes se exportan del buzón con huellas SHA-256 y cadena de custodia, sin necesidad de desplazarse. La ratificación puede hacerse por videoconferencia cuando el juzgado lo admite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta un peritaje de correo electrónico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende del número de mensajes, de si hay que revisar los registros de la cuenta o analizar adjuntos, de la urgencia y de si hay que ratificar el informe en juicio. La primera consulta es gratuita y, si seguimos, recibes un presupuesto cerrado por escrito antes de empezar."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body class="has-quickbar">
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="/" aria-label="informeperitoinformatico.es — inicio">
+      <svg class="brand-mark" width="38" height="42" viewBox="0 0 36 40" aria-hidden="true">
+        <polygon points="18,2 34,11 34,29 18,38 2,29 2,11" fill="#0f6e67"/>
+        <circle cx="16" cy="18" r="6.5" fill="none" stroke="#fbf7f1" stroke-width="2.2"/>
+        <line x1="20.8" y1="22.8" x2="26" y2="28" stroke="#fbf7f1" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M12.6 18.3l2.3 2.2 4-4.3" fill="none" stroke="#e9a23b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Enrique Delgado</span>
+        <span class="brand-sub">Perito informático · Alcalá de Henares</span>
+      </span>
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav">
+        <li><a href="/#te-ayudo">¿Qué te ha pasado?</a></li>
+        <li><a href="/#como-trabajo">Cómo trabajo</a></li>
+        <li><a href="/#precio">Precio</a></li>
+        <li><a href="/zonas/">Zonas</a></li>
+        <li><a href="/articulos/">Artículos</a></li>
+        <li><a class="btn btn-primary btn-sm" href="#contacto">Consulta gratis</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="label">Menú</span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil">
+    <a href="/">Inicio</a>
+    <a href="/#te-ayudo">¿Qué te ha pasado?</a>
+    <a href="/#servicios">Servicios</a>
+    <a href="/#precio">Precio</a>
+    <a href="/#preguntas">Preguntas frecuentes</a>
+    <a href="/zonas/">Zonas donde trabajo</a>
+    <a href="/articulos/">Artículos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+<main id="main">
+<section class="hero hero-local" id="inicio" aria-labelledby="h1">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Migas de pan"><a href="/">Inicio</a><span aria-hidden="true">›</span><a href="/#servicios">Servicios</a><span aria-hidden="true">›</span><span aria-current="page">Correo electrónico</span></nav>
+    <span class="eyebrow">Peritaje de correo electrónico</span>
+    <h1 id="h1">Perito informático de <em>correo electrónico</em></h1>
+    <p class="lead">Averiguo desde dónde se envió de verdad un correo, si es auténtico y si alguien ha suplantado a tu empresa o a tu proveedor, y lo presento en un informe pericial que sirve para la denuncia, la reclamación o el juicio. Para particulares, empresas y abogados, en toda España.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-wa" href="https://wa.me/34649716627?text=Hola%20Enrique%2C%20quer%C3%ADa%20consultarte%20un%20caso%20de%20un%20correo%20electr%C3%B3nico." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.79h0a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg> Escríbeme por WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+34649716627"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> 649 716 627</a>
+    </div>
+    <ul class="reassure">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Primera consulta gratuita</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Presupuesto cerrado por escrito</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Informes conforme a UNE 197010</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="casos" aria-labelledby="h2-casos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Cuándo lo necesitas</span>
+      <h2 id="h2-casos">Casos en los que un peritaje de correo electrónico marca la diferencia</h2>
+      <p class="lead">Si tu caso no está aquí, cuéntamelo igualmente: te digo si un informe tiene sentido antes de que gastes nada.</p>
+    </div>
+    <div class="problems">
+      <article class="problem">
+        <h3>Factura con otra cuenta bancaria</h3>
+        <p>Pagaste a un proveedor y el dinero acabó en otra cuenta. Hay que saber si el correo era suyo, si su buzón estaba comprometido o si era un dominio falso.</p>
+      </article>
+      <article class="problem">
+        <h3>Suplantación de tu empresa</h3>
+        <p>Alguien envía correos en tu nombre o con un dominio casi idéntico al tuyo a tus clientes o a tu banco.</p>
+      </article>
+      <article class="problem">
+        <h3>Correo que niegan haber enviado</h3>
+        <p>La otra parte dice que nunca mandó ese mensaje, o que el que aportas no es el que se envió.</p>
+      </article>
+      <article class="problem">
+        <h3>Comunicaciones laborales</h3>
+        <p>Un despido, una sanción, una orden o un aviso por correo cuya fecha, envío o contenido hay que acreditar.</p>
+      </article>
+      <article class="problem">
+        <h3>Phishing y reclamación al banco</h3>
+        <p>Picaste en un correo falso de tu banco y necesitas documentar cómo ocurrió para reclamar o denunciar.</p>
+      </article>
+      <article class="problem">
+        <h3>Adjuntos manipulados</h3>
+        <p>Un PDF de factura, un contrato o un presupuesto que alguien ha modificado antes o después de enviarlo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="impreso" aria-labelledby="h2-impreso">
+  <div class="wrap first-aid">
+    <div>
+      <span class="eyebrow">La pregunta más habitual</span>
+      <h2 id="h2-impreso">¿No basta con <em>imprimir</em> el correo?</h2>
+      <p class="lead">No. Lo que ves en pantalla (el nombre del remitente, la dirección, la fecha) se puede falsificar con facilidad y no dice por dónde ha pasado el mensaje. Las pruebas técnicas están en las cabeceras, que no aparecen al imprimir ni en una captura.</p>
+      <p><a class="problem-link" href="/articulos/fraude-factura-cambio-cuenta-bancaria/">Lee cómo funciona el fraude de la factura →</a></p>
+    </div>
+    <ol>
+      <li><strong>El remitente visible se puede falsificar</strong><span>El nombre y la dirección que muestra tu programa de correo los elige quien envía el mensaje.</span></li>
+      <li><strong>Reenviar el correo lo altera</strong><span>Al reenviarlo se pierden o cambian las cabeceras originales que hay que analizar.</span></li>
+      <li><strong>Lo que da solidez es el original</strong><span>El mensaje completo tal como está en el buzón (archivo .eml o .msg), adquirido con huella SHA-256 y explicado en un informe.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="que-analizo" aria-labelledby="h2-analizo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">El detalle técnico</span>
+      <h2 id="h2-analizo">Qué analizo exactamente</h2>
+      <p class="lead">Trabajo sobre el mensaje original exportado del buzón, con todas sus cabeceras, y, cuando hace falta, sobre los registros de la cuenta de correo.</p>
+    </div>
+    <div class="problems">
+      <article class="problem">
+        <h3>Cabeceras completas</h3>
+        <p>Received, Message-ID, Return-Path y fechas: la ruta real del mensaje servidor a servidor y desde dónde salió.</p>
+      </article>
+      <article class="problem">
+        <h3>SPF, DKIM y DMARC</h3>
+        <p>Si el servidor que lo envió estaba autorizado por el dominio y si la firma DKIM confirma que el mensaje no se ha alterado.</p>
+      </article>
+      <article class="problem">
+        <h3>Dominios parecidos</h3>
+        <p>Detección de dominios casi idénticos al legítimo, con su fecha de registro y sus servidores de correo.</p>
+      </article>
+      <article class="problem">
+        <h3>Adjuntos y metadatos</h3>
+        <p>Autor, programa y fechas de creación y modificación de PDF y documentos de Office, y cambios como un número de cuenta.</p>
+      </article>
+      <article class="problem">
+        <h3>Buzón comprometido</h3>
+        <p>En Microsoft 365 o Google Workspace, inicios de sesión sospechosos y reglas de reenvío creadas por un intruso.</p>
+      </article>
+      <article class="problem">
+        <h3>Envío y recepción</h3>
+        <p>Si un correo llegó a su destino y cuándo, a partir de las cabeceras y de los registros disponibles.</p>
+      </article>
+    </div>
+    <div class="standards" aria-label="Normas de referencia">
+      Trabajo conforme a: <span class="pill">UNE 197010</span><span class="pill">UNE 71505-3</span><span class="pill">ISO/IEC 27037</span><span class="pill">LEC arts. 335–352</span>
+    </div>
+    <p class="note-out">No accedo a cuentas de correo ajenas: solo analizo buzones y mensajes a los que tienes derecho legítimo de acceso.</p>
+  </div>
+</section>
+
+<section id="como-trabajo" aria-labelledby="h2-proceso">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Sin sorpresas</span>
+      <h2 id="h2-proceso">Cómo es un peritaje de correo electrónico, paso a paso</h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <h3>Me cuentas el caso</h3>
+        <p>Por WhatsApp, teléfono o correo. Te digo con franqueza si un informe te ayuda y qué mensajes conviene analizar.</p>
+        <span class="tag">Gratis</span>
+      </li>
+      <li class="step">
+        <h3>Presupuesto</h3>
+        <p>Recibes por escrito qué incluye, el plazo y el precio cerrado. Tú decides sin compromiso.</p>
+        <span class="tag">Por escrito</span>
+      </li>
+      <li class="step">
+        <h3>Adquisición</h3>
+        <p>Exporto los mensajes originales directamente del buzón, sin reenviarlos, y documento cada paso de la cadena de custodia.</p>
+        <span class="tag">Hash SHA-256</span>
+      </li>
+      <li class="step">
+        <h3>Informe y juicio</h3>
+        <p>Te entrego el informe y te lo explico. Si hay que ratificarlo ante el juez, allí estaré para defenderlo.</p>
+        <span class="tag">UNE 197010</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="precio" aria-labelledby="h2-precio">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Hablemos claro</span>
+      <h2 id="h2-precio">¿Cuánto cuesta un peritaje de correo electrónico?</h2>
+      <p class="lead">No te voy a dar una tarifa genérica que luego no se cumple. Lo que sí te garantizo:</p>
+    </div>
+    <div class="price">
+      <div class="price-card highlight">
+        <p class="big">0 €</p>
+        <h3>La primera consulta</h3>
+        <p>Me cuentas tu caso y te digo, sin compromiso, si un informe pericial te va a ayudar. Si no lo necesitas, te lo digo.</p>
+      </div>
+      <div class="price-card">
+        <h3>Presupuesto cerrado, antes de empezar</h3>
+        <p>El precio depende sobre todo de:</p>
+        <ul>
+          <li>Cuántos correos y qué periodo hay que analizar</li>
+          <li>Si hay que revisar los registros de la cuenta (Microsoft 365, Google Workspace…)</li>
+          <li>Si hay que analizar adjuntos o dominios sospechosos</li>
+          <li>La urgencia y los plazos del procedimiento</li>
+          <li>Si hace falta ratificar el informe en juicio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas" aria-labelledby="h2-faq">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Dudas habituales</span>
+      <h2 id="h2-faq">Preguntas sobre el peritaje de correo electrónico</h2>
+    </div>
+    <div class="faq">
+      <details class="qa"><summary>¿Me sirve el correo impreso o una captura?</summary><div class="a"><p>Como apoyo, sí; como prueba técnica, no. Ni la impresión ni la captura muestran las cabeceras, que son las que dicen desde dónde y por qué servidores se envió el mensaje.</p></div></details>
+      <details class="qa"><summary>¿Puedo reenviarte el correo para que lo analices?</summary><div class="a"><p>Mejor no: al reenviarlo se pierden datos. Te explico cómo descargar el mensaje original como archivo .eml o .msg, o lo exporto yo directamente del buzón con cadena de custodia.</p></div></details>
+      <details class="qa"><summary>Ya he pagado una factura falsa, ¿qué hago?</summary><div class="a"><p>Llama a tu banco cuanto antes para intentar retener la transferencia y presenta denuncia. No borres ni reenvíes los correos. El informe pericial documenta cómo se produjo el engaño y sirve para la denuncia y para reclamar a quien corresponda.</p></div></details>
+      <details class="qa"><summary>¿Se puede saber quién envió el correo?</summary><div class="a"><p>Normalmente se puede determinar desde qué servidor y en muchos casos desde qué dirección IP salió, y si el dominio era el legítimo. Identificar a la persona concreta suele requerir que el juzgado pida datos al proveedor, y el informe es la base para solicitarlo.</p></div></details>
+      <details class="qa"><summary>¿Puedes demostrar que un correo se envió o se recibió?</summary><div class="a"><p>En muchos casos sí, a partir de las cabeceras del mensaje en el buzón del destinatario o del remitente y de los registros de la cuenta. Antes de empezar te digo qué se puede acreditar con lo que hay.</p></div></details>
+      <details class="qa"><summary>¿Trabajas fuera de Madrid, por ejemplo en Málaga, Barcelona o Córdoba?</summary><div class="a"><p>Sí. El peritaje de correo se hace casi siempre a distancia: los mensajes se exportan del buzón con huellas SHA-256 y cadena de custodia, sin necesidad de desplazarse. La ratificación puede hacerse por videoconferencia cuando el juzgado lo admite.</p></div></details>
+      <details class="qa"><summary>¿Cuánto cuesta un peritaje de correo electrónico?</summary><div class="a"><p>Depende del número de mensajes, de si hay que revisar los registros de la cuenta o analizar adjuntos, de la urgencia y de si hay que ratificar el informe en juicio. La primera consulta es gratuita y, si seguimos, recibes un presupuesto cerrado por escrito antes de empezar.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section id="leer-mas" aria-labelledby="h2-leer">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Para leer con calma</span>
+      <h2 id="h2-leer">Artículos y servicios relacionados</h2>
+    </div>
+    <ul class="zone-links">
+      <li><a href="/articulos/fraude-factura-cambio-cuenta-bancaria/">La factura con otra cuenta bancaria: el fraude BEC</a></li>
+      <li><a href="/articulos/victima-phishing-smishing-que-hacer/">He pinchado en un correo falso de mi banco: qué hacer</a></li>
+      <li><a href="/articulos/primeras-horas-conservar-prueba-digital/">Qué hacer en las primeras horas para no perder la prueba</a></li>
+      <li><a href="/articulos/como-elegir-perito-informatico/">Cómo elegir un perito informático</a></li>
+      <li><a href="/peritaje-whatsapp/">Peritaje de WhatsApp</a></li>
+    </ul>
+    <p class="zone-all"><a href="/zonas/">Ver las zonas donde trabajo →</a></p>
+  </div>
+</section>
+
+<section class="band" id="contacto" aria-labelledby="h2-contacto">
+  <div class="wrap">
+    <div class="cta-local">
+      <div>
+        <span class="eyebrow">Primera consulta gratuita</span>
+        <h2 id="h2-contacto">Cuéntame qué correo necesitas analizar</h2>
+        <p class="lead">Con dos o tres frases me basta para orientarte. Mientras tanto, no borres ni reenvíes los mensajes. Te respondo en menos de 24 horas.</p>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" href="https://wa.me/34649716627?text=Hola%20Enrique%2C%20quer%C3%ADa%20consultarte%20un%20caso%20de%20un%20correo%20electr%C3%B3nico." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.79h0a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg> Escríbeme por WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+34649716627"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> 649 716 627</a>
+        <a class="btn btn-ghost" href="/#contacto">Formulario de contacto</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Enrique Delgado · Perito informático</h4>
+        <p>Informes periciales de WhatsApp, correo electrónico, capturas de pantalla, imágenes y dispositivos móviles para particulares y abogados. Alcalá de Henares, Comunidad de Madrid y toda España.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/peritaje-whatsapp/">Peritaje de WhatsApp</a></li>
+          <li><a href="/peritaje-correo-electronico/">Peritaje de correo electrónico</a></li>
+          <li><a href="/#servicios">Todos los servicios</a></li>
+          <li><a href="/articulos/">Artículos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Zonas</h4>
+        <ul>
+          <li><a href="/perito-informatico-alcala-de-henares/">Alcalá de Henares</a></li>
+          <li><a href="/perito-informatico-madrid/">Madrid</a></li>
+          <li><a href="/perito-informatico-guadalajara/">Guadalajara</a></li>
+          <li><a href="/zonas/">Todas las zonas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal y redes</h4>
+        <ul>
+          <li><a href="/aviso_legal.html">Aviso legal</a></li>
+          <li><a href="/privacidad.html">Política de privacidad</a></li>
+          <li><a href="/cookies.html">Política de cookies</a></li>
+          <li><a href="https://www.linkedin.com/in/perito-informatico-enrique-delgado/" target="_blank" rel="me noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-seals" aria-label="Sellos">
+      <a class="seal" href="/privacidad.html" title="Compromiso de privacidad: tratamiento de datos conforme al RGPD y la LOPDGDD (autodeclaración del responsable)"><img src="/assets/sello-privacidad.svg" width="160" height="56" alt="Privacidad conforme al RGPD y la LOPDGDD: ver política de privacidad" loading="lazy" decoding="async"></a>
+      <a class="seal" href="https://www.copyscape.com/" target="_blank" rel="noopener"><img src="/assets/sellos/copyscape-banner.png" width="160" height="56" alt="Protected by Copyscape" title="Protected by Copyscape - Do not copy content from this page." loading="lazy" decoding="async"></a>
+      <a class="seal dmca-badge" href="https://www.dmca.com/Protection/Status.aspx?ID=2ef77367-5e2f-42a9-b553-0fedeca2b8cf&amp;refurl=https://informeperitoinformatico.es/" target="_blank" rel="noopener" title="DMCA.com Protection Status"><img src="/assets/sellos/dmca-badge.png" width="150" height="75" alt="DMCA.com Protection Status" loading="lazy" decoding="async"></a>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 informeperitoinformatico.es</span>
+      <span>Esta web no usa cookies ni rastreadores.</span>
+    </div>
+  </div>
+</footer>
+<div class="quickbar" aria-label="Contacto rápido">
+  <a class="btn btn-ghost" href="tel:+34649716627">Llamar</a>
+  <a class="btn btn-wa" href="https://wa.me/34649716627?text=Hola%20Enrique%2C%20quer%C3%ADa%20consultarte%20un%20caso%20de%20un%20correo%20electr%C3%B3nico." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+<script src="/main.js" defer></script>
+</body>
+</html>

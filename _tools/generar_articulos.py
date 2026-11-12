@@ -89,7 +89,7 @@ ARTICULOS = [
 <li><strong>No borres el SMS, el correo ni el historial de llamadas.</strong> Haz capturas, pero conserva también el original.</li>
 <li><strong>Guarda el enlace</strong> tal como venía (cópialo, no lo vuelvas a abrir).</li>
 <li><strong>Anota la hora</strong> del mensaje, de la llamada y de cada operación que veas en la cuenta.</li>
-<li>Si fue un correo, <strong>no lo reenvíes</strong>: el reenvío altera las cabeceras técnicas que permiten saber de dónde vino.</li>
+<li>Si fue un correo, <strong>no lo reenvíes</strong>: el reenvío altera las cabeceras técnicas que permiten saber de dónde vino (te lo explico en <a href="/peritaje-correo-electronico/">peritaje de correo electrónico</a>).</li>
 </ul>
 
 <h2>3. Denuncia y reclama</h2>
@@ -215,6 +215,7 @@ ARTICULOS = [
 
 <h2>Lo que el correo no puede esconder</h2>
 <p>Cada correo lleva unas <strong>cabeceras técnicas</strong> que registran por qué servidores pasó, cuándo y desde dónde se envió, y el resultado de los controles <strong>SPF</strong>, <strong>DKIM</strong> y <strong>DMARC</strong> del dominio. Analizándolas se puede determinar si el mensaje vino de verdad del proveedor, de un dominio parecido o de un buzón comprometido. Esa información es clave para la denuncia y para reclamar al banco.</p>
+<p>Te explico qué se analiza exactamente en la página de <a href="/peritaje-correo-electronico/">peritaje de correo electrónico</a>.</p>
 
 <h2>Tres consejos</h2>
 <ol>
