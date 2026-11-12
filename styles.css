@@ -275,7 +275,7 @@ a.channel:hover{border-color:var(--line-2);box-shadow:var(--shadow);color:var(--
 .foot-seals .seal{display:inline-flex;border-radius:8px;line-height:0;opacity:.9;transition:opacity .15s}
 .foot-seals .seal:hover,.foot-seals .seal:focus-visible{opacity:1}
 .foot-seals img{display:block;width:160px;height:56px}
-.foot-seals .dmca-badge img{width:56px;height:56px}
+.foot-seals .dmca-badge img{width:120px;height:56px}
 .wrap > .foot-seals:first-child{margin-top:0}
 .foot-seals + .foot-bottom[style]{margin-top:20px!important}
 
