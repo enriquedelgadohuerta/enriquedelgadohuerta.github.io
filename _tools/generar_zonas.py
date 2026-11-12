@@ -571,6 +571,24 @@ def documento(title, desc, canonical, jsonld, cuerpo, og_title=None):
 """
 
 
+# Títulos y descripciones a medida (por slug) para páginas que ya salen arriba
+# en Google pero reciben pocos clics. El resto usa la plantilla.
+SEO_LOCAL = {
+    "alcala-de-henares": (
+        "Perito Informático en Alcalá de Henares | Cita en persona",
+        "Perito informático en Alcalá de Henares: WhatsApp, correos y capturas que valgan como prueba en juicio. Nos vemos en persona y la primera consulta es gratis."),
+    "caceres": (
+        "Perito Informático en Cáceres | Prueba digital para juicio",
+        "¿Necesitas un perito informático en Cáceres? Convierto WhatsApp, correos y capturas en prueba válida para el juicio, con informe UNE 197010. Consulta gratis."),
+    "melilla": (
+        "Perito Informático en Melilla | WhatsApp y correos para juicio",
+        "Perito informático para Melilla a distancia y con cadena de custodia: WhatsApp, correos y capturas que se sostengan en el juicio. Primera consulta gratis."),
+    "ceuta": (
+        "Perito Informático en Ceuta | WhatsApp y correos para juicio",
+        "¿Te han impugnado un WhatsApp o un correo en Ceuta? Lo analizo a distancia, con cadena de custodia e informe pericial válido en juicio. Consulta gratis."),
+}
+
+
 # ───────────────────────── página local ─────────────────────────
 def pagina(l):
     n = l["nombre"]
@@ -586,6 +604,8 @@ def pagina(l):
         f"Informes periciales informáticos en {n}: autenticidad de WhatsApp, correos falsos, capturas e imágenes y móviles. Respuesta en 24 h y primera consulta gratuita.",
     ]
     desc = pick(l, desc_opts, "desc")
+    if l["slug"] in SEO_LOCAL:
+        title, desc = SEO_LOCAL[l["slug"]]
     preguntas = faqs(l)
 
     place = {"@type": "City", "name": n,

@@ -106,6 +106,16 @@ ARTICULOS = [
         "titulo": "Tu móvil se queda sin cobertura y empiezan los cargos: el SIM swapping",
         "desc": "Qué es el SIM swapping o duplicado fraudulento de la tarjeta SIM, cómo detectarlo, qué hacer de inmediato y qué pruebas conviene conservar.",
         "resumen": "Si tu móvil se queda sin línea de repente, no esperes: puede que alguien tenga tu número.",
+        "seo_titulo": "SIM swapping: móvil sin cobertura y cargos en tu banco",
+        "seo_desc": "¿Te has quedado sin línea y aparecen cargos en el banco? Puede ser un duplicado de tu SIM. Qué hacer en la primera hora y qué pruebas guardar para reclamar.",
+        "faq": [
+            ("¿Cómo sé si me han hecho un SIM swapping?",
+             "La señal más clara es perder la línea de repente («Sin servicio» o «Solo emergencias») sin motivo aparente, sobre todo si a la vez recibes avisos de cambios de contraseña o de accesos a tus cuentas. Llama a tu operador desde otro teléfono y pregunta si se ha emitido un duplicado de tu SIM."),
+            ("¿Qué pruebas tengo que guardar para reclamar al banco?",
+             "Las horas exactas en que perdiste la línea, los SMS y correos de aviso, los movimientos del banco y la denuncia. No borres nada del teléfono: el análisis forense permite reconstruir la cronología con fechas y horas verificables."),
+            ("¿Para qué sirve un perito informático en un SIM swapping?",
+             "En estas reclamaciones se discute quién falló: el banco, el operador o el cliente. El informe pericial ordena la cronología técnica de lo ocurrido y la documenta de forma que el banco, el juzgado o tu abogado puedan valorarla."),
+        ],
         "cuerpo": """
 <p>Estás en casa, con cobertura de siempre, y de repente tu móvil marca «Sin servicio» o «Solo emergencias». No es una avería: puede que alguien haya conseguido un <strong>duplicado de tu tarjeta SIM</strong>.</p>
 
@@ -138,6 +148,16 @@ ARTICULOS = [
         "titulo": "¿Es real o la ha hecho una IA? Pruebas falsas en los juicios",
         "desc": "Fotos, capturas y documentos generados o retocados con inteligencia artificial llegan a los juzgados. Qué se puede comprobar, qué límites tiene el análisis y cómo proteger tus pruebas reales.",
         "resumen": "La IA permite fabricar pruebas creíbles, y también negar las auténticas. El método forense es la respuesta a las dos cosas.",
+        "seo_titulo": "¿Prueba falsa hecha con IA? Cómo se detecta en un juicio",
+        "seo_desc": "Capturas, fotos o documentos hechos con IA en un juicio: qué puede comprobar un perito, qué límites tiene el análisis y cómo defender tus pruebas reales.",
+        "faq": [
+            ("¿Se puede saber si una captura o una foto está hecha con IA?",
+             "A menudo sí, pero no con un detector automático, que se equivoca en los dos sentidos. Lo fiable es buscar el original en el dispositivo o la cuenta y revisar metadatos, compresión, formato y coherencia con el resto de datos, y expresar en el informe el grado de certeza real."),
+            ("¿Qué hago si dicen que mi prueba real está hecha con IA?",
+             "Conserva el original: el teléfono, la cuenta o el archivo sin reenviar. Si se adquiere con cadena de custodia y huellas digitales (hash), se puede demostrar que existe en su origen y que no se ha alterado."),
+            ("¿Un perito informático analiza también audios y vídeos?",
+             "En imágenes, capturas y documentos sí. En audio y vídeo el análisis es más complejo y puede requerir además un especialista en acústica o imagen forense; te lo digo antes de empezar."),
+        ],
         "cuerpo": """
 <p>Hasta hace poco, una foto o una captura se presumían auténticas salvo prueba en contrario. Hoy cualquiera puede generar una conversación, una imagen o un documento con apariencia real en minutos. Y eso tiene dos caras.</p>
 
@@ -258,15 +278,32 @@ def fecha_larga(iso):
     return f"{int(d)} de {MESES[int(m) - 1]} de {a}"
 
 
+def bloque_faq_articulo(a):
+    if not a.get("faq"):
+        return ""
+    items = "\n".join(
+        f'      <details class="qa"><summary>{gz.esc(q)}</summary><div class="a"><p>{gz.esc(r)}</p></div></details>'
+        for q, r in a["faq"]
+    )
+    return f"""
+  <section class="article-faq" aria-labelledby="h2-faq">
+    <h2 id="h2-faq">Preguntas frecuentes</h2>
+    <div class="faq">
+{items}
+    </div>
+  </section>"""
+
+
 def pagina_articulo(a):
     url = f"{SITE}/articulos/{a['slug']}/"
+    meta_desc = a.get("seo_desc", a["desc"])
     jsonld = [
         {
             "@context": "https://schema.org",
             "@type": "Article",
             "@id": url + "#articulo",
             "headline": a["titulo"],
-            "description": a["desc"],
+            "description": meta_desc,
             "inLanguage": "es-ES",
             "datePublished": a["fecha"],
             "dateModified": a["fecha"],
@@ -285,6 +322,12 @@ def pagina_articulo(a):
             ],
         },
     ]
+    if a.get("faq"):
+        jsonld.append({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in a["faq"]],
+        })
     otros = "\n".join(
         f'      <li><a href="/articulos/{o["slug"]}/">{gz.esc(o["titulo"])}</a></li>'
         for o in ARTICULOS if o is not a
@@ -296,7 +339,7 @@ def pagina_articulo(a):
   <p class="meta">Por <a href="{LINKEDIN}" rel="author me noopener" target="_blank">Enrique Delgado</a>, perito informático · {fecha_larga(a['fecha'])}</p>
   <div class="article-body">
 {a['cuerpo'].strip()}
-  </div>
+  </div>{bloque_faq_articulo(a)}
   <aside class="article-cta" id="contacto">
     <h2>¿Tienes un caso parecido?</h2>
     <p>Cuéntamelo sin compromiso: te digo si un informe pericial te ayuda y cuánto costaría, por escrito.</p>
@@ -313,7 +356,8 @@ def pagina_articulo(a):
     <p class="zone-all"><a href="{LINKEDIN}" target="_blank" rel="me noopener">Sígueme en LinkedIn para nuevos artículos →</a></p>
   </section>
 </article>"""
-    return gz.documento(a["titulo"] + " | Enrique Delgado, perito informático", a["desc"], url, jsonld, cuerpo,
+    titulo_seo = a.get("seo_titulo") or a["titulo"] + " | Enrique Delgado, perito informático"
+    return gz.documento(titulo_seo, meta_desc, url, jsonld, cuerpo,
                         og_title=a["titulo"]).replace('<meta property="og:type" content="website">',
                                                        '<meta property="og:type" content="article">')
 
