@@ -95,7 +95,7 @@ def pagina_whatsapp():
     url = f"{SITE}/{slug}/"
     title = "Perito Informático de WhatsApp | Informe pericial para juicio"
     desc = ("Peritaje de WhatsApp para juicio: analizo la conversación en el teléfono original, cotejo "
-            "capturas y busco mensajes borrados. Toda España. Primera consulta gratis.")
+            "capturas y busco mensajes borrados. Toda España. Consulta gratis.")
     wa_txt = "Hola Enrique, quería consultarte un caso de mensajes de WhatsApp."
 
     jsonld = [
