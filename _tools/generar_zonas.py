@@ -339,6 +339,52 @@ def bloque_servicios(l):
 </section>"""
 
 
+def bloque_alcala(l):
+    """Contenido propio solo para la página de Alcalá de Henares (la base)."""
+    if l["modo"] != "base":
+        return ""
+    casos = [
+        ("Familia y custodia", "Mensajes entre exparejas sobre los hijos, la pensión o el régimen de visitas que se discuten en el juzgado de familia."),
+        ("Amenazas y acoso", "Conversaciones de WhatsApp, Instagram o Telegram que hay que fijar antes de denunciar, sin que se pierdan ni se puedan negar."),
+        ("Acuerdos y deudas", "Préstamos, alquileres o encargos pactados por WhatsApp o por correo que ahora la otra parte no reconoce."),
+        ("Trabajo", "Mensajes del jefe o de la empresa en un despido o una reclamación, y correos que alguien dice no haber enviado."),
+    ]
+    cards = "\n".join(
+        f"""      <article class="problem">
+        <h3>{esc(t)}</h3>
+        <p>{esc(d)}</p>
+      </article>""" for t, d in casos
+    )
+    return f"""<section id="pantallazos-alcala" aria-labelledby="h2-pant">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">{ICON_PIN} Alcalá de Henares</span>
+      <h2 id="h2-pant">¿Tienes pantallazos de WhatsApp para un juicio en Alcalá?</h2>
+      <p class="lead">Es la consulta que más recibo en Alcalá. Los pantallazos pueden valer como prueba, pero si la otra parte los impugna con motivos, hay que demostrar que son auténticos. Lo que da solidez es el original en el teléfono, y aquí puedo verlo en persona.</p>
+    </div>
+    <ol class="steps steps-3">
+      <li class="step"><h3>No borres nada</h3><p>Conserva la conversación y el teléfono tal como están. No cambies de móvil ni restaures copias de seguridad.</p></li>
+      <li class="step"><h3>Quedamos en Alcalá</h3><p>Me enseñas el teléfono y te digo, sin compromiso, si los pantallazos bastan o conviene un informe.</p></li>
+      <li class="step"><h3>Informe y juicio</h3><p>Si hace falta, adquiero la conversación con huella SHA-256, redacto el informe y lo ratifico en los juzgados de Alcalá.</p></li>
+    </ol>
+    <p class="zone-all"><a href="/articulos/pantallazos-whatsapp-prueba-juicio/">Lee cuándo valen los pantallazos de WhatsApp como prueba →</a></p>
+  </div>
+</section>
+
+<section class="band" id="casos-alcala" aria-labelledby="h2-casos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Casos habituales</span>
+      <h2 id="h2-casos">Para qué me llaman desde Alcalá de Henares</h2>
+      <p class="lead">Particulares y despachos de Alcalá, Meco, Camarma de Esteruelas, Villalbilla, Los Santos de la Humosa y el resto del partido judicial. Me desplazo a cualquier barrio: Centro, Ensanche, Espartales, La Garena, Reyes Católicos, El Val, Juan de Austria o Nueva Alcalá.</p>
+    </div>
+    <div class="problems">
+{cards}
+    </div>
+  </div>
+</section>"""
+
+
 def faqs(l):
     n = l["nombre"]
     d = redondea(l["dist"])
@@ -346,6 +392,10 @@ def faqs(l):
     if l["modo"] == "base":
         out.append((f"¿Dónde nos vemos en Alcalá de Henares?",
                     "Quedamos donde te resulte más cómodo dentro de Alcalá. Muchas consultas se resuelven además por WhatsApp o teléfono sin necesidad de vernos."))
+        out.append(("¿Valen los pantallazos de WhatsApp como prueba en un juicio en Alcalá de Henares?",
+                    "Pueden valer: los juzgados de Alcalá, como el resto, aplican el criterio del Tribunal Supremo, que permite valorar capturas sin pericial si nadie las discute o si otras pruebas las confirman. Si la otra parte las impugna con motivos concretos, hay que demostrar su autenticidad, y para eso es clave conservar el teléfono original."))
+        out.append(("¿Puedes ver el teléfono en Alcalá sin quedártelo?",
+                    "Sí. La adquisición se hace delante de ti, se documenta con huellas SHA-256 y el teléfono vuelve contigo. Solo en casos complejos hace falta más tiempo, y te lo digo antes."))
     elif l["modo"] == "local":
         out.append((f"¿Tengo que ir a Alcalá de Henares si vivo en {n}?",
                     f"No. Estoy a unos {d} km de {n}: cuando hay que ver un teléfono o recoger una prueba, voy yo. La primera consulta se hace por WhatsApp, teléfono o correo."))
@@ -576,7 +626,7 @@ def documento(title, desc, canonical, jsonld, cuerpo, og_title=None):
 SEO_LOCAL = {
     "alcala-de-henares": (
         "Perito Informático en Alcalá de Henares | Cita en persona",
-        "Perito informático en Alcalá de Henares: WhatsApp, correos y capturas que valgan como prueba en juicio. Nos vemos en persona y la primera consulta es gratis."),
+        "Perito informático en Alcalá de Henares: pantallazos de WhatsApp, correos y capturas válidos como prueba en juicio. Cita en persona y primera consulta gratis."),
     "caceres": (
         "Perito Informático en Cáceres | Prueba digital para juicio",
         "¿Necesitas un perito informático en Cáceres? Convierto WhatsApp, correos y capturas en prueba válida para el juicio, con informe UNE 197010. Consulta gratis."),
@@ -668,15 +718,16 @@ def pagina(l):
   </div>
 </section>"""
 
-    cuerpo = "\n\n".join([
+    cuerpo = "\n\n".join(b for b in [
         hero,
         bloque_servicios(l),
+        bloque_alcala(l),
         bloque_modalidad(l),
         bloque_juzgado(l),
         bloque_faq(l, preguntas),
         bloque_cercanos(l),
         bloque_contacto(l),
-    ])
+    ] if b)
     html_doc = documento(title, desc, canonical, jsonld, cuerpo, og_title=f"Perito informático en {n}")
     # el quickbar lleva el texto de WhatsApp con la ciudad
     html_doc = html_doc.replace(quickbar(), quickbar(l))

@@ -187,31 +187,72 @@ ARTICULOS = [
         "slug": "pantallazos-whatsapp-prueba-juicio",
         "tag": "WhatsApp",
         "fecha": "2026-10-23",
-        "titulo": "¿Basta un pantallazo de WhatsApp como prueba en un juicio?",
-        "desc": "Qué dice el Tribunal Supremo sobre las capturas de WhatsApp, cuándo hace falta un informe pericial y qué hacer para que tu prueba no se caiga si la impugnan.",
+        "actualizado": "2026-11-13",
+        "titulo": "Pantallazos de WhatsApp como prueba en un juicio: cuándo valen y cuándo no",
+        "desc": "Qué dice el Tribunal Supremo sobre los pantallazos de WhatsApp como prueba, cuándo hace falta un informe pericial y qué hacer para que tu prueba no se caiga si la impugnan.",
         "resumen": "A veces sí, pero no te fíes: lo que da solidez a la prueba es el original en el teléfono.",
+        "seo_titulo": "Pantallazos de WhatsApp como prueba en juicio: ¿valen? (2026)",
+        "seo_desc": "¿Sirven los pantallazos de WhatsApp como prueba? Qué dice el Supremo (STS 300/2015 y 629/2025), qué pasa si los impugnan y cómo presentarlos bien.",
+        "faq": [
+            ("¿Valen los pantallazos de WhatsApp como prueba en un juicio?",
+             "Pueden valer. El Tribunal Supremo admite que el juez valore capturas de WhatsApp sin informe pericial cuando nadie las discute o cuando otras pruebas confirman que son auténticas. Si la otra parte las impugna con motivos concretos, quien las aporta tiene que demostrar su autenticidad, normalmente con un informe pericial sobre el teléfono original."),
+            ("¿Qué pasa si la otra parte dice que mis pantallazos son falsos?",
+             "Si la impugnación es genérica («eso puede estar manipulado») suele no bastar. Si aporta indicios concretos —fechas que no cuadran, mensajes que no aparecen en su teléfono, cortes en la conversación—, tendrás que acreditar el origen, la autoría y la integridad de los mensajes. Por eso conviene conservar el teléfono sin tocar."),
+            ("¿Sirve un acta notarial de los mensajes de WhatsApp?",
+             "El notario da fe de lo que ve en la pantalla del teléfono en ese momento, lo que ayuda a fijar la conversación. Pero no analiza si los mensajes se manipularon antes ni comprueba los datos internos de la aplicación. Si la autenticidad se discute, el informe pericial es el que responde a esa pregunta."),
+            ("¿Puedo aportar pantallazos de una conversación en la que no participé?",
+             "Con mucha cautela. Si accediste al teléfono o la cuenta de otra persona sin su permiso, la prueba puede anularse y además podrías cometer un delito de descubrimiento y revelación de secretos (artículo 197 del Código Penal). Consúltalo antes con tu abogado."),
+            ("¿Cuánto cuesta un informe pericial de WhatsApp?",
+             "Depende del volumen de la conversación, de si hay que extraer datos del teléfono y de si hay que ratificar el informe en juicio. La primera consulta es gratuita y, antes de empezar, recibes un presupuesto cerrado por escrito."),
+        ],
         "cuerpo": """
-<p>«Tengo los pantallazos, ¿con eso vale?» Es la pregunta que más me hacen. Y la respuesta corta es: <strong>a veces sí, pero no te fíes</strong>.</p>
+<p>«Tengo los pantallazos, ¿con eso vale?» Es la pregunta que más me hacen. Y la respuesta corta es: <strong>a veces sí, pero no te fíes</strong>. Los pantallazos de WhatsApp como prueba funcionan bien mientras nadie los discute; el problema llega cuando la otra parte dice que son falsos.</p>
 
-<h2>Lo que ha cambiado en los tribunales</h2>
-<p>Durante años, la referencia fue la sentencia del Tribunal Supremo 300/2015: si la otra parte impugnaba una conversación aportada en captura, hacía falta una prueba pericial que acreditara su origen, su autoría y su integridad.</p>
-<p>En 2025 el Supremo suavizó ese criterio (por ejemplo, en la STS 629/2025): una captura de WhatsApp puede valorarse como prueba sin informe pericial, salvo que existan indicios razonables de manipulación.</p>
+<h2>Qué es exactamente un pantallazo ante el juez</h2>
+<p>Un pantallazo (captura de pantalla) es una <strong>imagen</strong> de la conversación, no la conversación. En el proceso civil se aporta como documento o como medio de reproducción (artículos 299, 382 y 384 de la Ley de Enjuiciamiento Civil) y en el penal se valora junto con el resto de la prueba. En ambos casos, el juez lo valora libremente: no hay una regla que diga «los pantallazos siempre valen» o «nunca valen».</p>
 
-<h2>El problema: basta con que la impugnen con argumentos</h2>
-<p>Que una captura <em>pueda</em> valer no significa que vaya a valer en tu caso. Si la otra parte la impugna aportando motivos —incoherencias de fechas, mensajes que no encajan, una conversación que no aparece en su teléfono—, vuelve a ser necesario demostrar que es auténtica. Y hoy generar una conversación falsa con apariencia real está al alcance de cualquiera.</p>
+<h2>Lo que dice el Tribunal Supremo</h2>
+<p>Durante años la referencia fue la <strong>STS 300/2015, de 19 de mayo</strong>: la prueba de una conversación de mensajería debe abordarse con cautela y, si se impugna su autenticidad, la carga de demostrarla pasa a quien la aporta, lo que en la práctica obliga a una pericial informática.</p>
+<p>Desde entonces el Supremo ha matizado ese criterio. Sentencias como la <strong>STS 375/2018</strong> y, sobre todo, las de 2025 (<strong>STS 116/2025, 603/2025 y 629/2025</strong>) establecen que la pericial no es obligatoria siempre: una impugnación genérica no basta, y los mensajes pueden valorarse sin informe cuando otras pruebas descartan la manipulación (el reconocimiento de la otra parte, testigos, otros documentos que encajan).</p>
 
-<h2>Qué da solidez a la prueba</h2>
-<p>No es la imagen, sino el original:</p>
+<h2>Cuándo suelen bastar los pantallazos</h2>
 <ul>
-<li><strong>La conversación en el propio teléfono</strong>, sin borrar ni reinstalar nada.</li>
-<li><strong>Una adquisición documentada</strong>, con huellas digitales (hash SHA-256) que demuestran que nada ha cambiado después.</li>
-<li><strong>Un informe pericial</strong> que explique al juez qué se ha analizado, cómo y con qué grado de certeza.</li>
+<li>La otra parte <strong>reconoce</strong> la conversación o no la discute.</li>
+<li>Hay <strong>otras pruebas</strong> que la corroboran: testigos que vieron los mensajes, pagos o hechos que coinciden con lo que se dice en el chat.</li>
+<li>La conversación es <strong>secundaria</strong> en el caso y no decide el resultado.</li>
+</ul>
+
+<h2>Cuándo no te puedes fiar</h2>
+<ul>
+<li>La otra parte <strong>impugna con motivos concretos</strong>: incoherencias de fechas, mensajes que no aparecen en su teléfono, saltos en la conversación.</li>
+<li>Los mensajes son <strong>la prueba principal</strong>: amenazas, acoso, un acuerdo de pago, un despido.</li>
+<li>Hay sospecha de <strong>montaje o de edición</strong>. Hoy generar una conversación falsa con apariencia real está al alcance de cualquiera, también con inteligencia artificial.</li>
+<li>Los pantallazos están <strong>recortados</strong> o no muestran el número de teléfono, la fecha o el contexto.</li>
+</ul>
+
+<h2>Cómo hacer los pantallazos para que tengan más fuerza</h2>
+<p>Si vas a hacer capturas, hazlas bien. No sustituyen al original, pero ayudan:</p>
+<ol>
+<li><strong>Muestra quién es quién:</strong> haz también una captura de la ficha del contacto con el número de teléfono.</li>
+<li><strong>No recortes:</strong> capturas completas, con la hora de cada mensaje y la fecha de los separadores del chat.</li>
+<li><strong>Incluye el contexto:</strong> lo anterior y lo posterior a los mensajes clave, no solo la frase que te interesa.</li>
+<li><strong>Exporta también el chat</strong> desde WhatsApp (Más › Exportar chat), sin borrar nada después.</li>
+<li><strong>Conserva el teléfono tal como está:</strong> sin borrar la conversación, sin cambiar de móvil y sin restaurar copias de seguridad.</li>
+</ol>
+
+<h2>Qué hace el perito cuando hay que defender la prueba</h2>
+<p>Cuando la autenticidad se discute, lo que da solidez no es la imagen, sino el original:</p>
+<ul>
+<li><strong>Adquisición forense del teléfono</strong> o de la copia de la conversación, documentada paso a paso.</li>
+<li><strong>Cotejo</strong> de los pantallazos aportados con los mensajes que hay realmente en el dispositivo.</li>
+<li><strong>Huellas digitales (hash SHA-256)</strong> que demuestran que nada ha cambiado desde la adquisición.</li>
+<li><strong>Un informe pericial</strong> que explique al juez qué se ha analizado, cómo y con qué grado de certeza, y que el perito ratifica en el juicio si se le cita.</li>
 </ul>
 
 <h2>Mi consejo</h2>
-<p>Guarda los pantallazos, pero sobre todo <strong>conserva el teléfono tal como está</strong>. Si el asunto llega a juicio y alguien pone en duda tus mensajes, lo agradecerás.</p>
+<p>Guarda los pantallazos, pero sobre todo <strong>conserva el teléfono tal como está</strong>. Si el asunto llega a juicio y alguien pone en duda tus mensajes, lo agradecerás. Y si te han presentado pantallazos que crees falsos, también se pueden analizar: el método es el mismo.</p>
 
-<p>Si quieres saber qué se analiza exactamente y cómo es el proceso, te lo explico en la página de <a href="/peritaje-whatsapp/">peritaje de WhatsApp</a>.</p>
+<p>Si quieres saber qué se analiza exactamente y cómo es el proceso, te lo explico en la página de <a href="/peritaje-whatsapp/">peritaje de WhatsApp</a>. Si tu caso se ve en los juzgados de Alcalá de Henares o del Corredor del Henares, puedo ver el teléfono en persona: <a href="/perito-informatico-alcala-de-henares/">perito informático en Alcalá de Henares</a>.</p>
 """,
     },
     {
@@ -306,7 +347,7 @@ def pagina_articulo(a):
             "description": meta_desc,
             "inLanguage": "es-ES",
             "datePublished": a["fecha"],
-            "dateModified": a["fecha"],
+            "dateModified": a.get("actualizado", a["fecha"]),
             "mainEntityOfPage": url,
             "image": f"{SITE}/og-image.jpg",
             "author": {"@type": "Person", "@id": SITE + "/#person", "name": "Enrique Delgado", "url": SITE + "/", "sameAs": [LINKEDIN]},
@@ -336,7 +377,7 @@ def pagina_articulo(a):
   <nav class="crumbs" aria-label="Migas de pan"><a href="/">Inicio</a><span aria-hidden="true">›</span><a href="/articulos/">Artículos</a><span aria-hidden="true">›</span><span aria-current="page">{gz.esc(a['tag'])}</span></nav>
   <span class="eyebrow">{gz.esc(a['tag'])}</span>
   <h1>{gz.esc(a['titulo'])}</h1>
-  <p class="meta">Por <a href="{LINKEDIN}" rel="author me noopener" target="_blank">Enrique Delgado</a>, perito informático · {fecha_larga(a['fecha'])}</p>
+  <p class="meta">Por <a href="{LINKEDIN}" rel="author me noopener" target="_blank">Enrique Delgado</a>, perito informático · {fecha_larga(a['fecha'])}{(' · actualizado el ' + fecha_larga(a['actualizado'])) if a.get('actualizado') else ''}</p>
   <div class="article-body">
 {a['cuerpo'].strip()}
   </div>{bloque_faq_articulo(a)}

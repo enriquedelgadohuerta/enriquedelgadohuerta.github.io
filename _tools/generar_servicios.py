@@ -104,7 +104,7 @@ WHATSAPP = {
          "Depende del número de conversaciones y mensajes, de cómo haya que extraerlos, de la urgencia y de si hay que ratificar el informe en juicio. La primera consulta es gratuita y, si seguimos, recibes un presupuesto cerrado por escrito antes de empezar."),
     ],
     "relacionados": [
-        ("/articulos/pantallazos-whatsapp-prueba-juicio/", "¿Basta un pantallazo de WhatsApp como prueba?"),
+        ("/articulos/pantallazos-whatsapp-prueba-juicio/", "Pantallazos de WhatsApp como prueba: cuándo valen"),
         ("/articulos/primeras-horas-conservar-prueba-digital/", "Qué hacer en las primeras horas para no perder la prueba"),
         ("/articulos/pruebas-falsas-inteligencia-artificial/", "Pruebas falsas hechas con IA en los juicios"),
         ("/articulos/como-elegir-perito-informatico/", "Cómo elegir un perito informático"),
