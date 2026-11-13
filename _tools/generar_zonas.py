@@ -625,8 +625,8 @@ def documento(title, desc, canonical, jsonld, cuerpo, og_title=None):
 # en Google pero reciben pocos clics. El resto usa la plantilla.
 SEO_LOCAL = {
     "alcala-de-henares": (
-        "Perito Informático en Alcalá de Henares | Cita en persona",
-        "Perito informático en Alcalá de Henares: pantallazos de WhatsApp, correos y capturas válidos como prueba en juicio. Cita en persona y primera consulta gratis."),
+        "Perito Informático en Alcalá de Henares | Consulta gratis",
+        "¿Pantallazos de WhatsApp o correos para un juicio en Alcalá? Te digo gratis si valen como prueba. Cita en persona, presupuesto cerrado e informe UNE 197010."),
     "caceres": (
         "Perito Informático en Cáceres | Prueba digital para juicio",
         "¿Necesitas un perito informático en Cáceres? Convierto WhatsApp, correos y capturas en prueba válida para el juicio, con informe UNE 197010. Consulta gratis."),
