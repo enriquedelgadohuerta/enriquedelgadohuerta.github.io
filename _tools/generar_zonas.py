@@ -127,7 +127,8 @@ def cercanos(l, n=6):
     if l["modo"] in ("base", "local"):
         cand = [o for o in otros if o["modo"] in ("base", "local")]
     else:
-        cand = [o for o in otros if o["tipo"] == "capital"]
+        cand = [o for o in otros if o["tipo"] == "capital" or
+                (o["provincia"] == l["provincia"] and o["modo"] not in ("base", "local"))]
     cand.sort(key=lambda o: km(l, o))
     res = cand[:n]
     base = POR_NOMBRE["Alcalá de Henares"]
@@ -258,8 +259,11 @@ def bloque_juzgado(l):
             filas.append(("Partido judicial", "Guadalajara es cabeza de su partido judicial, que incluye los municipios del Corredor del Henares en la provincia."))
         else:
             filas.append(("Partido judicial", f"{esc(n)} pertenece al partido judicial de {enlace_lugar('Guadalajara')}: los asuntos se ven en los juzgados de la capital."))
+    elif l.get("partido_num"):
+        filas.append(("Partido judicial", f"{esc(n)} es cabeza del partido judicial nº {l['partido_num']} de la provincia de {esc(l['provincia'])}: los asuntos de primera instancia e instrucción se ven en el Tribunal de Instancia de {esc(n)}."))
     else:
         filas.append(("Juzgados", f"Los asuntos de {esc(n)} se tramitan en los juzgados de su partido judicial, con sede en la propia ciudad."))
+    filas.extend(LOCAL_EXTRA.get(l["slug"], {}).get("juzgado", []))
     filas.append(("Recursos", f"Las apelaciones en materia civil y penal van a {esc(l['audiencia_txt'])}."))
     filas.append(("Ámbito autonómico", esc(l["tsj_txt"]) + "."))
     comp = COMPOSICION.get(l["partido"])
@@ -339,6 +343,62 @@ def bloque_servicios(l):
 </section>"""
 
 
+# ───────────────────────── contenido local propio ─────────────────────────
+# Textos específicos de algunas ciudades fuera de Madrid. Solo hechos verificables
+# (organización judicial, comunicaciones); nada de "oficina" ni domicilio local.
+LOCAL_EXTRA = {
+    "puertollano": {
+        "juzgado": [
+            ("Violencia sobre la mujer", "Estos asuntos del partido de Puertollano se tramitan en la Sección de Violencia sobre la Mujer del Tribunal de Instancia de <a href=\"/perito-informatico-ciudad-real/\">Ciudad Real</a>, que extiende su jurisdicción a Puertollano."),
+        ],
+        "faqs": [
+            ("¿Te desplazas a Puertollano para ver un teléfono o ratificar?",
+             "Sí. Puertollano tiene AVE directo con Madrid, así que puedo ir y volver en el día para hacer una extracción forense delante de ti o para ratificar el informe en el Tribunal de Instancia de Puertollano."),
+        ],
+        "eyebrow": "Puertollano y comarca",
+        "titulo": "Peritaje informático en Puertollano y su comarca",
+        "lead": ("Atiendo a particulares, empresas y despachos de Puertollano y del resto de su partido judicial: "
+                 "Almodóvar del Campo, Argamasilla de Calatrava, Villamayor de Calatrava, Brazatortas, Aldea del Rey, "
+                 "Fuencaliente, Mestanza o Solana del Pino. Gracias al AVE, cuando el caso lo pide me planto en Puertollano "
+                 "en el día; lo demás se resuelve a distancia con las mismas garantías."),
+        "casos": [
+            ("Familia y custodia", "Mensajes entre exparejas sobre los hijos, la pensión o las visitas que se discuten en el Tribunal de Instancia de Puertollano."),
+            ("Trabajo y empresa", "Despidos, sanciones y reclamaciones con mensajes del encargado, correos internos o registros de fichaje que una parte niega."),
+            ("Estafas y facturas falsas", "Facturas con la cuenta bancaria cambiada, SMS que suplantan al banco y compraventas entre particulares que acaban en denuncia."),
+            ("Amenazas y acoso", "Conversaciones de WhatsApp, Instagram o Telegram que hay que fijar antes de denunciar para que no se pierdan ni se puedan negar."),
+        ],
+        "enlace": ("/articulos/fraude-factura-cambio-cuenta-bancaria/", "Qué hacer si te llega una factura con otra cuenta bancaria →"),
+    },
+}
+
+
+def bloque_local_extra(l):
+    x = LOCAL_EXTRA.get(l["slug"])
+    if not x or "casos" not in x:
+        return ""
+    cards = "\n".join(
+        f"""      <article class="problem">
+        <h3>{esc(t)}</h3>
+        <p>{esc(d)}</p>
+      </article>""" for t, d in x["casos"]
+    )
+    enlace = ""
+    if x.get("enlace"):
+        enlace = f'\n    <p class="zone-all"><a href="{x["enlace"][0]}">{esc(x["enlace"][1])}</a></p>'
+    return f"""<section id="casos-{l['slug']}" aria-labelledby="h2-local">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">{ICON_PIN} {esc(x['eyebrow'])}</span>
+      <h2 id="h2-local">{esc(x['titulo'])}</h2>
+      <p class="lead">{esc(x['lead'])}</p>
+    </div>
+    <div class="problems">
+{cards}
+    </div>{enlace}
+  </div>
+</section>"""
+
+
 def bloque_alcala(l):
     """Contenido propio solo para la página de Alcalá de Henares (la base)."""
     if l["modo"] != "base":
@@ -411,6 +471,7 @@ def faqs(l):
                     f"Si el juzgado de {n} acepta la videoconferencia, la ratificación se puede hacer a distancia. Si exige presencia, me desplazo y el coste del viaje aparece en el presupuesto desde el principio, sin sorpresas."))
     out.append((pick(l, [f"¿Cuánto cuesta un perito informático en {n}?", f"¿Qué precio tiene un informe pericial informático en {n}?"], "faqp"),
                 "Depende del tipo de prueba, del volumen de información y de si hay que acudir a juicio. La primera consulta es gratuita y, si seguimos, recibes un presupuesto cerrado por escrito antes de empezar."))
+    out.extend(LOCAL_EXTRA.get(l["slug"], {}).get("faqs", []))
     out.append(("¿Necesito abogado para contratarte?",
                 "No. Muchas personas me consultan antes de tener abogado para saber si su prueba se sostiene. Si después hay procedimiento, me coordino con tu abogado."))
     return out
@@ -624,6 +685,9 @@ def documento(title, desc, canonical, jsonld, cuerpo, og_title=None):
 # Títulos y descripciones a medida (por slug) para páginas que ya salen arriba
 # en Google pero reciben pocos clics. El resto usa la plantilla.
 SEO_LOCAL = {
+    "puertollano": (
+        "Perito Informático en Puertollano | WhatsApp, Correos y Móviles",
+        "Perito informático en Puertollano y su comarca: WhatsApp, correos, capturas y móviles para juicio, con informe UNE 197010. Me desplazo en AVE. Consulta gratis."),
     "alcala-de-henares": (
         "Perito Informático en Alcalá de Henares | Consulta gratis",
         "¿Pantallazos de WhatsApp o correos para un juicio en Alcalá? Te digo gratis si valen como prueba. Cita en persona, presupuesto cerrado e informe UNE 197010."),
@@ -722,6 +786,7 @@ def pagina(l):
         hero,
         bloque_servicios(l),
         bloque_alcala(l),
+        bloque_local_extra(l),
         bloque_modalidad(l),
         bloque_juzgado(l),
         bloque_faq(l, preguntas),
@@ -741,8 +806,8 @@ def pagina_zonas():
          [l for l in LUGARES if l["tipo"] == "corredor"]),
         ("Comunidad de Madrid · partidos judiciales", "Cabezas de partido judicial de la Comunidad de Madrid. Me desplazo para extracciones y ratificaciones.",
          [l for l in LUGARES if l["tipo"] == "partido"] + [POR_NOMBRE[p] for p in ("Alcalá de Henares", "Torrejón de Ardoz", "Coslada")]),
-        ("Capitales de provincia", "Trabajo a distancia con cadena de custodia y me desplazo cuando el caso lo requiere.",
-         [l for l in LUGARES if l["tipo"] == "capital" or l.get("capital")]),
+        ("Capitales de provincia y otras ciudades", "Trabajo a distancia con cadena de custodia y me desplazo cuando el caso lo requiere.",
+         [l for l in LUGARES if l["tipo"] in ("capital", "ciudad") or l.get("capital")]),
     ]
     secciones = []
     for i, (t, d, ls) in enumerate(grupos):

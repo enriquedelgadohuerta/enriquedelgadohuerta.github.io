@@ -14,7 +14,8 @@
     "Alcalá de Henares": ["Alcalá de Henares", "Anchuelo", "Camarma de Esteruelas", "Corpa", "Los Santos de la Humosa", "Meco", "Pezuela de las Torres", "Santorcaz", "Valdeavero", "Valverde de Alcalá", "Villalbilla"],
     "Torrejón de Ardoz": ["Torrejón de Ardoz", "Ajalvir", "Algete", "Cobeña", "Daganzo de Arriba", "Fresno de Torote", "Fuente el Saz de Jarama", "Paracuellos de Jarama", "Ribatejada", "Valdeolmos-Alalpardo", "Valdetorres de Jarama"],
     "Coslada": ["Coslada", "San Fernando de Henares", "Mejorada del Campo", "Velilla de San Antonio"],
-    "Arganda del Rey": ["Arganda del Rey", "Ambite", "Brea de Tajo", "Campo Real", "Carabaña", "Estremera", "Fuentidueña de Tajo", "Loeches", "Morata de Tajuña", "Nuevo Baztán", "Olmeda de las Fuentes", "Orusco de Tajuña", "Perales de Tajuña", "Pozuelo del Rey", "Rivas-Vaciamadrid", "Tielmes", "Torres de la Alameda", "Valdaracete", "Valdilecha", "Villamanrique de Tajo", "Villar del Olmo", "Villarejo de Salvanés"]
+    "Arganda del Rey": ["Arganda del Rey", "Ambite", "Brea de Tajo", "Campo Real", "Carabaña", "Estremera", "Fuentidueña de Tajo", "Loeches", "Morata de Tajuña", "Nuevo Baztán", "Olmeda de las Fuentes", "Orusco de Tajuña", "Perales de Tajuña", "Pozuelo del Rey", "Rivas-Vaciamadrid", "Tielmes", "Torres de la Alameda", "Valdaracete", "Valdilecha", "Villamanrique de Tajo", "Villar del Olmo", "Villarejo de Salvanés"],
+    "Puertollano": ["Puertollano", "Abenójar", "Aldea del Rey", "Almodóvar del Campo", "Argamasilla de Calatrava", "Brazatortas", "Cabezarados", "Cabezarrubias del Puerto", "Caracuel de Calatrava", "Corral de Calatrava", "Fuencaliente", "Hinojosas de Calatrava", "Mestanza", "Los Pozuelos de Calatrava", "San Lorenzo de Calatrava", "Solana del Pino", "Villamayor de Calatrava", "Villanueva de San Carlos"]
   },
 
   "lugares": [
@@ -75,6 +76,7 @@
     {"nombre": "Cádiz", "tipo": "capital", "provincia": "Cádiz", "ccaa": "Andalucía", "tsj": "Tribunal Superior de Justicia de Andalucía, Ceuta y Melilla (Granada)", "lat": 36.527, "lon": -6.288},
     {"nombre": "Castellón de la Plana", "tipo": "capital", "provincia": "Castellón", "ccaa": "Comunitat Valenciana", "tsj": "Tribunal Superior de Justicia de la Comunitat Valenciana (Valencia)", "lat": 39.986, "lon": -0.051},
     {"nombre": "Ciudad Real", "tipo": "capital", "provincia": "Ciudad Real", "ccaa": "Castilla-La Mancha", "tsj": "Tribunal Superior de Justicia de Castilla-La Mancha (Albacete)", "lat": 38.985, "lon": -3.927},
+    {"nombre": "Puertollano", "tipo": "ciudad", "provincia": "Ciudad Real", "ccaa": "Castilla-La Mancha", "tsj": "Tribunal Superior de Justicia de Castilla-La Mancha (Albacete)", "partido": "Puertollano", "partido_num": 7, "lat": 38.687, "lon": -4.107},
     {"nombre": "Córdoba", "tipo": "capital", "provincia": "Córdoba", "ccaa": "Andalucía", "tsj": "Tribunal Superior de Justicia de Andalucía, Ceuta y Melilla (Granada)", "lat": 37.888, "lon": -4.779},
     {"nombre": "Cuenca", "tipo": "capital", "provincia": "Cuenca", "ccaa": "Castilla-La Mancha", "tsj": "Tribunal Superior de Justicia de Castilla-La Mancha (Albacete)", "lat": 40.070, "lon": -2.137},
     {"nombre": "Girona", "tipo": "capital", "provincia": "Girona", "ccaa": "Cataluña", "tsj": "Tribunal Superior de Justicia de Cataluña (Barcelona)", "lat": 41.979, "lon": 2.821},
