@@ -28,6 +28,8 @@ Qué no hace: no accede a dispositivos ni cuentas de terceros sin derecho legít
 - [Recuperación de datos borrados con validez pericial](https://informeperitoinformatico.es/recuperacion-datos-borrados/): mensajes, fotos y archivos eliminados en móviles, ordenadores y copias de seguridad, con expectativas realistas y cadena de custodia
 - [Informe pericial informático y contrapericial](https://informeperitoinformatico.es/informe-pericial-informatico/): informe UNE 197010, revisión del informe de la parte contraria, ratificación en juicio en civil, penal, laboral y contencioso
 
+- [Perito informático para abogados y despachos](https://informeperitoinformatico.es/peritaje-informatico-abogados/): valoración previa de la prueba digital en 24 h, informe UNE 197010, contrapericial, revisión de volcados en penal y ratificación
+
 ## Artículos
 
 - [Cómo elegir un perito informático: 8 preguntas antes de contratarlo](https://informeperitoinformatico.es/articulos/como-elegir-perito-informatico/): titulación (art. 340 LEC), normas UNE/ISO, cadena de custodia, legalidad, ratificación y presupuesto

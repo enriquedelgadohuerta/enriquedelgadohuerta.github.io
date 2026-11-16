@@ -311,7 +311,8 @@ SERVICIO_URL = {
     "Informe y contrapericial": ("/informe-pericial-informatico/", "Informe pericial y contrapericial →"),
 }
 PAGINAS_SERVICIO = ["peritaje-whatsapp", "peritaje-correo-electronico", "peritaje-capturas-imagenes",
-                    "peritaje-movil", "recuperacion-datos-borrados", "informe-pericial-informatico"]
+                    "peritaje-movil", "recuperacion-datos-borrados", "informe-pericial-informatico",
+                    "peritaje-informatico-abogados"]
 
 
 def bloque_servicios(l):
@@ -602,6 +603,7 @@ def footer():
           <li><a href="/peritaje-movil/">Forense de móviles</a></li>
           <li><a href="/recuperacion-datos-borrados/">Recuperación de datos borrados</a></li>
           <li><a href="/informe-pericial-informatico/">Informe pericial y contrapericial</a></li>
+          <li><a href="/peritaje-informatico-abogados/">Para abogados y despachos</a></li>
           <li><a href="/#servicios">Todos los servicios</a></li>
           <li><a href="/articulos/">Artículos</a></li>
         </ul>
@@ -716,14 +718,17 @@ SEO_LOCAL = {
 def pagina(l):
     n = l["nombre"]
     canonical = SITE + l["url"]
-    title = f"Perito Informático en {n} | WhatsApp, Correos y Capturas"
-    if len(title) > 65:
-        title = f"Perito Informático en {n} | WhatsApp y Correos"
-    if len(title) > 65:
+    # «perito informático judicial <ciudad>» es la forma de búsqueda local más frecuente (Search Console)
+    title = f"Perito Informático Judicial en {n} | WhatsApp y Correos"
+    if len(title) > 62:
+        title = f"Perito Informático Judicial en {n} | Consulta gratis"
+    if len(title) > 62:
+        title = f"Perito Informático Judicial en {n}"
+    if len(title) > 62:
         title = f"Perito Informático en {n}"
     desc_opts = [
         f"Perito informático en {n} para particulares y abogados. Peritaje de WhatsApp, correos, capturas y móviles con informe UNE 197010. Primera consulta gratuita.",
-        f"¿Necesitas un perito informático en {n}? Analizo WhatsApp, correos electrónicos, capturas y teléfonos y te lo explico sin tecnicismos. Consulta gratis.",
+        f"¿Buscas perito informático judicial en {n}? Analizo WhatsApp, correos, capturas y móviles y te lo explico sin tecnicismos. Consulta gratis.",
         f"Informes periciales informáticos en {n}: autenticidad de WhatsApp, correos falsos, capturas e imágenes y móviles. Respuesta en 24 h y primera consulta gratuita.",
     ]
     desc = pick(l, desc_opts, "desc")

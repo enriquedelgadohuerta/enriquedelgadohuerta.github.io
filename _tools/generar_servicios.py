@@ -29,7 +29,7 @@ NORMAS = """    <div class="standards" aria-label="Normas de referencia">
 # ───────────────────────── contenidos ─────────────────────────
 WHATSAPP = {
     "slug": "peritaje-whatsapp",
-    "title": "Perito Informático de WhatsApp | Informe pericial para juicio",
+    "title": "Perito Informático de WhatsApp en Madrid | Informe para juicio",
     "desc": ("Peritaje de WhatsApp para juicio: analizo la conversación en el teléfono original, cotejo "
              "capturas y busco mensajes borrados. Toda España. Consulta gratis."),
     "og_title": "Perito informático de WhatsApp",
@@ -539,7 +539,88 @@ INFORME = {
     "contacto_lead": "Con dos o tres frases me basta para orientarte. Si eres abogado, indícame la jurisdicción y la fecha límite. Te respondo en menos de 24 horas.",
 }
 
-SERVICIOS = [WHATSAPP, CORREO, CAPTURAS, MOVIL, BORRADOS, INFORME]
+ABOGADOS = {
+    "slug": "peritaje-informatico-abogados",
+    "title": "Perito Informático para Abogados y Despachos | Madrid y España",
+    "desc": ("Perito informático para despachos: valoración previa de la prueba digital en 24 h, informe "
+             "UNE 197010, contrapericial y ratificación. Civil, penal y laboral."),
+    "og_title": "Perito informático para abogados y despachos",
+    "nombre": "Perito informático para abogados",
+    "alternos": ["Perito informático para despachos", "Colaboración pericial con abogados"],
+    "tipo": "Peritaje informático para procedimientos judiciales",
+    "miga": "Para abogados",
+    "corto": "Para abogados y despachos",
+    "wa_txt": "Hola Enrique, soy abogado y quería consultarte una pericial informática.",
+    "eyebrow": "Para abogados y despachos",
+    "h1": "Perito informático para <em>abogados</em> y despachos",
+    "lead": "Trabajo con letrados en procedimientos civiles, penales, laborales y de familia en los que la prueba es digital: WhatsApp, correos, capturas, móviles. Te digo pronto y por escrito si la prueba se sostiene, y entrego el informe en el plazo que marca el procedimiento.",
+    "casos_h2": "En qué te ayudo como perito de parte",
+    "casos": [
+        ("Valoración previa", "Antes de presentar la demanda o la denuncia, reviso la prueba digital de tu cliente y te digo si se sostiene y qué riesgos tiene si la impugnan."),
+        ("Informe con la demanda", "Dictamen conforme a UNE 197010 para aportarlo con la demanda o la contestación, o en el momento procesal que corresponda."),
+        ("Impugnar la prueba contraria", "Capturas, correos o documentos digitales de la otra parte sin origen acreditado: análisis técnico que fundamenta la impugnación."),
+        ("Contrapericial", "Revisión del informe del perito contrario: método, cadena de custodia, herramientas y si las conclusiones se apoyan en los datos."),
+        ("Penal: volcados y atestados", "Revisión de extracciones de móviles y de informes policiales, y análisis de dispositivos depositados con autorización judicial."),
+        ("Preparar el interrogatorio", "Notas técnicas para la vista: qué preguntar al perito contrario y qué puntos débiles tiene su informe."),
+    ],
+    "duda_id": "plazos",
+    "duda_eyebrow": "Lo que más preocupa a un despacho",
+    "duda_h2": "Plazos, <em>honorarios</em> y criterio",
+    "duda_lead": "Sé que el informe tiene que llegar a tiempo y que no puedes presentar una pericial que se caiga en la vista. Por eso trabajo con un plazo y un precio fijados por escrito desde el principio, y te aviso antes de redactar si el análisis no respalda la tesis de tu cliente.",
+    "duda_link": ("/informe-pericial-informatico/", "Ver cómo es el informe pericial y la contrapericial →"),
+    "duda_puntos": [
+        ("Respuesta en 24 horas", "Primera valoración del caso sin coste, por teléfono, WhatsApp o correo, con indicación clara de si la pericial tiene recorrido."),
+        ("Presupuesto cerrado", "Honorarios por escrito antes de empezar, incluidos los desplazamientos y la ratificación si se prevé."),
+        ("Independencia técnica", "Si los datos no sostienen lo que necesitas, te lo digo antes de que el informe se presente."),
+    ],
+    "analisis_lead": "Informes con la estructura de la norma UNE 197010 y tratamiento de la evidencia según UNE 71505-3 e ISO/IEC 27037, pensados para que el juez los entienda.",
+    "analisis": [
+        ("Objeto pericial acotado", "Delimito contigo las preguntas que debe responder el informe, para que sea útil al procedimiento y no un análisis genérico."),
+        ("Cadena de custodia", "Adquisición documentada con huellas SHA-256 desde el primer momento, para que la integridad de la prueba no sea un punto de ataque."),
+        ("Lenguaje claro", "Conclusiones redactadas para jueces y letrados, separando lo que se afirma con certeza de lo que no puede afirmarse."),
+        ("Mensajería y correo", "WhatsApp, Telegram, correo electrónico (cabeceras, SPF, DKIM, DMARC) y suplantaciones de identidad."),
+        ("Imágenes y móviles", "Autenticidad de capturas y fotografías, análisis forense de teléfonos y recuperación de datos borrados cuando es posible."),
+        ("Ratificación", "Comparecencia en juicio o vista, presencial en Madrid y Guadalajara y por videoconferencia en el resto de España cuando el tribunal lo admite."),
+    ],
+    "nota_legal": "Actúo como perito de parte o por designación judicial. Solo analizo dispositivos y cuentas con derecho legítimo de acceso, consentimiento del titular o autorización judicial.",
+    "pasos_h2": "Cómo trabajamos juntos",
+    "pasos": [
+        ("Me cuentas el caso", "Jurisdicción, fase del procedimiento, plazos y qué prueba digital hay. Con eso te doy una primera valoración.", "24 h"),
+        ("Presupuesto y encargo", "Honorarios y plazo de entrega por escrito. Concretamos juntos el objeto de la pericial.", "Por escrito"),
+        ("Análisis e informe", "Adquiero la evidencia con cadena de custodia, la analizo y te explico las conclusiones antes de entregar el informe.", "UNE 197010"),
+        ("Vista", "Preparamos la ratificación y defiendo el informe ante el tribunal.", "Ratificación"),
+    ],
+    "precio_h2": "¿Cómo se presupuesta una pericial informática?",
+    "precio_factores": [
+        "El tipo y el volumen de la prueba digital",
+        "Si es un informe propio o una contrapericial",
+        "Si hay que desplazarse para la adquisición o la vista",
+        "Los plazos del procedimiento",
+        "Si se prevé ratificación en juicio",
+    ],
+    "faq_h2": "Preguntas frecuentes de abogados",
+    "faq": [
+        ("¿Con cuánto tiempo necesitas el encargo?",
+         "Cuanto antes, mejor, sobre todo si hay que adquirir la prueba de un teléfono. En cuanto me cuentes el caso te digo el plazo realista de entrega, y si el procedimiento aprieta lo indicamos en el presupuesto."),
+        ("¿Puedo consultarte antes de que el cliente decida encargar la pericial?",
+         "Sí. La primera valoración es gratuita y sirve precisamente para decidir si merece la pena. Si la prueba no se sostiene o no hace falta perito, te lo digo."),
+        ("¿Trabajas en procedimientos penales?",
+         "Sí, como perito de parte de la defensa o de la acusación particular: revisión de volcados y atestados, análisis de dispositivos depositados con autorización judicial y contrapericial del informe policial o del perito contrario."),
+        ("¿Puedes ratificar fuera de Madrid?",
+         "Sí. En Madrid y Guadalajara acudo en persona. En el resto de España, si el tribunal admite la videoconferencia la ratificación se hace a distancia; si exige presencia, me desplazo y el viaje figura en el presupuesto."),
+        ("¿El informe va firmado por un ingeniero?",
+         "Sí. Soy ingeniero técnico industrial con más de veinte años en consultoría tecnológica y de datos, y firmo personalmente cada informe y su ratificación."),
+    ],
+    "relacionados": [
+        ("/articulos/pantallazos-whatsapp-prueba-juicio/", "Pantallazos de WhatsApp como prueba: cuándo valen"),
+        ("/articulos/como-elegir-perito-informatico/", "Cómo elegir y contratar un perito informático"),
+        ("/articulos/pruebas-falsas-inteligencia-artificial/", "Pruebas falsas hechas con IA en los juicios"),
+    ],
+    "contacto_h2": "Cuéntame el procedimiento y el plazo",
+    "contacto_lead": "Jurisdicción, fase y fecha límite: con eso te doy una primera valoración en menos de 24 horas.",
+}
+
+SERVICIOS = [WHATSAPP, CORREO, CAPTURAS, MOVIL, BORRADOS, INFORME, ABOGADOS]
 
 
 # ───────────────────────── plantilla ─────────────────────────

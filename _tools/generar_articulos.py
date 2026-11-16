@@ -26,6 +26,7 @@ ARTICULOS = [
         "tag": "Guía",
         "fecha": "2026-11-10",
         "titulo": "Cómo elegir un perito informático: 8 preguntas antes de contratarlo",
+        "seo_titulo": "Cómo elegir y contratar un perito informático: 8 preguntas",
         "desc": "Qué comprobar antes de contratar a un perito informático en Madrid o en cualquier punto de España: titulación, normas UNE e ISO, cadena de custodia, ratificación en juicio, presupuesto y legalidad del análisis.",
         "resumen": "Titulación, método, independencia y un presupuesto por escrito: lo que debes preguntar antes de encargar un informe pericial.",
         "cuerpo": """
@@ -70,6 +71,7 @@ ARTICULOS = [
         "tag": "Fraude",
         "fecha": "2026-10-28",
         "titulo": "He pinchado en un SMS o correo falso de mi banco: qué hacer ahora",
+        "seo_titulo": "He pinchado en un SMS o correo falso del banco: qué hacer",
         "desc": "Pasos inmediatos si has caído en un phishing, smishing o vishing bancario: qué hacer con el dispositivo, cómo conservar la prueba y por qué importa para reclamar al banco.",
         "resumen": "Primero corta el daño; después conserva la prueba. En ese orden, y sin borrar nada.",
         "cuerpo": """
@@ -260,6 +262,7 @@ ARTICULOS = [
         "tag": "Correo",
         "fecha": "2026-10-23",
         "titulo": "La factura con otra cuenta bancaria: cómo funciona el fraude y qué hacer",
+        "seo_titulo": "Factura con otra cuenta bancaria: el fraude BEC y qué hacer",
         "desc": "El fraude del cambio de cuenta (BEC) explicado: cómo se produce, qué revelan las cabeceras del correo (SPF, DKIM, DMARC) y qué hacer si ya has pagado.",
         "resumen": "El remitente se puede falsificar; el rastro técnico del correo, mucho menos.",
         "cuerpo": """
@@ -291,6 +294,7 @@ ARTICULOS = [
         "tag": "Evidencia",
         "fecha": "2026-10-23",
         "titulo": "Qué hacer en las primeras horas para no perder una prueba digital",
+        "seo_titulo": "Cómo conservar una prueba digital: las primeras horas",
         "desc": "Cinco cosas que conviene hacer (y no hacer) desde el primer minuto ante un caso de acoso, amenazas o estafa para que la prueba digital siga siendo válida.",
         "resumen": "Lo que haces en las primeras horas decide si la prueba se sostiene después.",
         "cuerpo": """
