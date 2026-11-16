@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perito Forense de Móviles Android e iPhone | Informe pericial</title>
+<meta name="description" content="Análisis forense de móviles Android e iPhone: mensajes, llamadas, fotos y ubicaciones con cadena de custodia. Revisión de volcados policiales. Consulta gratis.">
+<meta name="author" content="Enrique Delgado — Perito Informático">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#fbf7f1">
+<link rel="canonical" href="https://informeperitoinformatico.es/peritaje-movil/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://informeperitoinformatico.es/peritaje-movil/">
+<meta property="og:title" content="Perito forense de teléfonos móviles">
+<meta property="og:description" content="Análisis forense de móviles Android e iPhone: mensajes, llamadas, fotos y ubicaciones con cadena de custodia. Revisión de volcados policiales. Consulta gratis.">
+<meta property="og:image" content="https://informeperitoinformatico.es/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="informeperitoinformatico.es">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preload" href="/assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://informeperitoinformatico.es/peritaje-movil/#servicio",
+  "name": "Análisis forense de dispositivos móviles",
+  "alternateName": [
+    "Perito informático de móviles",
+    "Peritaje de teléfono móvil",
+    "Forense de iPhone y Android"
+  ],
+  "serviceType": "Análisis forense de dispositivos móviles",
+  "url": "https://informeperitoinformatico.es/peritaje-movil/",
+  "description": "Análisis forense de móviles Android e iPhone: mensajes, llamadas, fotos y ubicaciones con cadena de custodia. Revisión de volcados policiales. Consulta gratis.",
+  "provider": {
+    "@id": "https://informeperitoinformatico.es/#organization"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "España"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "servicePhone": {
+      "@type": "ContactPoint",
+      "telephone": "+34649716627",
+      "contactType": "customer service",
+      "availableLanguage": "es"
+    },
+    "serviceUrl": "https://informeperitoinformatico.es/peritaje-movil/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://informeperitoinformatico.es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Servicios",
+      "item": "https://informeperitoinformatico.es/#servicios"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Forense de móviles",
+      "item": "https://informeperitoinformatico.es/peritaje-movil/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Puedes analizar un móvil que está en el juzgado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, siempre que el juzgado lo autorice. Tu abogado solicita la pericial y el acceso al teléfono o a una copia del volcado. Antes de pedirlo te ayudo a concretar qué hay que analizar, para que la solicitud sea precisa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede demostrar que dos personas no se comunicaron?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se puede acreditar qué registros existen en el teléfono y cuáles no, y si hay indicios de que se borró algo. Probar una ausencia tiene límites técnicos que explico en el informe con claridad, porque es justo lo que el tribunal va a preguntar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Desbloqueas móviles sin el código?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Trabajo con teléfonos cuyo titular facilita el acceso o con el volcado que proporciona el juzgado. No fuerzo el bloqueo de dispositivos ajenos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se pueden recuperar mensajes y fotos borrados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A veces. Depende del modelo, de la versión del sistema, del tiempo transcurrido y de las copias de seguridad. Antes de empezar te digo qué es razonable esperar, sin prometer lo que no se puede conseguir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Revisas el informe de extracción de la policía?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Compruebo cómo se hizo la extracción, si la cadena de custodia es correcta y si los datos sostienen las conclusiones del atestado. Es una de las contrapericiales más útiles en procedimientos penales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajas fuera de Madrid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, en toda España. En la Comunidad de Madrid y el Corredor del Henares me desplazo con facilidad; en otras provincias valoramos el desplazamiento o el trabajo sobre un volcado. La ratificación puede hacerse por videoconferencia cuando el tribunal lo admite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta analizar un móvil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de qué haya que buscar, de cómo se acceda al teléfono, de los desplazamientos y de si hay que ratificar el informe. La primera consulta es gratuita y, si seguimos, recibes un presupuesto cerrado por escrito antes de empezar."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body class="has-quickbar">
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="/" aria-label="informeperitoinformatico.es — inicio">
+      <svg class="brand-mark" width="38" height="42" viewBox="0 0 36 40" aria-hidden="true">
+        <polygon points="18,2 34,11 34,29 18,38 2,29 2,11" fill="#0f6e67"/>
+        <circle cx="16" cy="18" r="6.5" fill="none" stroke="#fbf7f1" stroke-width="2.2"/>
+        <line x1="20.8" y1="22.8" x2="26" y2="28" stroke="#fbf7f1" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M12.6 18.3l2.3 2.2 4-4.3" fill="none" stroke="#e9a23b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Enrique Delgado</span>
+        <span class="brand-sub">Perito informático · Alcalá de Henares</span>
+      </span>
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav">
+        <li><a href="/#te-ayudo">¿Qué te ha pasado?</a></li>
+        <li><a href="/#como-trabajo">Cómo trabajo</a></li>
+        <li><a href="/#precio">Precio</a></li>
+        <li><a href="/zonas/">Zonas</a></li>
+        <li><a href="/articulos/">Artículos</a></li>
+        <li><a class="btn btn-primary btn-sm" href="#contacto">Consulta gratis</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="label">Menú</span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil">
+    <a href="/">Inicio</a>
+    <a href="/#te-ayudo">¿Qué te ha pasado?</a>
+    <a href="/#servicios">Servicios</a>
+    <a href="/#precio">Precio</a>
+    <a href="/#preguntas">Preguntas frecuentes</a>
+    <a href="/zonas/">Zonas donde trabajo</a>
+    <a href="/articulos/">Artículos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+<main id="main">
+<section class="hero hero-local" id="inicio" aria-labelledby="h1">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Migas de pan"><a href="/">Inicio</a><span aria-hidden="true">›</span><a href="/#servicios">Servicios</a><span aria-hidden="true">›</span><span aria-current="page">Teléfonos móviles</span></nav>
+    <span class="eyebrow">Forense de móviles Android e iOS</span>
+    <h1 id="h1">Perito forense de <em>teléfonos móviles</em></h1>
+    <p class="lead">Extraigo y analizo la información de teléfonos Android y iPhone (mensajes, llamadas, fotos, ubicaciones y aplicaciones) con cadena de custodia, y lo presento en un informe pericial para el juzgado. También reviso los volcados y los informes de móviles que aportan la policía o la otra parte.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-wa" href="https://wa.me/34649716627?text=Hola%20Enrique%2C%20quer%C3%ADa%20consultarte%20un%20caso%20sobre%20el%20an%C3%A1lisis%20de%20un%20tel%C3%A9fono%20m%C3%B3vil." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.79h0a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg> Escríbeme por WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+34649716627"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> 649 716 627</a>
+    </div>
+    <ul class="reassure">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Primera consulta gratuita</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Presupuesto cerrado por escrito</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Informes conforme a UNE 197010</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="casos" aria-labelledby="h2-casos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Cuándo lo necesitas</span>
+      <h2 id="h2-casos">Casos en los que el análisis de un móvil marca la diferencia</h2>
+      <p class="lead">Si tu caso no está aquí, cuéntamelo igualmente: te digo si un informe tiene sentido antes de que gastes nada.</p>
+    </div>
+    <div class="problems">
+      <article class="problem">
+        <h3>Procedimientos penales</h3>
+        <p>Acreditar o descartar comunicaciones, llamadas o contactos entre personas investigadas a partir del contenido real del teléfono.</p>
+      </article>
+      <article class="problem">
+        <h3>Revisión del volcado policial</h3>
+        <p>La policía ha extraído el teléfono y hay que comprobar qué contiene de verdad el volcado, cómo se hizo y si las conclusiones se sostienen.</p>
+      </article>
+      <article class="problem">
+        <h3>Llamadas y comunicaciones</h3>
+        <p>Registro de llamadas, SMS y mensajes de varias aplicaciones para reconstruir quién habló con quién y cuándo.</p>
+      </article>
+      <article class="problem">
+        <h3>Ubicaciones y desplazamientos</h3>
+        <p>Dónde estaba un teléfono en un momento concreto según la información que guardan el sistema, las fotos y las aplicaciones.</p>
+      </article>
+      <article class="problem">
+        <h3>Ámbito laboral</h3>
+        <p>Teléfonos de empresa entregados por un empleado: qué contienen, qué se borró y cuándo, respetando la intimidad del trabajador.</p>
+      </article>
+      <article class="problem">
+        <h3>Familia y custodia</h3>
+        <p>Mensajes, fotos y registros del propio teléfono que acreditan hechos relevantes en el procedimiento.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="deposito" aria-labelledby="h2-deposito">
+  <div class="wrap first-aid">
+    <div>
+      <span class="eyebrow">Muy habitual en penal</span>
+      <h2 id="h2-deposito">¿Y si el móvil está en el <em>juzgado</em>?</h2>
+      <p class="lead">Cuando el teléfono está intervenido o depositado en el juzgado, el perito de parte no puede llevárselo sin más. Tu abogado debe pedir al juzgado que autorice el acceso o la entrega para la pericial, y el análisis se hace con las garantías que fije la resolución.</p>
+      <p><a class="problem-link" href="/articulos/primeras-horas-conservar-prueba-digital/">Lee cómo conservar la prueba digital desde el principio →</a></p>
+    </div>
+    <ol>
+      <li><strong>Autorización judicial</strong><span>El abogado solicita la pericial y el acceso al dispositivo. El juzgado decide si se entrega, se analiza en sede judicial o se facilita una copia del volcado.</span></li>
+      <li><strong>Trabajar sobre una copia</strong><span>Siempre que se pueda, el análisis se hace sobre una copia verificada con hash, para no alterar el original.</span></li>
+      <li><strong>Contrastar el volcado oficial</strong><span>Si ya existe una extracción policial, compruebo su integridad y si permite sostener las conclusiones del atestado.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="que-analizo" aria-labelledby="h2-analizo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">El detalle técnico</span>
+      <h2 id="h2-analizo">Qué analizo exactamente</h2>
+      <p class="lead">Trabajo con extracciones lógicas del dispositivo y con sus copias de seguridad (iTunes/Finder, Google, iCloud cuando hay acceso legítimo), o con el volcado que facilite el juzgado.</p>
+    </div>
+    <div class="problems">
+      <article class="problem">
+        <h3>Mensajería</h3>
+        <p>WhatsApp, Telegram, SMS y otras aplicaciones: conversaciones, participantes, fechas, adjuntos y mensajes eliminados cuando queden rastros.</p>
+      </article>
+      <article class="problem">
+        <h3>Llamadas y contactos</h3>
+        <p>Registro de llamadas entrantes, salientes y perdidas, duración, contactos guardados y su historial.</p>
+      </article>
+      <article class="problem">
+        <h3>Fotos, vídeos y audios</h3>
+        <p>Archivos multimedia con sus metadatos y su relación con las conversaciones en que se enviaron o recibieron.</p>
+      </article>
+      <article class="problem">
+        <h3>Ubicaciones</h3>
+        <p>Datos de localización que guardan el sistema, las fotos y las aplicaciones, con sus limitaciones de precisión explicadas.</p>
+      </article>
+      <article class="problem">
+        <h3>Línea temporal</h3>
+        <p>Reconstrucción cronológica de la actividad del teléfono en el periodo que interesa al procedimiento.</p>
+      </article>
+      <article class="problem">
+        <h3>Revisión de informes ajenos</h3>
+        <p>Análisis crítico de volcados e informes de extracción (por ejemplo, de UFED/Cellebrite) aportados por la policía o la otra parte.</p>
+      </article>
+    </div>
+    <div class="standards" aria-label="Normas de referencia">
+      Trabajo conforme a: <span class="pill">UNE 197010</span><span class="pill">UNE 71505-3</span><span class="pill">ISO/IEC 27037</span><span class="pill">LEC arts. 335–352</span>
+    </div>
+    <p class="note-out">Solo analizo teléfonos a los que tienes derecho legítimo de acceso, con el consentimiento de su titular o con autorización judicial. No desbloqueo móviles ajenos ni accedo a cuentas de terceros.</p>
+  </div>
+</section>
+
+<section id="como-trabajo" aria-labelledby="h2-proceso">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Sin sorpresas</span>
+      <h2 id="h2-proceso">Cómo es el análisis forense de un móvil, paso a paso</h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <h3>Me cuentas el caso</h3>
+        <p>Por WhatsApp, teléfono o correo, tú o tu abogado. Te digo con franqueza si un informe te ayuda y qué hay que buscar.</p>
+        <span class="tag">Gratis</span>
+      </li>
+      <li class="step">
+        <h3>Presupuesto</h3>
+        <p>Recibes por escrito qué incluye, el plazo y el precio cerrado, incluidos los desplazamientos si los hay.</p>
+        <span class="tag">Por escrito</span>
+      </li>
+      <li class="step">
+        <h3>Adquisición</h3>
+        <p>Extraigo la información del teléfono o del volcado facilitado, calculo las huellas SHA-256 y documento la cadena de custodia.</p>
+        <span class="tag">Hash SHA-256</span>
+      </li>
+      <li class="step">
+        <h3>Informe y juicio</h3>
+        <p>Te entrego el informe y te lo explico. Si hay que ratificarlo ante el juez o el tribunal, allí estaré para defenderlo.</p>
+        <span class="tag">UNE 197010</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="precio" aria-labelledby="h2-precio">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Hablemos claro</span>
+      <h2 id="h2-precio">¿Cuánto cuesta el análisis forense de un móvil?</h2>
+      <p class="lead">No te voy a dar una tarifa genérica que luego no se cumple. Lo que sí te garantizo:</p>
+    </div>
+    <div class="price">
+      <div class="price-card highlight">
+        <p class="big">0 €</p>
+        <h3>La primera consulta</h3>
+        <p>Me cuentas tu caso y te digo, sin compromiso, si un informe pericial te va a ayudar. Si no lo necesitas, te lo digo.</p>
+      </div>
+      <div class="price-card">
+        <h3>Presupuesto cerrado, antes de empezar</h3>
+        <p>El precio depende sobre todo de:</p>
+        <ul>
+          <li>Qué hay que buscar y en qué periodo</li>
+          <li>Si se trabaja con el teléfono, con una copia de seguridad o con un volcado ya realizado</li>
+          <li>Si el móvil está depositado en un juzgado y hay que desplazarse</li>
+          <li>La urgencia y los plazos del procedimiento</li>
+          <li>Si hace falta ratificar el informe en juicio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas" aria-labelledby="h2-faq">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Dudas habituales</span>
+      <h2 id="h2-faq">Preguntas sobre el análisis forense de móviles</h2>
+    </div>
+    <div class="faq">
+      <details class="qa"><summary>¿Puedes analizar un móvil que está en el juzgado?</summary><div class="a"><p>Sí, siempre que el juzgado lo autorice. Tu abogado solicita la pericial y el acceso al teléfono o a una copia del volcado. Antes de pedirlo te ayudo a concretar qué hay que analizar, para que la solicitud sea precisa.</p></div></details>
+      <details class="qa"><summary>¿Se puede demostrar que dos personas no se comunicaron?</summary><div class="a"><p>Se puede acreditar qué registros existen en el teléfono y cuáles no, y si hay indicios de que se borró algo. Probar una ausencia tiene límites técnicos que explico en el informe con claridad, porque es justo lo que el tribunal va a preguntar.</p></div></details>
+      <details class="qa"><summary>¿Desbloqueas móviles sin el código?</summary><div class="a"><p>No. Trabajo con teléfonos cuyo titular facilita el acceso o con el volcado que proporciona el juzgado. No fuerzo el bloqueo de dispositivos ajenos.</p></div></details>
+      <details class="qa"><summary>¿Se pueden recuperar mensajes y fotos borrados?</summary><div class="a"><p>A veces. Depende del modelo, de la versión del sistema, del tiempo transcurrido y de las copias de seguridad. Antes de empezar te digo qué es razonable esperar, sin prometer lo que no se puede conseguir.</p></div></details>
+      <details class="qa"><summary>¿Revisas el informe de extracción de la policía?</summary><div class="a"><p>Sí. Compruebo cómo se hizo la extracción, si la cadena de custodia es correcta y si los datos sostienen las conclusiones del atestado. Es una de las contrapericiales más útiles en procedimientos penales.</p></div></details>
+      <details class="qa"><summary>¿Trabajas fuera de Madrid?</summary><div class="a"><p>Sí, en toda España. En la Comunidad de Madrid y el Corredor del Henares me desplazo con facilidad; en otras provincias valoramos el desplazamiento o el trabajo sobre un volcado. La ratificación puede hacerse por videoconferencia cuando el tribunal lo admite.</p></div></details>
+      <details class="qa"><summary>¿Cuánto cuesta analizar un móvil?</summary><div class="a"><p>Depende de qué haya que buscar, de cómo se acceda al teléfono, de los desplazamientos y de si hay que ratificar el informe. La primera consulta es gratuita y, si seguimos, recibes un presupuesto cerrado por escrito antes de empezar.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section id="leer-mas" aria-labelledby="h2-leer">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Para leer con calma</span>
+      <h2 id="h2-leer">Artículos y servicios relacionados</h2>
+    </div>
+    <ul class="zone-links">
+      <li><a href="/articulos/primeras-horas-conservar-prueba-digital/">Qué hacer en las primeras horas para no perder la prueba</a></li>
+      <li><a href="/articulos/sim-swapping-movil-sin-cobertura/">Móvil sin cobertura de repente: el SIM swapping</a></li>
+      <li><a href="/articulos/como-elegir-perito-informatico/">Cómo elegir un perito informático</a></li>
+      <li><a href="/peritaje-whatsapp/">Peritaje de WhatsApp</a></li>
+      <li><a href="/peritaje-correo-electronico/">Peritaje de correo electrónico</a></li>
+      <li><a href="/peritaje-capturas-imagenes/">Peritaje de capturas e imágenes</a></li>
+      <li><a href="/recuperacion-datos-borrados/">Recuperación de datos borrados</a></li>
+      <li><a href="/informe-pericial-informatico/">Informe pericial y contrapericial</a></li>
+    </ul>
+    <p class="zone-all"><a href="/zonas/">Ver las zonas donde trabajo →</a></p>
+  </div>
+</section>
+
+<section class="band" id="contacto" aria-labelledby="h2-contacto">
+  <div class="wrap">
+    <div class="cta-local">
+      <div>
+        <span class="eyebrow">Primera consulta gratuita</span>
+        <h2 id="h2-contacto">Cuéntame qué necesitas saber del teléfono</h2>
+        <p class="lead">Con dos o tres frases me basta para orientarte. Mientras tanto, no restaures el teléfono ni desinstales aplicaciones. Te respondo en menos de 24 horas.</p>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" href="https://wa.me/34649716627?text=Hola%20Enrique%2C%20quer%C3%ADa%20consultarte%20un%20caso%20sobre%20el%20an%C3%A1lisis%20de%20un%20tel%C3%A9fono%20m%C3%B3vil." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.79h0a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg> Escríbeme por WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+34649716627"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> 649 716 627</a>
+        <a class="btn btn-ghost" href="/#contacto">Formulario de contacto</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Enrique Delgado · Perito informático</h4>
+        <p>Informes periciales de WhatsApp, correo electrónico, capturas de pantalla, imágenes y dispositivos móviles para particulares y abogados. Alcalá de Henares, Comunidad de Madrid y toda España.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/peritaje-whatsapp/">Peritaje de WhatsApp</a></li>
+          <li><a href="/peritaje-correo-electronico/">Peritaje de correo electrónico</a></li>
+          <li><a href="/peritaje-capturas-imagenes/">Peritaje de capturas e imágenes</a></li>
+          <li><a href="/peritaje-movil/">Forense de móviles</a></li>
+          <li><a href="/recuperacion-datos-borrados/">Recuperación de datos borrados</a></li>
+          <li><a href="/informe-pericial-informatico/">Informe pericial y contrapericial</a></li>
+          <li><a href="/#servicios">Todos los servicios</a></li>
+          <li><a href="/articulos/">Artículos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Zonas</h4>
+        <ul>
+          <li><a href="/perito-informatico-alcala-de-henares/">Alcalá de Henares</a></li>
+          <li><a href="/perito-informatico-madrid/">Madrid</a></li>
+          <li><a href="/perito-informatico-guadalajara/">Guadalajara</a></li>
+          <li><a href="/zonas/">Todas las zonas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal y redes</h4>
+        <ul>
+          <li><a href="/aviso_legal.html">Aviso legal</a></li>
+          <li><a href="/privacidad.html">Política de privacidad</a></li>
+          <li><a href="/cookies.html">Política de cookies</a></li>
+          <li><a href="https://www.linkedin.com/in/perito-informatico-enrique-delgado/" target="_blank" rel="me noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-seals" aria-label="Sellos">
+      <a class="seal" href="/privacidad.html" title="Compromiso de privacidad: tratamiento de datos conforme al RGPD y la LOPDGDD (autodeclaración del responsable)"><img src="/assets/sello-privacidad.svg" width="160" height="56" alt="Privacidad conforme al RGPD y la LOPDGDD: ver política de privacidad" loading="lazy" decoding="async"></a>
+      <a class="seal" href="https://www.copyscape.com/" target="_blank" rel="noopener"><img src="/assets/sellos/copyscape-banner.png" width="160" height="56" alt="Protected by Copyscape" title="Protected by Copyscape - Do not copy content from this page." loading="lazy" decoding="async"></a>
+      <a class="seal dmca-badge" href="https://www.dmca.com/Protection/Status.aspx?ID=2ef77367-5e2f-42a9-b553-0fedeca2b8cf&amp;refurl=https://informeperitoinformatico.es/" target="_blank" rel="noopener" title="DMCA.com Protection Status"><img src="/assets/sellos/dmca-badge.png" width="150" height="75" alt="DMCA.com Protection Status" loading="lazy" decoding="async"></a>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 informeperitoinformatico.es</span>
+      <span>Esta web no usa cookies ni rastreadores.</span>
+    </div>
+  </div>
+</footer>
+<div class="quickbar" aria-label="Contacto rápido">
+  <a class="btn btn-ghost" href="tel:+34649716627">Llamar</a>
+  <a class="btn btn-wa" href="https://wa.me/34649716627?text=Hola%20Enrique%2C%20quer%C3%ADa%20consultarte%20un%20caso%20sobre%20el%20an%C3%A1lisis%20de%20un%20tel%C3%A9fono%20m%C3%B3vil." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+<script src="/main.js" defer></script>
+</body>
+</html>

@@ -305,8 +305,13 @@ SERVICIOS = [
 SERVICIO_URL = {
     "WhatsApp y mensajería": ("/peritaje-whatsapp/", "Peritaje de WhatsApp →"),
     "Correo electrónico": ("/peritaje-correo-electronico/", "Peritaje de correo electrónico →"),
+    "Capturas e imágenes": ("/peritaje-capturas-imagenes/", "Peritaje de capturas e imágenes →"),
+    "Móviles Android e iOS": ("/peritaje-movil/", "Forense de móviles →"),
+    "Datos borrados": ("/recuperacion-datos-borrados/", "Recuperación de datos borrados →"),
+    "Informe y contrapericial": ("/informe-pericial-informatico/", "Informe pericial y contrapericial →"),
 }
-PAGINAS_SERVICIO = ["peritaje-whatsapp", "peritaje-correo-electronico"]
+PAGINAS_SERVICIO = ["peritaje-whatsapp", "peritaje-correo-electronico", "peritaje-capturas-imagenes",
+                    "peritaje-movil", "recuperacion-datos-borrados", "informe-pericial-informatico"]
 
 
 def bloque_servicios(l):
@@ -593,6 +598,10 @@ def footer():
         <ul>
           <li><a href="/peritaje-whatsapp/">Peritaje de WhatsApp</a></li>
           <li><a href="/peritaje-correo-electronico/">Peritaje de correo electrónico</a></li>
+          <li><a href="/peritaje-capturas-imagenes/">Peritaje de capturas e imágenes</a></li>
+          <li><a href="/peritaje-movil/">Forense de móviles</a></li>
+          <li><a href="/recuperacion-datos-borrados/">Recuperación de datos borrados</a></li>
+          <li><a href="/informe-pericial-informatico/">Informe pericial y contrapericial</a></li>
           <li><a href="/#servicios">Todos los servicios</a></li>
           <li><a href="/articulos/">Artículos</a></li>
         </ul>
