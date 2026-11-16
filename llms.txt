@@ -23,9 +23,10 @@ Qué no hace: no accede a dispositivos ni cuentas de terceros sin derecho legít
 
 - [Peritaje de WhatsApp y mensajería](https://informeperitoinformatico.es/peritaje-whatsapp/): adquisición forense de la conversación, cotejo de capturas con el original, mensajes eliminados cuando es técnicamente posible, huellas SHA-256
 - [Peritaje de correo electrónico](https://informeperitoinformatico.es/peritaje-correo-electronico/): análisis de cabeceras, SPF/DKIM/DMARC, suplantaciones y fraude de factura (BEC)
-- [Capturas de pantalla e imágenes](https://informeperitoinformatico.es/#servicios): metadatos EXIF, coherencia de formato, detección de manipulaciones
-- [Forense de dispositivos móviles](https://informeperitoinformatico.es/#servicios): extracción lógica y análisis de copias de seguridad de Android e iOS
-- [Informe pericial y contrapericial](https://informeperitoinformatico.es/#servicios): informe UNE 197010, revisión del informe de la parte contraria, ratificación en juicio
+- [Peritaje de capturas de pantalla e imágenes](https://informeperitoinformatico.es/peritaje-capturas-imagenes/): metadatos EXIF, huellas de edición, cotejo de capturas con el original e indicios de imágenes generadas con IA
+- [Forense de teléfonos móviles Android e iPhone](https://informeperitoinformatico.es/peritaje-movil/): extracción y análisis de mensajes, llamadas, fotos y ubicaciones; móviles depositados en el juzgado (con autorización judicial) y revisión de volcados policiales
+- [Recuperación de datos borrados con validez pericial](https://informeperitoinformatico.es/recuperacion-datos-borrados/): mensajes, fotos y archivos eliminados en móviles, ordenadores y copias de seguridad, con expectativas realistas y cadena de custodia
+- [Informe pericial informático y contrapericial](https://informeperitoinformatico.es/informe-pericial-informatico/): informe UNE 197010, revisión del informe de la parte contraria, ratificación en juicio en civil, penal, laboral y contencioso
 
 ## Artículos
 
