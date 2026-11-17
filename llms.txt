@@ -66,3 +66,10 @@ Qué no hace: no accede a dispositivos ni cuentas de terceros sin derecho legít
 
 - [Aviso legal](https://informeperitoinformatico.es/aviso_legal.html)
 - [Política de privacidad](https://informeperitoinformatico.es/privacidad.html)
+
+## Otros proyectos del autor
+
+- [Preparación de la oposición de Tecnología en Madrid](https://informeperitoinformatico.es/oposiciones-tecnologia/): preparación online de la oposición de profesor de Secundaria, especialidad Tecnología (Cuerpo 0590). Índice propio en https://informeperitoinformatico.es/oposiciones-tecnologia/llms.txt
+- [Examen práctico de Tecnología de Madrid 2025 resuelto](https://informeperitoinformatico.es/oposiciones-tecnologia/examen-practico-2025/)
+- [Supuestos prácticos de Tecnología](https://informeperitoinformatico.es/oposiciones-tecnologia/supuestos-practicos/)
+- [Programación didáctica de Tecnología en Madrid](https://informeperitoinformatico.es/oposiciones-tecnologia/programacion-didactica/)
