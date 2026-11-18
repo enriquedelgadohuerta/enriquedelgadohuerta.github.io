@@ -21,6 +21,7 @@ _tools/                 Generador y datos de las páginas locales (no se publica
 
 ## Notas
 
+- **Envío de archivos** (`/enviar-archivos/`): página privada (noindex, fuera del sitemap) a la que se llega con un enlace por expediente. Sube a OneDrive a través de un Cloudflare Worker y calcula el SHA-256 en el navegador. Configuración y generación de enlaces: `_tools/subidas-worker/LEEME.md`.
 - **Formulario de contacto**: no envía datos a ningún servidor. Compone el mensaje y lo abre en WhatsApp o en el correo del visitante.
 - **Sin cookies ni terceros**: no hay Google Fonts, analítica ni avatares externos. Si se añade algo así, actualizar `cookies.html` y `privacidad.html`.
 - **Datos estructurados**: `ProfessionalService`, `Person` y `FAQPage` en `index.html`. Las preguntas del JSON-LD deben coincidir con las visibles en la sección `#preguntas`.

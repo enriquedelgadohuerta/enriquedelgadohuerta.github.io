@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /enviar-archivos/
 
 # Buscadores
 User-agent: Googlebot

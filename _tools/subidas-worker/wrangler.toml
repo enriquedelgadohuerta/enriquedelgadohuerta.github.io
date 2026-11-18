@@ -1,0 +1,19 @@
+name = "subidas-perito"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[vars]
+# Identificador de la aplicación registrada en Microsoft Entra (paso 1 de LEEME.md)
+CLIENT_ID = "PEGAR-AQUI-EL-CLIENT-ID"
+# Carpeta de tu OneDrive donde caen las subidas: <BASE_FOLDER>/<expediente>/<lote>/
+BASE_FOLDER = "Peritajes/Recepciones"
+# Orígenes que pueden usar el Worker (separados por comas)
+ALLOWED_ORIGIN = "https://informeperitoinformatico.es,https://www.informeperitoinformatico.es"
+
+[[kv_namespaces]]
+binding = "TOKENS"
+id = "PEGAR-AQUI-EL-ID-DEL-KV"
+
+[observability]
+enabled = true
