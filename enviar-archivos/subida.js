@@ -13,7 +13,7 @@
   "use strict";
 
   // URL del Worker de Cloudflare (ver _tools/subidas-worker/LEEME.md)
-  var API = "https://subidas-perito.CAMBIAR.workers.dev";
+  var API = "https://subidas-perito.subida-perito.workers.dev";
 
   var CHUNK = 320 * 1024 * 16; // 5 MiB, múltiplo de 320 KiB como exige OneDrive
   var MAX_FILE = 20 * 1024 * 1024 * 1024; // 20 GB
