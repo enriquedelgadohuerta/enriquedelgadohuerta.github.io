@@ -869,6 +869,50 @@ def pagina_zonas():
 
 
 # ───────────────────────── sitemap ─────────────────────────
+
+# lastmod real: solo cambia la fecha de una URL si su HTML ha cambiado.
+# Guarda un SHA-256 por URL en _tools/sitemap_estado.json (no se publica).
+ESTADO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sitemap_estado.json")
+
+
+def _hash_url(u):
+    ruta = os.path.join(ROOT, u[len(SITE):].strip("/"), "index.html")
+    if not os.path.exists(ruta):
+        return None
+    with open(ruta, "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()
+
+
+def fechas_lastmod(urls):
+    if os.path.exists(ESTADO):
+        with open(ESTADO, encoding="utf-8") as f:
+            estado = json.load(f)
+        previas = {}
+    else:
+        # primera ejecución: se toman como punto de partida las fechas del sitemap actual
+        estado = {}
+        previas = {}
+        sm = os.path.join(ROOT, "sitemap.xml")
+        if os.path.exists(sm):
+            with open(sm, encoding="utf-8") as f:
+                previas = dict(re.findall(r"<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>", f.read()))
+    fechas, nuevo = {}, {}
+    for u in urls:
+        h = _hash_url(u)
+        e = estado.get(u)
+        if e and e["sha256"] == h:
+            fecha = e["lastmod"]
+        elif not estado and u in previas:
+            fecha = previas[u]
+        else:
+            fecha = HOY
+        fechas[u] = fecha
+        nuevo[u] = {"sha256": h, "lastmod": fecha}
+    with open(ESTADO, "w", encoding="utf-8") as f:
+        json.dump(nuevo, f, ensure_ascii=False, indent=1, sort_keys=True)
+        f.write("\n")
+    return fechas
+
 def sitemap():
     urls = [(SITE + "/", "monthly", "1.0")]
     # páginas de servicio (generadas por _tools/generar_servicios.py)
@@ -887,8 +931,9 @@ def sitemap():
     for l in orden:
         pr = {"base": "0.9", "local": "0.8", "cercana": "0.6", "remota": "0.5"}[l["modo"]]
         urls.append((SITE + l["url"], "monthly", pr))
+    fechas = fechas_lastmod([u for u, _, _ in urls])
     body = "\n".join(
-        f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{HOY}</lastmod>\n    <changefreq>{c}</changefreq>\n    <priority>{p}</priority>\n  </url>"
+        f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{fechas[u]}</lastmod>\n    <changefreq>{c}</changefreq>\n    <priority>{p}</priority>\n  </url>"
         for u, c, p in urls
     )
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n'
@@ -912,8 +957,9 @@ def main():
     os.makedirs(os.path.join(ROOT, "zonas"), exist_ok=True)
     with open(os.path.join(ROOT, "zonas", "index.html"), "w", encoding="utf-8") as f:
         f.write(pagina_zonas())
+    xml = sitemap()  # antes de abrir el fichero: sitemap() puede leer el actual
     with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
-        f.write(sitemap())
+        f.write(xml)
     modos = {}
     for l in LUGARES:
         modos[l["modo"]] = modos.get(l["modo"], 0) + 1

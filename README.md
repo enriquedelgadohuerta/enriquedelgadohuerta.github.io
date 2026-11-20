@@ -39,6 +39,7 @@ python3 _tools/generar_zonas.py
 - Para añadir un municipio, se añade una entrada a `lugares` y se vuelve a ejecutar el script. Para cambiar textos, editar las funciones del script, no el HTML generado.
 - Cada página incluye datos estructurados `Service` (proveedor: la organización de la home), `BreadcrumbList` y `FAQPage` coherente con las preguntas visibles.
 - El script reescribe `sitemap.xml` entero.
+- `lastmod` es real: el script guarda un SHA-256 del HTML de cada URL en `_tools/sitemap_estado.json` y solo pone la fecha de hoy a las páginas cuyo HTML ha cambiado. Hay que subir ese fichero junto con el sitemap; si se borra, la siguiente ejecución toma como punto de partida las fechas del `sitemap.xml` actual.
 
 ## Buscadores con IA (ChatGPT, Gemini, Copilot, Claude, Perplexity)
 
