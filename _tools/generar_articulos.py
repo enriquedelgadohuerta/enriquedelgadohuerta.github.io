@@ -105,24 +105,25 @@ ARTICULOS = [
         "slug": "sim-swapping-movil-sin-cobertura",
         "tag": "Móviles",
         "fecha": "2026-10-28",
+        "actualizado": "2026-11-20",
         "titulo": "Tu móvil se queda sin cobertura y empiezan los cargos: el SIM swapping",
-        "desc": "Qué es el SIM swapping o duplicado fraudulento de la tarjeta SIM, cómo detectarlo, qué hacer de inmediato y qué pruebas conviene conservar.",
+        "desc": "Qué es el SIM swapping o duplicado fraudulento de la tarjeta SIM o eSIM, cómo detectarlo, qué hacer de inmediato y qué pruebas conviene pedir y conservar.",
         "resumen": "Si tu móvil se queda sin línea de repente, no esperes: puede que alguien tenga tu número.",
         "seo_titulo": "SIM swapping: móvil sin cobertura y cargos en tu banco",
         "seo_desc": "¿Te has quedado sin línea y aparecen cargos en el banco? Puede ser un duplicado de tu SIM. Qué hacer en la primera hora y qué pruebas guardar para reclamar.",
         "faq": [
             ("¿Cómo sé si me han hecho un SIM swapping?",
-             "La señal más clara es perder la línea de repente («Sin servicio» o «Solo emergencias») sin motivo aparente, sobre todo si a la vez recibes avisos de cambios de contraseña o de accesos a tus cuentas. Llama a tu operador desde otro teléfono y pregunta si se ha emitido un duplicado de tu SIM."),
+             "La señal más clara es perder la línea de repente («Sin servicio» o «Solo emergencias») sin motivo aparente, sobre todo si a la vez recibes avisos de cambios de contraseña o de accesos a tus cuentas. Llama a tu banco y a tu operador desde otro teléfono, y pregunta al operador si se ha emitido un duplicado de tu SIM o eSIM."),
             ("¿Qué pruebas tengo que guardar para reclamar al banco?",
-             "Las horas exactas en que perdiste la línea, los SMS y correos de aviso, los movimientos del banco y la denuncia. No borres nada del teléfono: el análisis forense permite reconstruir la cronología con fechas y horas verificables."),
+             "Las horas exactas en que perdiste la línea, los SMS y correos de aviso, los movimientos del banco y la denuncia. Pide además por escrito al operador cuándo, dónde y con qué documentación se emitió el duplicado, y al banco el registro de accesos y operaciones. No restaures ni cambies el teléfono: el análisis forense permite reconstruir la cronología con fechas y horas verificables."),
             ("¿Para qué sirve un perito informático en un SIM swapping?",
              "En estas reclamaciones se discute quién falló: el banco, el operador o el cliente. El informe pericial ordena la cronología técnica de lo ocurrido y la documenta de forma que el banco, el juzgado o tu abogado puedan valorarla."),
         ],
         "cuerpo": """
-<p>Estás en casa, con cobertura de siempre, y de repente tu móvil marca «Sin servicio» o «Solo emergencias». No es una avería: puede que alguien haya conseguido un <strong>duplicado de tu tarjeta SIM</strong>.</p>
+<p>Estás en casa, con cobertura de siempre, y de repente tu móvil marca «Sin servicio» o «Solo emergencias». No es una avería: puede que alguien haya conseguido un <strong>duplicado de tu tarjeta SIM</strong> (o de tu eSIM, que no necesita tarjeta física).</p>
 
 <h2>Cómo funciona</h2>
-<p>El delincuente se hace pasar por ti ante tu operador —con datos obtenidos antes, a menudo por un SMS o una llamada falsa— y consigue que le activen una SIM con tu número. Desde ese momento, <strong>los SMS de verificación del banco le llegan a él</strong>. Con tus claves y esos códigos puede hacer transferencias o entrar en tus cuentas. INCIBE lo describe como un fraude que permite tomar el control de banca online, correo y redes sociales.</p>
+<p>Lo habitual es que antes te hayan robado las claves del banco con un SMS, un correo o una llamada falsa. Les falta una cosa: los códigos de verificación que llegan a tu número. Para conseguirlos, el delincuente se hace pasar por ti ante tu operador y logra que le activen una SIM o eSIM con tu número. Desde ese momento, <strong>los SMS de verificación del banco le llegan a él</strong>. Con tus claves y esos códigos puede hacer transferencias o entrar en tus cuentas. INCIBE lo describe como un fraude que permite tomar el control de banca online, correo y redes sociales.</p>
 
 <h2>Señales de alarma</h2>
 <ul>
@@ -133,11 +134,20 @@ ARTICULOS = [
 
 <h2>Qué hacer de inmediato</h2>
 <ol>
-<li><strong>Llama a tu operador</strong> desde otro teléfono y pregunta si se ha emitido un duplicado de tu SIM. Pide bloquearlo.</li>
-<li><strong>Llama a tu banco</strong> para bloquear accesos y operaciones.</li>
-<li><strong>Conserva todo</strong>: capturas de los avisos, correos de cambio de contraseña, horas exactas en que perdiste la línea.</li>
-<li><strong>Denuncia</strong> ante la Policía Nacional o la Guardia Civil.</li>
+<li><strong>Llama a tu banco</strong> desde otro teléfono y bloquea tarjetas, accesos y operaciones. El dinero es lo que más corre.</li>
+<li><strong>Llama a tu operador</strong>, pregunta si se ha emitido un duplicado de tu SIM o eSIM y pide que lo anulen.</li>
+<li><strong>Cambia la contraseña de tu correo</strong> y revisa qué cuentas se recuperan por SMS: con tu número pueden restablecerlas.</li>
+<li><strong>Haz una captura del «Sin servicio»</strong> con la hora visible y apunta cuándo perdiste la línea. Guarda también los avisos y correos de cambio de contraseña.</li>
+<li><strong>No restaures ni cambies el teléfono</strong>: guarda rastros de cuándo dejó de tener red.</li>
 </ol>
+<p>Si tienes dudas, la línea 017 de INCIBE es gratuita y confidencial.</p>
+
+<h2>Después, ya con calma</h2>
+<ul>
+<li><strong>Pide al operador por escrito</strong> cuándo, dónde (tienda, teléfono o internet) y con qué documentación se emitió el duplicado. Puedes ejercer tu derecho de acceso del RGPD.</li>
+<li><strong>Pide al banco</strong> el registro de accesos y operaciones: horas, dispositivos y método de verificación usado.</li>
+<li><strong>Denuncia</strong> ante la Policía Nacional o la Guardia Civil aportando esa cronología y esos documentos.</li>
+</ul>
 
 <h2>La prueba que vas a necesitar</h2>
 <p>En estas reclamaciones suele discutirse quién falló: el banco, el operador o el cliente. La cronología técnica —cuándo se perdió la línea, cuándo llegaron los códigos, desde dónde se hicieron las operaciones— es la clave. El análisis forense de tu teléfono y de los correos y notificaciones recibidos permite reconstruirla con fechas y horas verificables.</p>
