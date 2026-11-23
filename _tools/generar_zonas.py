@@ -378,6 +378,16 @@ LOCAL_EXTRA = {
 }
 
 
+# Capitales de provincia, Ceuta y Melilla: contenido propio desde capitales_extra.py
+import capitales_extra  # noqa: E402
+
+for _l in LUGARES:
+    if _l["tipo"] == "capital" and _l["slug"] not in LOCAL_EXTRA:
+        _x = capitales_extra.construir(_l, enlace_lugar)
+        if _x:
+            LOCAL_EXTRA[_l["slug"]] = _x
+
+
 def bloque_local_extra(l):
     x = LOCAL_EXTRA.get(l["slug"])
     if not x or "casos" not in x:
@@ -396,7 +406,7 @@ def bloque_local_extra(l):
     <div class="section-head">
       <span class="eyebrow">{ICON_PIN} {esc(x['eyebrow'])}</span>
       <h2 id="h2-local">{esc(x['titulo'])}</h2>
-      <p class="lead">{esc(x['lead'])}</p>
+      <p class="lead">{x.get('lead_html') or esc(x['lead'])}</p>
     </div>
     <div class="problems">
 {cards}
@@ -725,12 +735,9 @@ SEO_LOCAL = {
 }
 
 
-# Solo se indexan las zonas donde atiendo en persona: Corredor del Henares
-# (Madrid y Guadalajara) y cabezas de partido judicial de la Comunidad de Madrid.
-# Las capitales lejanas siguen publicadas (para quien llegue por enlace), pero con
-# noindex y fuera del sitemap: eran casi idénticas entre sí y Google podía tratarlas
-# como «doorway pages» y penalizar todo el dominio.
-TIPOS_INDEXABLES = ("corredor", "partido")
+# Todas las páginas locales se indexan. Las capitales de provincia llevan
+# contenido propio (capitales_extra.py) para no ser páginas casi idénticas.
+TIPOS_INDEXABLES = ("corredor", "partido", "capital", "ciudad")
 
 
 def indexable(l):
