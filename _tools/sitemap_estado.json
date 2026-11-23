@@ -8,32 +8,32 @@
   "sha256": "63177cce30d4e092811d4202e7ed4cf847a3da915b703b5fd48ab04df1ff3135"
  },
  "https://informeperitoinformatico.es/articulos/como-elegir-perito-informatico/": {
-  "lastmod": "2026-11-16",
-  "sha256": "e1b0364d7719fbb43b2efe11235e09c7106c2208fb56f0291a0e7b6baf10ba77"
+  "lastmod": "2026-11-23",
+  "sha256": "29f94d0b69752e8d8fe9b5754f9b977c4c0d1963bd2422e741016f8622266c7b"
  },
  "https://informeperitoinformatico.es/articulos/fraude-factura-cambio-cuenta-bancaria/": {
-  "lastmod": "2026-11-16",
-  "sha256": "9e37da78307c1d21812b716038da4700d88b5fc7e25436e929319fedbc9befb3"
+  "lastmod": "2026-11-23",
+  "sha256": "51a5516d6d9e39992996ac21c90793e78fe478cdaf8c3c1d69b3fd57db91f2de"
  },
  "https://informeperitoinformatico.es/articulos/pantallazos-whatsapp-prueba-juicio/": {
-  "lastmod": "2026-11-16",
-  "sha256": "a258cc75fe61d593204cf81aab6ad0d26c2fe56e7d28a70c3f7c4adf23148700"
+  "lastmod": "2026-11-23",
+  "sha256": "d8794d00c1d475cb9bfe673e6587b58f07946061f2069601fdd3b2ba1c00f6c9"
  },
  "https://informeperitoinformatico.es/articulos/primeras-horas-conservar-prueba-digital/": {
-  "lastmod": "2026-11-16",
-  "sha256": "cdf1d77750fe50b014d2f98c27e0defff13284201e14b425b87d4d4069d7b5f9"
+  "lastmod": "2026-11-23",
+  "sha256": "dd14f3b8610453743f347bc3ab9e048d16ec49780c4ab39e7c38739ef31ce08c"
  },
  "https://informeperitoinformatico.es/articulos/pruebas-falsas-inteligencia-artificial/": {
-  "lastmod": "2026-11-16",
-  "sha256": "9360b31a7d0072158bccf7a9955dc66b27a11fa0d1cc3732b6de1c218236e48b"
+  "lastmod": "2026-11-23",
+  "sha256": "155e0e683d19fb2747b563e1f35bb3d65de74e62a652248620f46ec03972a392"
  },
  "https://informeperitoinformatico.es/articulos/sim-swapping-movil-sin-cobertura/": {
-  "lastmod": "2026-11-20",
-  "sha256": "a666818aa5544021a2de7cf68af6d0878080f9d00fb8955f2b2c1ae8a1a3c33d"
+  "lastmod": "2026-11-23",
+  "sha256": "4f7b4a6807aef8f971c2ff5c98a9c649cf787d26a8c159372db377a8f964395a"
  },
  "https://informeperitoinformatico.es/articulos/victima-phishing-smishing-que-hacer/": {
-  "lastmod": "2026-11-16",
-  "sha256": "982dd6737052f575e70fa0911ee5b9508c2845d29f5eb8944da1472af9b106ed"
+  "lastmod": "2026-11-23",
+  "sha256": "33fc908765e44db23433dec9c524b8a25898820423900f21cb1dc36d35d9820e"
  },
  "https://informeperitoinformatico.es/informe-pericial-informatico/": {
   "lastmod": "2026-11-16",
@@ -59,17 +59,9 @@
   "lastmod": "2026-11-16",
   "sha256": "c5640bd8817c1761b5096d63a72436f3f27ae82a665216d20a25495b8f083153"
  },
- "https://informeperitoinformatico.es/perito-informatico-a-coruna/": {
-  "lastmod": "2026-11-16",
-  "sha256": "d2bfd08fa2eb0cbd0f217c3f264e8bae08054d87565a095212ed74167a1f458f"
- },
  "https://informeperitoinformatico.es/perito-informatico-ajalvir/": {
   "lastmod": "2026-11-16",
   "sha256": "041507bf56e49cf59ea534001ba0e5db70c1df437f5847fc4fb0dc300087c54c"
- },
- "https://informeperitoinformatico.es/perito-informatico-albacete/": {
-  "lastmod": "2026-11-16",
-  "sha256": "e340813642a4431d5338cad14d6ca516985608a4f9fbeb9c191831800dd53930"
  },
  "https://informeperitoinformatico.es/perito-informatico-alcala-de-henares/": {
   "lastmod": "2026-11-16",
@@ -83,14 +75,6 @@
   "lastmod": "2026-11-16",
   "sha256": "fe69c70da65098e26391299b60e31148b4a280df7ec7598b141fae9defcf69d8"
  },
- "https://informeperitoinformatico.es/perito-informatico-alicante/": {
-  "lastmod": "2026-11-16",
-  "sha256": "37378379797d3fb6726b6952daf408dfd64ab3f366f4ae61a02b0e28ffe51454"
- },
- "https://informeperitoinformatico.es/perito-informatico-almeria/": {
-  "lastmod": "2026-11-16",
-  "sha256": "0523f9e43cbeec5a46b7690fdea233b238bb0655105303a29e36dff612a37e0b"
- },
  "https://informeperitoinformatico.es/perito-informatico-alovera/": {
   "lastmod": "2026-11-16",
   "sha256": "99ee95b7d285c6f4fc0692f17784db9b5f1fe4e73635bd13e33a58fb36eb1823"
@@ -103,61 +87,21 @@
   "lastmod": "2026-11-16",
   "sha256": "e8b3e353ce5b3a4a9645209072b228ec320b04310a27d0548d947d0d7f720aa7"
  },
- "https://informeperitoinformatico.es/perito-informatico-avila/": {
-  "lastmod": "2026-11-16",
-  "sha256": "ae8be2a7bb9f0942d60daa675f8d53a714f051fc0ead00029af2782628408616"
- },
  "https://informeperitoinformatico.es/perito-informatico-azuqueca-de-henares/": {
-  "lastmod": "2026-11-16",
-  "sha256": "40b4611d0cac268e6ea2ecba792d3df78af8887426cf4ea38a632a40ca4233a4"
- },
- "https://informeperitoinformatico.es/perito-informatico-badajoz/": {
-  "lastmod": "2026-11-16",
-  "sha256": "e0bac877629b5ddb46eac950d0699939d70817275189cb15ec70ea1045f8e6d8"
- },
- "https://informeperitoinformatico.es/perito-informatico-barcelona/": {
-  "lastmod": "2026-11-16",
-  "sha256": "9d72fb8b1a80db00542d79040274f162563bd7f3e40cff4ccc316635e448ddf1"
- },
- "https://informeperitoinformatico.es/perito-informatico-bilbao/": {
-  "lastmod": "2026-11-16",
-  "sha256": "6edac7221a9afb1356a5c07dd0cf589de86af1966449b05f6321bcf41be30989"
- },
- "https://informeperitoinformatico.es/perito-informatico-burgos/": {
-  "lastmod": "2026-11-16",
-  "sha256": "6ce41af3999bc644d9ec4c37ab3038b505ce506c5a336766efb06156623122d6"
+  "lastmod": "2026-11-23",
+  "sha256": "5e4e7757476b972995de50bcb67373d3b60dd26722b4098a266c158c425dad06"
  },
  "https://informeperitoinformatico.es/perito-informatico-cabanillas-del-campo/": {
   "lastmod": "2026-11-16",
   "sha256": "a7c4084f79f04b6b3beba57cacd7d65a9e46b87e093748495fa48e742e97f4d2"
  },
- "https://informeperitoinformatico.es/perito-informatico-caceres/": {
-  "lastmod": "2026-11-16",
-  "sha256": "7807cea95fb4ef3842e49e2b31ed975b54622a4ac2c0ad5870d2d22acc50b243"
- },
- "https://informeperitoinformatico.es/perito-informatico-cadiz/": {
-  "lastmod": "2026-11-16",
-  "sha256": "103527b0b654b96e6e6883fece7da279f37e403e8cabd933e39e0752b0fd62bb"
- },
  "https://informeperitoinformatico.es/perito-informatico-camarma-de-esteruelas/": {
   "lastmod": "2026-11-16",
   "sha256": "bf85ffb96706178c2f3c65cd747508b8a2ee847584d91da95a25cdf878e5caaf"
  },
- "https://informeperitoinformatico.es/perito-informatico-castellon-de-la-plana/": {
-  "lastmod": "2026-11-16",
-  "sha256": "cb106da9b27b41314f97794e1d9f478cf452eb22398e0586d27c40716889f498"
- },
- "https://informeperitoinformatico.es/perito-informatico-ceuta/": {
-  "lastmod": "2026-11-16",
-  "sha256": "c52389058cd447bbd1357d26bc2e9117ca2eabe4ab3cb67916acf9a297b169a5"
- },
  "https://informeperitoinformatico.es/perito-informatico-chiloeches/": {
   "lastmod": "2026-11-16",
   "sha256": "b3e531dd92bb3fe9d569fcdb564654a27afad99b4b5f12d72d8a685701c8d8b4"
- },
- "https://informeperitoinformatico.es/perito-informatico-ciudad-real/": {
-  "lastmod": "2026-11-16",
-  "sha256": "922b9f6571b6bf29f18d0370fdde2efabe29a35bc23621f7f7c4de9fa1f41e0b"
  },
  "https://informeperitoinformatico.es/perito-informatico-collado-villalba/": {
   "lastmod": "2026-11-16",
@@ -167,17 +111,9 @@
   "lastmod": "2026-11-16",
   "sha256": "1d7502abc012af9827286303ecb985e02f56fe56123a1548a10ccad6c39e6406"
  },
- "https://informeperitoinformatico.es/perito-informatico-cordoba/": {
-  "lastmod": "2026-11-16",
-  "sha256": "4c90aaa0625cd508cb55d870782b75faf13d4951eb4860794502143e6bbd94d1"
- },
  "https://informeperitoinformatico.es/perito-informatico-coslada/": {
   "lastmod": "2026-11-16",
   "sha256": "13d7731e79e5ab9588cec4edb7ee6fe5417dc4f8c95eea879c7c1cffbcb86eb0"
- },
- "https://informeperitoinformatico.es/perito-informatico-cuenca/": {
-  "lastmod": "2026-11-16",
-  "sha256": "0abcafb007d7142caf250b6abb0ee13852eccd4ec6f9d091076263579a93ee95"
  },
  "https://informeperitoinformatico.es/perito-informatico-daganzo-de-arriba/": {
   "lastmod": "2026-11-16",
@@ -191,73 +127,29 @@
   "lastmod": "2026-11-16",
   "sha256": "0ed94c65375bfb0b03d41d9a19e4b32169d6b3f2d624835bbf96c30d56710732"
  },
- "https://informeperitoinformatico.es/perito-informatico-girona/": {
-  "lastmod": "2026-11-16",
-  "sha256": "06d1ceaa8ebe65cde73fefd7b39a182a123152cf339d6b1dace4af061dc6b88e"
- },
- "https://informeperitoinformatico.es/perito-informatico-granada/": {
-  "lastmod": "2026-11-16",
-  "sha256": "1d5226a308d679a806d4263eeaa2a12f53ac8717a70722b2a6d65e15413fc895"
- },
  "https://informeperitoinformatico.es/perito-informatico-guadalajara/": {
-  "lastmod": "2026-11-16",
-  "sha256": "b103f4ab79f83953ad3e21226d2c9ba68034904d1f600584a30881979506aaed"
- },
- "https://informeperitoinformatico.es/perito-informatico-huelva/": {
-  "lastmod": "2026-11-16",
-  "sha256": "a91e0bd2146d0d468a68c9a6bc8e24ac6b7509dbaefec4ce8d59544aa01d3439"
- },
- "https://informeperitoinformatico.es/perito-informatico-huesca/": {
-  "lastmod": "2026-11-16",
-  "sha256": "d83b4e7f1ab15cc2dbab421ee6bd829bec8249ac495918c8ab27bed0aa8c110b"
- },
- "https://informeperitoinformatico.es/perito-informatico-jaen/": {
-  "lastmod": "2026-11-16",
-  "sha256": "f400c27fa7ad7ed9b451331bcdbc5a31a18f4fe84d75005563edbe436c83c737"
- },
- "https://informeperitoinformatico.es/perito-informatico-las-palmas-de-gran-canaria/": {
-  "lastmod": "2026-11-16",
-  "sha256": "81e0765f747511a14479f521587af5ad9dec703812709436b2e9f0f1b98ee66f"
+  "lastmod": "2026-11-23",
+  "sha256": "f3a7a243bd82acf6d8f01beaa29662a6446098272eae364f026d10460241be32"
  },
  "https://informeperitoinformatico.es/perito-informatico-leganes/": {
   "lastmod": "2026-11-16",
   "sha256": "1b0d9bf425a0ac8661fbc50a18af05cbe8e0f3647a025cfd36379a3aa7dde619"
  },
- "https://informeperitoinformatico.es/perito-informatico-leon/": {
-  "lastmod": "2026-11-16",
-  "sha256": "69f21efbb17324f2ef533ba50ef7c03d0c1f118d6cf277976b67ba081b1c74eb"
- },
- "https://informeperitoinformatico.es/perito-informatico-lleida/": {
-  "lastmod": "2026-11-16",
-  "sha256": "67b2700a6cea6525a14848980cb9773a7041135d612fa4acfa3ae81812332547"
- },
  "https://informeperitoinformatico.es/perito-informatico-loeches/": {
   "lastmod": "2026-11-16",
   "sha256": "5b19e191aec21f330c9740ac26974f14db7f2924f7d38d9df09dcf71c0108890"
- },
- "https://informeperitoinformatico.es/perito-informatico-logrono/": {
-  "lastmod": "2026-11-16",
-  "sha256": "31eaf47063c3d51e36488b0f822849e27891f9978bbe5669e617e2d9e0137dcb"
  },
  "https://informeperitoinformatico.es/perito-informatico-los-santos-de-la-humosa/": {
   "lastmod": "2026-11-16",
   "sha256": "7bf29253cfaa0bb8a272429e0179781252c0c87e2a64ecb0eccbb97dce15635b"
  },
- "https://informeperitoinformatico.es/perito-informatico-lugo/": {
-  "lastmod": "2026-11-16",
-  "sha256": "e3c6c52e8eb80b4cc5fe0eec6a94136856577e7cbde52d90f1f4190600746d29"
- },
  "https://informeperitoinformatico.es/perito-informatico-madrid/": {
-  "lastmod": "2026-11-16",
-  "sha256": "858f3ff3a0483445640cb072d602ebebe3df37beb3f5dc5be813cbdd603619b6"
+  "lastmod": "2026-11-23",
+  "sha256": "c8d9831cd7a791c817dcd8aaf3bb5cd303c6028e6b4c9db20c32ecdfd4b00196"
  },
  "https://informeperitoinformatico.es/perito-informatico-majadahonda/": {
   "lastmod": "2026-11-16",
   "sha256": "306f8b96c34d1b3383d49bfeecb41bce9469166d4443166f427584c7c77a00e2"
- },
- "https://informeperitoinformatico.es/perito-informatico-malaga/": {
-  "lastmod": "2026-11-16",
-  "sha256": "c7430da6cca7b14e9848d560b9853b0c9ca258986cd97f703e31d0fbcbe4f4d6"
  },
  "https://informeperitoinformatico.es/perito-informatico-marchamalo/": {
   "lastmod": "2026-11-16",
@@ -271,41 +163,13 @@
   "lastmod": "2026-11-16",
   "sha256": "591e0503f64c8372be7677c380f01b94d9c98d98eb2b4b6d41dec4b9c37f7111"
  },
- "https://informeperitoinformatico.es/perito-informatico-melilla/": {
-  "lastmod": "2026-11-16",
-  "sha256": "b1cc3c7efaa86c47f5e0735c20acaf002a74fa4ccd62ed1856ff1baeeca30c91"
- },
  "https://informeperitoinformatico.es/perito-informatico-mostoles/": {
   "lastmod": "2026-11-16",
   "sha256": "45f3d6185c0276583a0428c5f1f491f98507af2d0e3f36c9348c7beac408f58b"
  },
- "https://informeperitoinformatico.es/perito-informatico-murcia/": {
-  "lastmod": "2026-11-16",
-  "sha256": "de1bf4e365e6743a5d3caed3d021cdd8d86dc9e805f343014018ddf889550267"
- },
  "https://informeperitoinformatico.es/perito-informatico-navalcarnero/": {
   "lastmod": "2026-11-16",
   "sha256": "80a06a52e6720e86d4a8b79a7712169a957f39edf8c54797a9339bc8d24d483e"
- },
- "https://informeperitoinformatico.es/perito-informatico-ourense/": {
-  "lastmod": "2026-11-16",
-  "sha256": "d47ff59b2b64c226952eaec823e057a57d59197eac3541d7e12e584f8fb4811d"
- },
- "https://informeperitoinformatico.es/perito-informatico-oviedo/": {
-  "lastmod": "2026-11-16",
-  "sha256": "d2863600677ff0a968f754d704e3e7da6b339a4c9d713a1edd54f9a2599cb14c"
- },
- "https://informeperitoinformatico.es/perito-informatico-palencia/": {
-  "lastmod": "2026-11-16",
-  "sha256": "6a964482d53795ab1f048658eb3e535f3d3c6e9aca5be1871469b74ec061e65e"
- },
- "https://informeperitoinformatico.es/perito-informatico-palma/": {
-  "lastmod": "2026-11-16",
-  "sha256": "45963b04da3709e3f8c60f0950eb1d7428e4f93af8f457688e8f8f78d70e63c4"
- },
- "https://informeperitoinformatico.es/perito-informatico-pamplona/": {
-  "lastmod": "2026-11-16",
-  "sha256": "df427f44f8cf1f9be1cac16ec034b96a59da65cdfd1e0a5b9b78cb89f1aef6f2"
  },
  "https://informeperitoinformatico.es/perito-informatico-paracuellos-de-jarama/": {
   "lastmod": "2026-11-16",
@@ -315,25 +179,13 @@
   "lastmod": "2026-11-16",
   "sha256": "6a2271dd2bac6a8a58fd39b90e96c8130aad77a07ac3402009dda13e6129e29e"
  },
- "https://informeperitoinformatico.es/perito-informatico-pontevedra/": {
-  "lastmod": "2026-11-16",
-  "sha256": "67cb5de553626cc46bfcac97632ceb31cc27a7d165211f0e010d2498ba327e2e"
- },
  "https://informeperitoinformatico.es/perito-informatico-pozuelo-de-alarcon/": {
   "lastmod": "2026-11-16",
   "sha256": "6183f061bf8fc2a5e70484fd74db63434b4f94ad31be570ba165af3e8f4483c2"
  },
- "https://informeperitoinformatico.es/perito-informatico-puertollano/": {
-  "lastmod": "2026-11-16",
-  "sha256": "5bdc3f6dd89cb2e2216e66d422b69b8c5e6af527f48754cdf46e45fc1a78fc62"
- },
  "https://informeperitoinformatico.es/perito-informatico-quer/": {
   "lastmod": "2026-11-16",
   "sha256": "bc1852b7b5a4d2ec772cc53fb9e5acef9cb9dd5d30cb5fd92163f2556609c20d"
- },
- "https://informeperitoinformatico.es/perito-informatico-salamanca/": {
-  "lastmod": "2026-11-16",
-  "sha256": "83819e7f076b52b5cad41a54f6cc45280ca3afb866358eee6717310f012ff5da"
  },
  "https://informeperitoinformatico.es/perito-informatico-san-fernando-de-henares/": {
   "lastmod": "2026-11-16",
@@ -342,42 +194,6 @@
  "https://informeperitoinformatico.es/perito-informatico-san-lorenzo-de-el-escorial/": {
   "lastmod": "2026-11-16",
   "sha256": "0521481def6c7adc2665b5a881e7514cc4fd85f247ea9d7fa5a32d23937efa1c"
- },
- "https://informeperitoinformatico.es/perito-informatico-san-sebastian/": {
-  "lastmod": "2026-11-16",
-  "sha256": "3a8d9ed357c54b82711474c49042793b228f1232d38affcf6c20eecee3782816"
- },
- "https://informeperitoinformatico.es/perito-informatico-santa-cruz-de-tenerife/": {
-  "lastmod": "2026-11-16",
-  "sha256": "2d2307ff2ffa0926f8856866f9c80ead0641041f19263b3ece212f6180cde7f5"
- },
- "https://informeperitoinformatico.es/perito-informatico-santander/": {
-  "lastmod": "2026-11-16",
-  "sha256": "3c02f2976c39fb399435cb28c98e9ace42cb8068b95e2aa91e053d21dafa1071"
- },
- "https://informeperitoinformatico.es/perito-informatico-segovia/": {
-  "lastmod": "2026-11-16",
-  "sha256": "1fcf103c4575afba36e38e33b1b24d749fb7d010c7849c77522b9e6ee91b301d"
- },
- "https://informeperitoinformatico.es/perito-informatico-sevilla/": {
-  "lastmod": "2026-11-16",
-  "sha256": "83a381b4e21083468719245a8c30ef7177a8d86e7ec041de18c3d21093514e2d"
- },
- "https://informeperitoinformatico.es/perito-informatico-soria/": {
-  "lastmod": "2026-11-16",
-  "sha256": "1ec504b1067b737c631454fe53dd84506e6f17d7ccd55cfdbdd9490c2f806b32"
- },
- "https://informeperitoinformatico.es/perito-informatico-tarragona/": {
-  "lastmod": "2026-11-16",
-  "sha256": "e585b5b350db2bcdfe47f1afcf5f7f6afdd32d50b3a072c77c8e70be88d46b58"
- },
- "https://informeperitoinformatico.es/perito-informatico-teruel/": {
-  "lastmod": "2026-11-16",
-  "sha256": "9b4a6c5b01f62e0d5ada7ef69a6344d3a80f0f1c84acbdbd5ae731b55afe40d5"
- },
- "https://informeperitoinformatico.es/perito-informatico-toledo/": {
-  "lastmod": "2026-11-16",
-  "sha256": "8001af18e22088667df3e1f88eff920c4971cc7adc9ef8b1afc3abc066a5ec6b"
  },
  "https://informeperitoinformatico.es/perito-informatico-torrejon-de-ardoz/": {
   "lastmod": "2026-11-16",
@@ -395,14 +211,6 @@
   "lastmod": "2026-11-16",
   "sha256": "858ad68a7d2a420b7cc0ecfbbfa69d34c13bcd1676f98fe8bf5ad0f00957a3c8"
  },
- "https://informeperitoinformatico.es/perito-informatico-valencia/": {
-  "lastmod": "2026-11-16",
-  "sha256": "3b7a257e0fd224bd13933153af79c587b9fa66334c05188db348a8e16f4c8e67"
- },
- "https://informeperitoinformatico.es/perito-informatico-valladolid/": {
-  "lastmod": "2026-11-16",
-  "sha256": "64ddeaf6d1e4990047f9e2d4098981dede699d2bf17fae47ca46a2447ce509ca"
- },
  "https://informeperitoinformatico.es/perito-informatico-velilla-de-san-antonio/": {
   "lastmod": "2026-11-16",
   "sha256": "ac5665bfffdc9ef667fe9e4fcd8fe0630749cf4192e7861aaee5ff8c096220c4"
@@ -414,18 +222,6 @@
  "https://informeperitoinformatico.es/perito-informatico-villanueva-de-la-torre/": {
   "lastmod": "2026-11-16",
   "sha256": "932e241b7703c50557ddebbf24181e6ba6db1dbc0b4abf06015f816d307d85a1"
- },
- "https://informeperitoinformatico.es/perito-informatico-vitoria-gasteiz/": {
-  "lastmod": "2026-11-16",
-  "sha256": "4a70c6fc3336087cf659666f97adb89971784664a4f9374a0ba05a1fc0b507af"
- },
- "https://informeperitoinformatico.es/perito-informatico-zamora/": {
-  "lastmod": "2026-11-16",
-  "sha256": "0c8a3990204b862206d34995f66d18aab3baebf641ca3659f664391751e34c58"
- },
- "https://informeperitoinformatico.es/perito-informatico-zaragoza/": {
-  "lastmod": "2026-11-16",
-  "sha256": "c2bd995e35280a3512e2eb973a6abfd6b90f80ad78cb79b7976a5d01117ff62a"
  },
  "https://informeperitoinformatico.es/recuperacion-datos-borrados/": {
   "lastmod": "2026-11-16",

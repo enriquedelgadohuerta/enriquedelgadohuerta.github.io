@@ -349,6 +349,43 @@ def bloque_faq_articulo(a):
   </section>"""
 
 
+# Enlaces internos de cada artículo a las páginas de servicio, con texto ancla
+# descriptivo. Los artículos ya salen en el top 10 de Google; las páginas de
+# servicio (WhatsApp, correo, capturas, informe) estaban por la posición 60-80.
+SERVICIOS = {
+    "whatsapp": ("/peritaje-whatsapp/", "Peritaje de WhatsApp para juicio"),
+    "correo": ("/peritaje-correo-electronico/", "Peritaje de correo electrónico"),
+    "capturas": ("/peritaje-capturas-imagenes/", "Peritaje de capturas de pantalla e imágenes"),
+    "movil": ("/peritaje-movil/", "Peritaje forense de teléfonos móviles"),
+    "informe": ("/informe-pericial-informatico/", "Informe pericial informático"),
+    "datos": ("/recuperacion-datos-borrados/", "Recuperación de datos borrados"),
+    "abogados": ("/peritaje-informatico-abogados/", "Perito informático para abogados"),
+}
+SERVICIOS_ARTICULO = {
+    "como-elegir-perito-informatico": ["informe", "whatsapp", "correo", "abogados"],
+    "victima-phishing-smishing-que-hacer": ["correo", "movil", "informe"],
+    "sim-swapping-movil-sin-cobertura": ["movil", "whatsapp", "informe"],
+    "pruebas-falsas-inteligencia-artificial": ["capturas", "whatsapp", "informe"],
+    "pantallazos-whatsapp-prueba-juicio": ["whatsapp", "capturas", "informe"],
+    "fraude-factura-cambio-cuenta-bancaria": ["correo", "informe", "abogados"],
+    "primeras-horas-conservar-prueba-digital": ["whatsapp", "correo", "movil", "datos"],
+}
+
+
+def bloque_servicios_articulo(a):
+    claves = SERVICIOS_ARTICULO.get(a["slug"], ["whatsapp", "correo", "capturas", "informe"])
+    items = "\n".join(
+        f'      <li><a href="{SERVICIOS[k][0]}">{gz.esc(SERVICIOS[k][1])}</a></li>' for k in claves
+    )
+    return f"""
+  <section class="article-more" aria-labelledby="h2-serv">
+    <h2 id="h2-serv">Servicios relacionados</h2>
+    <ul class="zone-links">
+{items}
+    </ul>
+  </section>"""
+
+
 def pagina_articulo(a):
     url = f"{SITE}/articulos/{a['slug']}/"
     meta_desc = a.get("seo_desc", a["desc"])
@@ -394,7 +431,7 @@ def pagina_articulo(a):
   <p class="meta">Por <a href="{LINKEDIN}" rel="author me noopener" target="_blank">Enrique Delgado</a>, perito informático · {fecha_larga(a['fecha'])}{(' · actualizado el ' + fecha_larga(a['actualizado'])) if a.get('actualizado') else ''}</p>
   <div class="article-body">
 {a['cuerpo'].strip()}
-  </div>{bloque_faq_articulo(a)}
+  </div>{bloque_faq_articulo(a)}{bloque_servicios_articulo(a)}
   <aside class="article-cta" id="contacto">
     <h2>¿Tienes un caso parecido?</h2>
     <p>Cuéntamelo sin compromiso: te digo si un informe pericial te ayuda y cuánto costaría, por escrito.</p>

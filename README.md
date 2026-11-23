@@ -38,6 +38,7 @@ python3 _tools/generar_zonas.py
 - Datos en `_tools/zonas.json`: Corredor del Henares (Madrid y Guadalajara), las 21 cabezas de partido judicial de la Comunidad de Madrid y las 52 capitales de provincia.
 - Para añadir un municipio, se añade una entrada a `lugares` y se vuelve a ejecutar el script. Para cambiar textos, editar las funciones del script, no el HTML generado.
 - Cada página incluye datos estructurados `Service` (proveedor: la organización de la home), `BreadcrumbList` y `FAQPage` coherente con las preguntas visibles.
+- Solo se indexan los lugares de tipo `corredor` y `partido` (`TIPOS_INDEXABLES`). Las capitales de provincia lejanas se publican con `noindex, follow` y quedan fuera del sitemap, para que Google no las trate como páginas puerta casi idénticas.
 - El script reescribe `sitemap.xml` entero.
 - `lastmod` es real: el script guarda un SHA-256 del HTML de cada URL en `_tools/sitemap_estado.json` y solo pone la fecha de hoy a las páginas cuyo HTML ha cambiado. Hay que subir ese fichero junto con el sitemap; si se borra, la siguiente ejecución toma como punto de partida las fechas del `sitemap.xml` actual.
 

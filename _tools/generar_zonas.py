@@ -648,7 +648,9 @@ def quickbar(l=None):
 </div>"""
 
 
-def documento(title, desc, canonical, jsonld, cuerpo, og_title=None):
+def documento(title, desc, canonical, jsonld, cuerpo, og_title=None, indexar=True):
+    robots = ("index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+              if indexar else "noindex, follow")
     ld = "\n".join(
         f'<script type="application/ld+json">\n{json.dumps(j, ensure_ascii=False, indent=2)}\n</script>' for j in jsonld
     )
@@ -660,7 +662,7 @@ def documento(title, desc, canonical, jsonld, cuerpo, og_title=None):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="author" content="Enrique Delgado — Perito Informático">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="robots" content="{robots}">
 <meta name="theme-color" content="#fbf7f1">
 <link rel="canonical" href="{canonical}">
 <meta property="og:type" content="website">
@@ -711,7 +713,28 @@ SEO_LOCAL = {
     "ceuta": (
         "Perito Informático en Ceuta | WhatsApp y correos para juicio",
         "¿Te han impugnado un WhatsApp o un correo en Ceuta? Lo analizo a distancia, con cadena de custodia e informe pericial válido en juicio. Consulta gratis."),
+    "madrid": (
+        "Perito Informático en Madrid | WhatsApp, correos y móviles",
+        "Perito informático judicial en Madrid: WhatsApp, correos, capturas y móviles con informe UNE 197010 y ratificación en juzgado. Primera consulta gratis."),
+    "guadalajara": (
+        "Perito Informático en Guadalajara | Consulta gratis",
+        "Perito informático en Guadalajara, cerca desde Alcalá: WhatsApp, correos, capturas y móviles para juicio, con cita en persona e informe UNE 197010."),
+    "azuqueca-de-henares": (
+        "Perito Informático en Azuqueca de Henares | Consulta gratis",
+        "¿WhatsApp, correos o capturas para un juicio en Azuqueca? Atiendo en persona desde Alcalá, con cadena de custodia e informe UNE 197010. Consulta gratis."),
 }
+
+
+# Solo se indexan las zonas donde atiendo en persona: Corredor del Henares
+# (Madrid y Guadalajara) y cabezas de partido judicial de la Comunidad de Madrid.
+# Las capitales lejanas siguen publicadas (para quien llegue por enlace), pero con
+# noindex y fuera del sitemap: eran casi idénticas entre sí y Google podía tratarlas
+# como «doorway pages» y penalizar todo el dominio.
+TIPOS_INDEXABLES = ("corredor", "partido")
+
+
+def indexable(l):
+    return l["tipo"] in TIPOS_INDEXABLES
 
 
 # ───────────────────────── página local ─────────────────────────
@@ -807,7 +830,8 @@ def pagina(l):
         bloque_cercanos(l),
         bloque_contacto(l),
     ] if b)
-    html_doc = documento(title, desc, canonical, jsonld, cuerpo, og_title=f"Perito informático en {n}")
+    html_doc = documento(title, desc, canonical, jsonld, cuerpo, og_title=f"Perito informático en {n}",
+                         indexar=indexable(l))
     # el quickbar lleva el texto de WhatsApp con la ciudad
     html_doc = html_doc.replace(quickbar(), quickbar(l))
     return html_doc
@@ -929,6 +953,8 @@ def sitemap():
                 urls.append((SITE + f"/articulos/{d}/", "monthly", "0.8"))
     orden = sorted(LUGARES, key=lambda l: ({"base": 0, "local": 1, "cercana": 2, "remota": 3}[l["modo"]], l["dist"]))
     for l in orden:
+        if not indexable(l):
+            continue
         pr = {"base": "0.9", "local": "0.8", "cercana": "0.6", "remota": "0.5"}[l["modo"]]
         urls.append((SITE + l["url"], "monthly", pr))
     fechas = fechas_lastmod([u for u, _, _ in urls])
