@@ -1,0 +1,14 @@
+name = "resenas-perito"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[vars]
+# Place ID de tu Perfil de Empresa en Google (paso 2 de LEEME.md). Empieza por "ChIJ".
+PLACE_ID = "PEGAR-AQUI-EL-PLACE-ID"
+# Orígenes que pueden pedir las reseñas (separados por comas)
+ALLOWED_ORIGIN = "https://informeperitoinformatico.es,https://www.informeperitoinformatico.es"
+LANG = "es"
+
+[observability]
+enabled = true
