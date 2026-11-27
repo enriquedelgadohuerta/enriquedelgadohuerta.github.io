@@ -16,7 +16,7 @@ const GRAPH = "https://graph.microsoft.com/v1.0";
 const TOKEN_URL = "https://login.microsoftonline.com/consumers/oauth2/v2.0/token";
 const SCOPE = "Files.ReadWrite offline_access";
 const MAX_FILE = 20 * 1024 * 1024 * 1024;
-const UPLOAD_HOSTS = [/\.1drv\.com$/i, /^api\.onedrive\.com$/i, /\.sharepoint\.com$/i, /\.microsoft\.com$/i];
+const UPLOAD_HOSTS = [/\.1drv\.com$/i, /^api\.onedrive\.com$/i, /\.sharepoint\.com$/i, /\.microsoft\.com$/i, /\.microsoftpersonalcontent\.com$/i];
 
 export default {
   async fetch(req, env) {

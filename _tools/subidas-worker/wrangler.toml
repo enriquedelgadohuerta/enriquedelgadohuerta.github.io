@@ -13,7 +13,7 @@ ALLOWED_ORIGIN = "https://informeperitoinformatico.es,https://www.informeperitoi
 
 [[kv_namespaces]]
 binding = "TOKENS"
-id = "PEGAR-AQUI-EL-ID-DEL-KV"
+id = "622d25fc2c874652917ce3d1ae635c82"
 
 [observability]
 enabled = true
