@@ -409,28 +409,3 @@ a.channel:hover{border-color:var(--line-2);box-shadow:var(--shadow);color:var(--
 .verified:hover{text-decoration:underline}
 @media (max-width:1020px){.article-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:720px){.article-grid{grid-template-columns:1fr}.article-cta{padding:22px}}
-
-/* ---------- Opiniones en Google (resenas.js) ---------- */
-[hidden]{display:none!important}
-.reviews-summary{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px;margin:14px 0 0;color:var(--ink-2)}
-.reviews-summary .score{font-family:var(--ff-head);font-size:40px;font-weight:600;line-height:1;color:var(--ink)}
-.reviews-summary .count{font-size:16px}
-.stars{display:inline-flex;gap:1px;font-size:16px;line-height:1;letter-spacing:0}
-.stars-lg{font-size:24px}
-.stars .on{color:var(--warm)}
-.stars .off{color:var(--line-2)}
-.stars .half{background:linear-gradient(90deg,var(--warm) 50%,var(--line-2) 50%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
-.review{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
-.review-head{display:flex;align-items:center;gap:12px}
-.review .avatar{width:40px;height:40px;border-radius:50%;flex-shrink:0;object-fit:cover}
-.review .avatar-txt{display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
-.review .who{display:flex;flex-direction:column;gap:3px;min-width:0}
-.review .author{font-weight:700;color:var(--ink);text-decoration:none}
-.review a.author:hover{text-decoration:underline}
-.review .meta{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink-3)}
-.review-text{margin:0;color:var(--ink-2);font-size:15.5px;white-space:pre-line}
-.review-src{margin:auto 0 0;font-size:14px;color:var(--ink-3)}
-.reviews-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px}
-@media (max-width:1020px){.reviews{grid-template-columns:1fr 1fr}}
-@media (max-width:720px){.reviews{grid-template-columns:1fr}}
